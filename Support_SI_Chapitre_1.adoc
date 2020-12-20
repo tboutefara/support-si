@@ -1,0 +1,495 @@
+= Cours de Système d'Information: Chapitre 1 - Notions de base
+Tarek Boutefara <t_boutefara@univ-jijel.dz>
+v0.2, 2020-12-20
+:imagesdir: ./images/
+:sectnums:
+:toc:
+
+=== Introduction
+
+La notion de Système d'Information ne peut pas être assimilée sans comprendre
+plusieurs notions relatives ainsi que le contexte général d'utilisation
+des Systèmes d'Information.
+
+Dans ce chapitre, nous allons voir la notion d'information. L'information 
+constitue l'objet essentiel sur lequel un Système d'Information. Il est 
+aussi important de comprendre son importance et sa position par rapport
+aux notions acquises précédemment (la notion de "donnée" à titre d'exemple).
+
+=== Information
+
+.Definition 1 :
+L'information est définie comme étant tout élément de connaissance pouvant 
+être perçu par l'un des cinq sens.
+
+Cette définition est une définition générale qui peut être projetée et
+adaptée selon le domaine d'étude. Elle voit l'information comme un
+élément de connaissance. Cela veut dire que nous ne pouvons pas obtenir, 
+construire ou extraire des connaissances sans avoir des informations.
+
+Elle précise aussi qu'une information ne peut être obtenue sans les cinq
+sens. En effet, chaque information peut être acquise ou reçue par l'un
+des cinq sens. Autrement, il sera impossible de la connaître ou de la
+manipuler. 
+
+A titre d'exemple, "la voiture est rouge" est une information que nous ne 
+pouvons pas assimiler sans le sens de la vue.
+
+.Definition 2 :
+L'information est une indication, renseignement, précision que l'on donne 
+ou que l'on obtient sur quelqu'un ou quelque chose.
+
+C'est une autre définition générale ; elle ne se focalise pas sur un domaine donné
+ou sur un type donné des informations. Néanmoins, elle précise qu'une information
+concerne "quelqu'un" ou "quelque chose". C'est-à-dire, une information n'a
+pas une existence propre mais elle nous offre des éléments de connaissance
+sur un objet existant.
+
+A titre d'exemple, l'information "la voiture est rouge" nous donne un élément 
+de connaissance (la couleur) sur un objet existant (la voiture).
+
+.Definition 3 :
+Une information est un élément de connaissance susceptible d'être représenté 
+à l'aide de conventions pour être conservé, traité ou communiqué.
+
+Cette définition enrichit davantage notre compréhension de la notion d'information :
+pour pouvoir manipuler une information (la conserver, la traiter ou la communiquer)
+une convention adéquate doit être adoptée pour la représenter. 
+
+Dans un contexte informatique, cette définition peut être optée comme
+cadre de travail. Ainsi, pour pouvoir stocker, traiter et échanger
+des informations en utilisant l'outil informatique, elles doivent 
+être représentées sous un format adéquat à l'outil informatique.
+
+=== Importance de l'information
+
+Après l'agriculture et l'ère industrielle, nous vivons dans l'ère de l'information.
+Aujourd'hui posséder l'information peut signifier posséder le pouvoir. Dans le cadre
+des entreprises, posséder l'information veut dire posséder un avantage par
+rapport aux concurrents. En effet l'information joue un rôle essentiel dans
+la prise de décision.
+
+La prise de décision est une activité quotidienne. Elle est plus importante 
+dans le milieu des organisations (et des entreprises en particulier). 
+La prise de décision se base sur une réflexion faite sur un ensemble 
+d'informations. Avoir des informations correctes, précises et d'actualité (à temps)
+influence d'une manière directe et forte la qualité des décisions prises.
+
+=== Données – Information – Connaissances
+[.text-center]
+Données -> Information -> Connaissances
+
+L'information est un élément de base de la connaissance. Elle se base à son
+tour sur un élément plus basique : la donnée. En effet, la donnée est une 
+valeur conservée (stockée). En informatique, une donnée est une suite de 0 et de 1.
+
+Une information peut être obtenue à partir d'une donnée en donnant un "sens"
+à cette dernière. Cela peut être fait en positionnant la donnée dans un contexte.
+Par la suite, une connaissance peut être obtenue à partir de l'information
+en lui enrichissant par une signification. Plus tard, la connaissance peut
+être utilisée comme un support pour la prise de décision.
+
+.Exemple 1
+Soit la donnée "5". Cette donnée peut être encodée par la suite 00000101
+sur un seul octet. Sans un contexte précis, le traitement de cette donnée
+n'aura pas une grande signification. +
+Néanmoins, en précisant qu'il s'agit de la "température du jour" qui sera "5°",
+la donné aura un "sens" et plusieurs traitements peuvent être effectués.
+En précisant ce contexte, nous avons pu obtenir une "information" à partir
+d'une "donnée". +
+Cette information peut être interprétée pour extraire une connaissance.
+"La température aujourd'hui est 5°" veut dire qu'"il fait froid". Cette
+connaissance sera un support pour la décision "je vais porter mon manteau".
+
+=== Système
+
+.Définition 1 :
+Un système est un ensemble d'éléments matériels ou immatériels, en interaction, 
+organisés en fonction d'un objectif. 
+
+Cette définition est la plus utilisée en littérature pour définir la notion
+du système. Elle met l'accent sur trois points essentiels dans chaque système :
+
+* Un système est complexe : généralement, un système se compose de plusieurs éléments.
+Cette composition peut être simple (d'un seul niveau) ou hiérarchique (de plusieurs niveaux).
+* Les composantes d'un système sont en interaction : ainsi, s'il est possible de dessiner
+une frontière entre deux sous-ensembles d'éléments dans un système donné (c'est-à-dire,
+aucune interaction n'est présente entre les deux sous-ensembles) alors ce système
+peut être décomposé en deux systèmes complètement indépendants.
+* Un système possède un objectif : cet objectif est essentiel pour définir
+les éléments qu'un système doit contenir et les interactions nécessaires entre
+ces éléments Il sera aussi important pour pouvoir contrôler le bon 
+fonctionnement du système.
+
+.Definition 2 :
+C'est un tout constitué d'éléments unis par des relations. Les éléments 
+et les relations sont munis de propriétés.
+
+Cette définition enrichit notre compréhension des systèmes par introduire
+la notion de "propriété". En effet, cette notion est essentielle pour
+pouvoir construire des systèmes.
+
+==== Exemple : une usine
+
+Une usine peut être représentée sous forme d'un système. Premièrement, 
+une usine se compose de plusieurs éléments. Ces éléments sont de nature
+matérielle (machines, ateliers, entrepôts) et immatérielle (emplois du temps, 
+procédures à suivre, lois internes). Ses éléments sont en constante interaction
+(échanges d'informations, échanges de la matière première et des produits 
+semi-finis et finis). +
+Ces éléments sont dotés de propriétés (une machine, à titre d'exemple, se 
+caractérise par une puissance et un débit de production, nous connaissons 
+aussi le type de matière première qu'elle consomme et en quel produit elle
+la transforme). +
+L'usine fonctionne dans l'objectif de produire des biens. Cet objectif 
+est l'élément clé pour le contrôle d'actvité de l'usine.
+
+==== Représentation graphique d'un système
+
+.Représentation graphique d'un système
+image::Systeme.jpeg[Représentation graphique d'un Système]
+
+Dans cette représentation, le système est vu comme une boîte noire. C'est-à-dire,
+la structure interne du système (les différents éléments et les interactions entre eux)
+n'est pas représentée. 
+
+Cette repérsentation met l'accent sur les entrées et les sorites du système.
+De manière générale, un système prend des éléments en entrée. Ces éléments ne 
+font pas partie du système, mais, ils seront traités par ces éléments. 
+Ce traitement donne comme résultat l'ensemble des éléments en sortie.
+
+Le contrôle concerne cette activité de transformation, essentiellement, 
+les performances du système durant la transformation (temps de transformation,
+nombre de pannes, nombre des erreurs, etc.) et les résultats générés 
+(qualité, coût, etc.) par le système. L'évaluation est effectuée par 
+rapport à l'objectif du système. Cette évaluation sera la base de nouveaux
+paramètres ou décisions qui peuvent être considérés comme des entrées
+pour le prochain cycle du système.
+
+=== Les caractéristiques d'un systeme
+
+==== Les frontières d'un systeme
+
+Un système est un élément fini dont le périmètre est une frontière qui
+le sépare de son environnement.
+
+A son tour, l'environnement du système est complexe. Une entreprise,
+à titre d'exemple, possède :
+
+* Un environnement économique : c'est l'environnement lié directement à son 
+activité comme :
+** Les fournisseurs : qui lui fournissent la matière première.
+** Les clients : qui achètent ses produits. Ils peuvent être des 
+utilisateurs finals (personnes) ou bien des entreprises.
+** Les concurrents : qui sont des entreprises qui produisent les mêmes
+produits.
+* Un environnement social : c'est la société dans laquelle l'entreprise
+exerce son activité. Même si la société n'est pas liée directement
+à l'activité de l'entreprise, elle peut l'influencer d'une manière indirecte
+en fixant un ensemble de "règles sociales" auxquelles l'entreprise doit
+adhérer.
+* L'état : qui contrôle l'activité de l'entreprise. Il interagit 
+avec l'entreprise par plusieurs composantes :
+** La direction des impôts,
+** Les autorités locales,
+** Le pouvoir législatif.
+
+Le système interagit avec son environnement grâce à des flux matériels 
+(produits, matière première), financiers (crédits, paiements) et 
+immatériels (lois, réclamations, demandes).
+
+==== Le système ouvert et le système fermé
+
+Selon leurs interactions avec leur environnement, on distingue deux types 
+du système :
+
+. *Les systèmes fermés :* Un système fermé peut être défini comme un 
+système qui n'effectue pas des échanges avec son environnement,
+. *Les systèmes ouverts :* Un système ouvert peut être défini comme un 
+système capable d'effetuer des échanges avec son environnement.
+
+==== Les systèmes génèrent des informations
+
+Durant son activité, un système génère des informations qui rendent compte
+de son comportement, ses performances et ses résultats. En effet, chaque système
+possède une sorte de "mémoire" et des mécanismes pour sauvegarder et pour
+traiter (si nécessaire) ces informations. Autrement, le contrôle de l'activité
+sera difficile, voire impossible. Par conséquent, le système sera incapable de
+déterminer est-ce qu'il a atteint ses objectifs ou pas.
+
+Les informations générées pour être :
+
+* *Pour son propre compte :* ces informations concernent ses éléments (composants)
+et les interactions entre eux. Elles sont généralement destinées à d'autres 
+éléments ou sont utilisées pour le contrôle.
+* *Au sein de l'environnement :* ces informations sont à destination d'autres
+systèmes dans l'environnement du système et concernent les interactions 
+qu'il effectue avec eux.
+
+=== Notion de sous-systeme
+
+.Définition
+Un sous-système est un sous-ensemble du système qui constitue lui-même un système avec
+ses propres entrées, sorties et fonction de transformation.
+
+Cette notion devient plus claire dans les systèmes où les interactions internes
+(entre ses propres éléments) prennent une forme hiérarchique. Elle permet
+de se focaliser sur un sous-système (analyse, conception, amélioration, etc.).
+
+.Exemple : l'université
+L'université est un système complexe et ouvert. Elle reçoit en entrée les nouveaux bacheliers
+prend comme elle prend les différentes ressources nécessaires. Elle offre
+en sortie des diplômés ainsi qu'un ensemble de productions scientifiques
+(livres, supports pédagogiques, articles scientifiques, brevets, etc.). Si 
+on analyse ses éléments, nous allons trouver qu'elle se compose d'un ensemble
+de faculté. Chaque faculté peut être vue comme un système. Elle vise les 
+mêmes objectifs mais pour un ensemble défini de spécialités. A son tour,
+la faculté se compose de plusieurs départements. Chaque département vise les 
+mêmes objectifs mais pour une spécialité donnée.
+
+=== Les sous-systemes d'un point de vue organisationnel
+
+Les organisations de manière générale sont structurées selon la fonction
+de ses éléments (on parle de l'approche fonctionnelle). Selon cette approche,
+les éléments qui exercent la même fonction sont regroupés ensemble.
+
+Cette structure est représentée en utilisant des organigrammes. Ces derniers
+permettent de montrer les différents services de l'organisation (sous-systèmes)
+ainsi que les liens hiérarchiques entre eux.
+
+Selon cette vision, un poste de travail appartient à un seul élément
+de la structure : Le travail est spécialisé et chaque poste est doté
+d'un ensemble fini de fonctions (ou tâches) à accomplir.
+
+.Exemple
+Une entreprise contient les suivants, où chaque service se spécialise en 
+une seule fonction :
+
+* Service de production,
+* Service de comptabilité,
+* Service financier,
+* Service maintenance,
+* Gestion des ressources humaines,
+* La direction.
+
+.Organigramme d'une petite entreprise
+image::Organigramme.jpeg[Organigramme d'une petite entreprise]
+
+=== Les sous-systemes d'un point de vue informationnel
+
+Comme pour la vision organisationnelle, un système pour être décomposé
+en sous-systèmes selon le type des informations manipulées.
+
+.Pyramide de Le Moigne
+image::Lemoigne.jpeg[Pyramide de Le Moigne]
+
+==== Le système de pilotage
+
+Le système de pilotage définit les missions et les objectifs, organise
+l'emploi des moyens, et contrôle l'exécution des travaux. Ces tâches 
+nécessitent des informations globales, abrégées et condensées pour refléter
+le fonctionnement de tout le système sur une période donnée ou durant un 
+cycle donné.
+
+en se basant sur ces informations et sur les décisions prises, il contrôle 
+le système opérant en lui fournissant des informations nécessaires pour
+la planification de son fonctionnement.
+
+.Exemple : 
+Dans une usine, pour décider la quantité à produire d'un produit donné, le 
+système de pilotage fait référence, par exemple, à la quantité produite
+durant l'an dernier. Cette information est globale (parce qu'elle couvre
+tout le processus de production) et condensée (elle regroupe les données
+de toute une année).
+
+==== Le système opérant
+
+Le système opérant est l'ensemble des moyens humains, matériels, 
+organisationnels qui exécutent les ordres du système de pilotage. Ces
+ordres sont lui fuornis selon des conventions claires et des représentations
+compréhensibles.
+
+Il assure le fonctionnement du système (la fonction de transformation).
+Durant son activité (continue), il produit une quantité énorme d'informations
+locales et détaillées.
+
+.Exemple
+Dans une usine, et durant son activité, un employé prépare une fiche de panne
+pour une machine qui l'utilise. Cette information (la machine X est en panne)
+est une information détaillée (elle concerne une seule étape de production) et 
+locale (elle ne concerne qu'un seul atelier).
+
+==== Le systeme d'information
+
+C'est l'ensemble des ressources humaines, techniques et financières qui
+fournissent, utilisent, compilent, traitent et distribuent l'information 
+de l'organisation. Il alimente l'organisation en informations en étant 
+la passerelle obligatoire par toutes les informations de l'organisation.
+
+Il achemine les informations du Système Opérant vers le Système de Pilotage.
+Durant cette diffusion, il doit les transformer (les traiter) en appliquant
+les différentes approches statistiques et d'analyse. Autrement, le Système
+de Pilotage ne sera pas en mesure de les exploiter sous leur forme brute.
+
+Il achemine aussi les informations du Système de Pilotage (les ordres et
+les stratégies) vers le Système Opérant. Durant cette diffusion, il doit 
+assurer que chaque élément du Système Opérant reçoit une information
+localisée qui le concerne et qu'il peut exploiter.
+
+Le Système d'Information permet aussi d'effectuer des échanges d'informations
+avec l'environnement de l'organisation. Ces échanges peuvent être de 
+différents formats et pour différentes raisons. Ils peuvent être initiés
+par l'organisation (envoie d'une commande à un fournisseur) ou par
+l'environnement (nouvelle loi communiquée par la direction des impôts).
+
+=== Fonctions du Système d'Information dans l'organisation
+
+. La collecte de l'information,
+. La mémorisation de l'information,
+. Le traitement de l'information,
+. La diffusion de l'information.
+
+=== Apport du Système d'Information pour l'organisation
+
+. Une prise de décision avec plus de certitude et d'objectivité : en offrant 
+des informations correctes, précises et d'actualité (au bon moment) aux décideurs
+au niveau de Système de Pilotage.
+. Une meilleure planification des objectifs : en offrant une meilleure communication
+entre le Système de Pilotage et le Système Opérant.
+. Prise en considération et évolution suivant l'environnement externe :
+en offrant la possibilité d'avoir des échanges informationnels rapides
+et précis avec les partenaires et les composants de l'environnement.
+. Une meilleure collaboration et coopération entre les différents sous-systèmes.
+
+=== L'aspect statique et l'aspect dynamique d'un Système d'Information
+
+Le Système d'Information, suivant ses fonctions, peut être réparti
+en deux parties :
+
+==== L'aspect statique
+
+La fonction de mémorisation d'un Système d'Information se traduit par :
+
+. L'enregistrement des faits dans un ensemble qui s'appellera base de données,
+. L'enregistrement se fait en respectant des structures, des règles et des
+contraintes auxquelles doivent répondre ces informations dans un ensemble
+qui s'appellera modèle de données.
+
+==== L'aspect dynamique
+
+Les fonctions de collecte, traitement et de transmission qui se traduisent par :
+
+. Mettre à jour les informations (ajout, suppression, modification),
+. Modification des structures et des règles suivant l'évolution de l'organisation.
+
+.Analogie en Informatique
+La meilleure analogie pour comprendre cette répartition est la notion
+d'algorithmes. Chaque algorithme se compose de deux parties : les variables 
+et le prgramme principal (avec les fonctions). Les variables permettent
+de mémoriser les données manipulées par le programme. Sans traitement,
+ces variables restent sans changement (d'où l'appellation statique). Le 
+programme principal est la partie exécutable (d'où l'appellation dynamique).
+Son rôle est d'appliquer l'ensemble des traitements sur les données (la partie
+statique).
+
+=== Système d'Information Automatisable (SIA)
+
+Chaque organisation possède un Système d'Information. Sans un Système d'Information, 
+il sera difficile d'imaginer une forme d'organisation, d'activité et de contrôle.
+La question traitée dans cette section est : est-il possible d'automatiser
+tout le système d'Information d'une organisation ? Pour répondre à cette question,
+il est nécessaire de voir la nature des différentes actions dans l'organisation
+et la possibilité de les traduire en programmes informatiques.
+
+==== Types des actions 
+
+Selon la théorie de Simon sur la rationnalité limitée dans la prise de décision,
+les actions peuvent etre classifiées en deux types :
+
+===== Actions programmees (programmables)
+
+Une action programmable est chaque action dans laquelle les sorties sont
+determinées de la même manière à partir des entrées. C'est-à-dire, les mêmes
+entrées donneront toujours les mêmes sorties.
+
+===== Décisions
+
+Une décision est une action dans laquelle les entrées ne sont pas suffisantes
+pour déterminer les sorties. Ainsi, les mêmes entrées donnent des sorties
+différentes. En effet, un décideur peut être influencé par les informations
+en entrée, les biais cognitifs (le processus de raisonnement lui-même), et
+le manque de temps. Par conséquent, un décideur peut prendre une décision
+"satisfaisante" si la prise d'une décision "optimale" s'avère coûteuse.
+
+
+==== Partie automatisable d'un Système d'Information
+
+Malgré l'avancée technologique, il n'est pas possible d'automatiser tout le
+système d'information d'une organisation. Seule une partie des traitements
+pourra être implémentée sous forme de programmes informatiques (les actions
+programmables).
+
+Il est aussi possible qu'une partie de ces actions ne sera pas concernée
+par l'automatisation pour des raisons organisationnelles (pas prioritaires,
+manque de financement, manque du personnel dans le service informatique, etc.).
+
+Ainsi, nous pouvons définir la partie automatisable d'un Système d'Information
+par "l'ensemble des actions programmées (programmables) concernées 
+par une décision d'automatisation."
+
+.Système Automatisable d'Information (Partie Automatisable)
+image::SAI.jpeg[Partie Automatisable]
+
+==== Structure et fonctions d'un système d'information automatisé
+
+La structure et les fonctions d'un Système d'Information automatisé peuvent 
+être résumées dans le schéma suivant :
+
+.Structure et fonctions d'un systeme d'information automatisé
+image::SI.jpeg[Structure et fonctions d'un systeme d'information automatisé]
+
+=== Vers le e-Buisness
+
+==== Les types des systèmes en e-Buisness
+
+Les types des systèmes en e-Buisness sont généralement basés sur les 
+types des relations commerciales qu'ils assurent :
+
+===== B to B (B2B)
+
+On dit qu'un système assure une relation de type B2B s'il assure une relation 
+d'entreprise à entreprise.
+
+===== B to C (B2C)
+
+On dit qu'un système d'information assure une relation B2C lorsqu'il assure
+une relation commerciale d'entreprise à client (grand public). Ces
+systèmes sont connus aussi sous le nom e-Commerce (commerce électronique)
+dont la définition ne se limite pas au seul acte de vente mais couvre tous
+les échanges (demande, devis, livraison facturation, service après vente).
+
+===== B to A (B2A)
+
+Cette appelation est utilisée lorsuq'il s'agit d'une relation de l'entreprise
+à l'administration (secteur public).
+
+==== L'importance du e-Buisness
+
+. Rendre plus efficace la relation avec les clients et les partenaires.
+. Développer de nouvelles opportunités d'affaires.
+. Fluidifier de la circulation de l'information interne.
+. Mettre sous contrôle les différents processus de l'entreprise.
+
+=== Conclusion
+
+Dans ce chapitre, nous avons vu la notion de Système d'Information ainsi
+que les concepts relatifs. Comprendre ces notions est essentiel pour 
+pouvoir concevoir, réaliser et manipuler un système d'information.
+
+Le Système d'Information prend davantage d'importance pour les entreprises.
+En effet, le Système d'Information peut réduire considérablement les coûts
+comme il permet d'améliorer les performances au sein de l'entreprise. 
+
+Avant d'entamer la conception des deux parties (statique et dynamique) d'un 
+Système d'Information, nous devons introduire d'abord la notion
+de "modélisation"; une compétence clé pour la conception des SI.

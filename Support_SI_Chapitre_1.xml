@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Cours de Système d&#8217;Information</title>
+<subtitle>Chapitre 1 - Notions de base</subtitle>
+<date>2020-12-20</date>
+<author>
+<personname>
+<firstname>Tarek</firstname>
+<surname>Boutefara</surname>
+</personname>
+<email>t_boutefara@univ-jijel.dz</email>
+</author>
+<authorinitials>TB</authorinitials>
+<revhistory>
+<revision>
+<revnumber>0.2</revnumber>
+<date>2020-12-20</date>
+<authorinitials>TB</authorinitials>
+</revision>
+</revhistory>
+</info>
+<section xml:id="_introduction">
+<title>Introduction</title>
+<simpara>La notion de Système d&#8217;Information ne peut pas être assimilée sans comprendre
+plusieurs notions relatives ainsi que le contexte général d&#8217;utilisation
+des Systèmes d&#8217;Information.</simpara>
+<simpara>Dans ce chapitre, nous allons voir la notion d&#8217;information. L&#8217;information
+constitue l&#8217;objet essentiel sur lequel un Système d&#8217;Information. Il est
+aussi important de comprendre son importance et sa position par rapport
+aux notions acquises précédemment (la notion de "donnée" à titre d&#8217;exemple).</simpara>
+</section>
+<section xml:id="_information">
+<title>Information</title>
+<formalpara>
+<title>Definition 1 :</title>
+<para>L&#8217;information est définie comme étant tout élément de connaissance pouvant
+être perçu par l&#8217;un des cinq sens.</para>
+</formalpara>
+<simpara>Cette définition est une définition générale qui peut être projetée et
+adaptée selon le domaine d&#8217;étude. Elle voit l&#8217;information comme un
+élément de connaissance. Cela veut dire que nous ne pouvons pas obtenir,
+construire ou extraire des connaissances sans avoir des informations.</simpara>
+<simpara>Elle précise aussi qu&#8217;une information ne peut être obtenue sans les cinq
+sens. En effet, chaque information peut être acquise ou reçue par l&#8217;un
+des cinq sens. Autrement, il sera impossible de la connaître ou de la
+manipuler.</simpara>
+<simpara>A titre d&#8217;exemple, "la voiture est rouge" est une information que nous ne
+pouvons pas assimiler sans le sens de la vue.</simpara>
+<formalpara>
+<title>Definition 2 :</title>
+<para>L&#8217;information est une indication, renseignement, précision que l&#8217;on donne
+ou que l&#8217;on obtient sur quelqu&#8217;un ou quelque chose.</para>
+</formalpara>
+<simpara>C&#8217;est une autre définition générale ; elle ne se focalise pas sur un domaine donné
+ou sur un type donné des informations. Néanmoins, elle précise qu&#8217;une information
+concerne "quelqu&#8217;un" ou "quelque chose". C&#8217;est-à-dire, une information n&#8217;a
+pas une existence propre mais elle nous offre des éléments de connaissance
+sur un objet existant.</simpara>
+<simpara>A titre d&#8217;exemple, l&#8217;information "la voiture est rouge" nous donne un élément
+de connaissance (la couleur) sur un objet existant (la voiture).</simpara>
+<formalpara>
+<title>Definition 3 :</title>
+<para>Une information est un élément de connaissance susceptible d&#8217;être représenté
+à l&#8217;aide de conventions pour être conservé, traité ou communiqué.</para>
+</formalpara>
+<simpara>Cette définition enrichit davantage notre compréhension de la notion d&#8217;information :
+pour pouvoir manipuler une information (la conserver, la traiter ou la communiquer)
+une convention adéquate doit être adoptée pour la représenter.</simpara>
+<simpara>Dans un contexte informatique, cette définition peut être optée comme
+cadre de travail. Ainsi, pour pouvoir stocker, traiter et échanger
+des informations en utilisant l&#8217;outil informatique, elles doivent
+être représentées sous un format adéquat à l&#8217;outil informatique.</simpara>
+</section>
+<section xml:id="_importance_de_linformation">
+<title>Importance de l&#8217;information</title>
+<simpara>Après l&#8217;agriculture et l&#8217;ère industrielle, nous vivons dans l&#8217;ère de l&#8217;information.
+Aujourd&#8217;hui posséder l&#8217;information peut signifier posséder le pouvoir. Dans le cadre
+des entreprises, posséder l&#8217;information veut dire posséder un avantage par
+rapport aux concurrents. En effet l&#8217;information joue un rôle essentiel dans
+la prise de décision.</simpara>
+<simpara>La prise de décision est une activité quotidienne. Elle est plus importante
+dans le milieu des organisations (et des entreprises en particulier).
+La prise de décision se base sur une réflexion faite sur un ensemble
+d&#8217;informations. Avoir des informations correctes, précises et d&#8217;actualité (à temps)
+influence d&#8217;une manière directe et forte la qualité des décisions prises.</simpara>
+</section>
+<section xml:id="_données_information_connaissances">
+<title>Données – Information – Connaissances</title>
+<simpara role="text-center">Données &#8594; Information &#8594; Connaissances</simpara>
+<simpara>L&#8217;information est un élément de base de la connaissance. Elle se base à son
+tour sur un élément plus basique : la donnée. En effet, la donnée est une
+valeur conservée (stockée). En informatique, une donnée est une suite de 0 et de 1.</simpara>
+<simpara>Une information peut être obtenue à partir d&#8217;une donnée en donnant un "sens"
+à cette dernière. Cela peut être fait en positionnant la donnée dans un contexte.
+Par la suite, une connaissance peut être obtenue à partir de l&#8217;information
+en lui enrichissant par une signification. Plus tard, la connaissance peut
+être utilisée comme un support pour la prise de décision.</simpara>
+<formalpara>
+<title>Exemple 1</title>
+<para>Soit la donnée "5". Cette donnée peut être encodée par la suite 00000101
+sur un seul octet. Sans un contexte précis, le traitement de cette donnée
+n&#8217;aura pas une grande signification.<?asciidoc-br?>
+Néanmoins, en précisant qu&#8217;il s&#8217;agit de la "température du jour" qui sera "5°",
+la donné aura un "sens" et plusieurs traitements peuvent être effectués.
+En précisant ce contexte, nous avons pu obtenir une "information" à partir
+d&#8217;une "donnée".<?asciidoc-br?>
+Cette information peut être interprétée pour extraire une connaissance.
+"La température aujourd&#8217;hui est 5°" veut dire qu'"il fait froid". Cette
+connaissance sera un support pour la décision "je vais porter mon manteau".</para>
+</formalpara>
+</section>
+<section xml:id="_système">
+<title>Système</title>
+<formalpara>
+<title>Définition 1 :</title>
+<para>Un système est un ensemble d&#8217;éléments matériels ou immatériels, en interaction,
+organisés en fonction d&#8217;un objectif.</para>
+</formalpara>
+<simpara>Cette définition est la plus utilisée en littérature pour définir la notion
+du système. Elle met l&#8217;accent sur trois points essentiels dans chaque système :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Un système est complexe : généralement, un système se compose de plusieurs éléments.
+Cette composition peut être simple (d&#8217;un seul niveau) ou hiérarchique (de plusieurs niveaux).</simpara>
+</listitem>
+<listitem>
+<simpara>Les composantes d&#8217;un système sont en interaction : ainsi, s&#8217;il est possible de dessiner
+une frontière entre deux sous-ensembles d&#8217;éléments dans un système donné (c&#8217;est-à-dire,
+aucune interaction n&#8217;est présente entre les deux sous-ensembles) alors ce système
+peut être décomposé en deux systèmes complètement indépendants.</simpara>
+</listitem>
+<listitem>
+<simpara>Un système possède un objectif : cet objectif est essentiel pour définir
+les éléments qu&#8217;un système doit contenir et les interactions nécessaires entre
+ces éléments Il sera aussi important pour pouvoir contrôler le bon
+fonctionnement du système.</simpara>
+</listitem>
+</itemizedlist>
+<formalpara>
+<title>Definition 2 :</title>
+<para>C&#8217;est un tout constitué d&#8217;éléments unis par des relations. Les éléments
+et les relations sont munis de propriétés.</para>
+</formalpara>
+<simpara>Cette définition enrichit notre compréhension des systèmes par introduire
+la notion de "propriété". En effet, cette notion est essentielle pour
+pouvoir construire des systèmes.</simpara>
+<section xml:id="_exemple_une_usine">
+<title>Exemple : une usine</title>
+<simpara>Une usine peut être représentée sous forme d&#8217;un système. Premièrement,
+une usine se compose de plusieurs éléments. Ces éléments sont de nature
+matérielle (machines, ateliers, entrepôts) et immatérielle (emplois du temps,
+procédures à suivre, lois internes). Ses éléments sont en constante interaction
+(échanges d&#8217;informations, échanges de la matière première et des produits
+semi-finis et finis).<?asciidoc-br?>
+Ces éléments sont dotés de propriétés (une machine, à titre d&#8217;exemple, se
+caractérise par une puissance et un débit de production, nous connaissons
+aussi le type de matière première qu&#8217;elle consomme et en quel produit elle
+la transforme).<?asciidoc-br?>
+L&#8217;usine fonctionne dans l&#8217;objectif de produire des biens. Cet objectif
+est l&#8217;élément clé pour le contrôle d&#8217;actvité de l&#8217;usine.</simpara>
+</section>
+<section xml:id="_représentation_graphique_dun_système">
+<title>Représentation graphique d&#8217;un système</title>
+<figure>
+<title>Représentation graphique d&#8217;un système</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/Systeme.jpeg"/>
+</imageobject>
+<textobject><phrase>Représentation graphique d&#8217;un Système</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>Dans cette représentation, le système est vu comme une boîte noire. C&#8217;est-à-dire,
+la structure interne du système (les différents éléments et les interactions entre eux)
+n&#8217;est pas représentée.</simpara>
+<simpara>Cette repérsentation met l&#8217;accent sur les entrées et les sorites du système.
+De manière générale, un système prend des éléments en entrée. Ces éléments ne
+font pas partie du système, mais, ils seront traités par ces éléments.
+Ce traitement donne comme résultat l&#8217;ensemble des éléments en sortie.</simpara>
+<simpara>Le contrôle concerne cette activité de transformation, essentiellement,
+les performances du système durant la transformation (temps de transformation,
+nombre de pannes, nombre des erreurs, etc.) et les résultats générés
+(qualité, coût, etc.) par le système. L&#8217;évaluation est effectuée par
+rapport à l&#8217;objectif du système. Cette évaluation sera la base de nouveaux
+paramètres ou décisions qui peuvent être considérés comme des entrées
+pour le prochain cycle du système.</simpara>
+</section>
+</section>
+<section xml:id="_les_caractéristiques_dun_systeme">
+<title>Les caractéristiques d&#8217;un systeme</title>
+<section xml:id="_les_frontières_dun_systeme">
+<title>Les frontières d&#8217;un systeme</title>
+<simpara>Un système est un élément fini dont le périmètre est une frontière qui
+le sépare de son environnement.</simpara>
+<simpara>A son tour, l&#8217;environnement du système est complexe. Une entreprise,
+à titre d&#8217;exemple, possède :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Un environnement économique : c&#8217;est l&#8217;environnement lié directement à son
+activité comme :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Les fournisseurs : qui lui fournissent la matière première.</simpara>
+</listitem>
+<listitem>
+<simpara>Les clients : qui achètent ses produits. Ils peuvent être des
+utilisateurs finals (personnes) ou bien des entreprises.</simpara>
+</listitem>
+<listitem>
+<simpara>Les concurrents : qui sont des entreprises qui produisent les mêmes
+produits.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Un environnement social : c&#8217;est la société dans laquelle l&#8217;entreprise
+exerce son activité. Même si la société n&#8217;est pas liée directement
+à l&#8217;activité de l&#8217;entreprise, elle peut l&#8217;influencer d&#8217;une manière indirecte
+en fixant un ensemble de "règles sociales" auxquelles l&#8217;entreprise doit
+adhérer.</simpara>
+</listitem>
+<listitem>
+<simpara>L&#8217;état : qui contrôle l&#8217;activité de l&#8217;entreprise. Il interagit
+avec l&#8217;entreprise par plusieurs composantes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>La direction des impôts,</simpara>
+</listitem>
+<listitem>
+<simpara>Les autorités locales,</simpara>
+</listitem>
+<listitem>
+<simpara>Le pouvoir législatif.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+<simpara>Le système interagit avec son environnement grâce à des flux matériels
+(produits, matière première), financiers (crédits, paiements) et
+immatériels (lois, réclamations, demandes).</simpara>
+</section>
+<section xml:id="_le_système_ouvert_et_le_système_fermé">
+<title>Le système ouvert et le système fermé</title>
+<simpara>Selon leurs interactions avec leur environnement, on distingue deux types
+du système :</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara><emphasis role="strong">Les systèmes fermés :</emphasis> Un système fermé peut être défini comme un
+système qui n&#8217;effectue pas des échanges avec son environnement,</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Les systèmes ouverts :</emphasis> Un système ouvert peut être défini comme un
+système capable d&#8217;effetuer des échanges avec son environnement.</simpara>
+</listitem>
+</orderedlist>
+</section>
+<section xml:id="_les_systèmes_génèrent_des_informations">
+<title>Les systèmes génèrent des informations</title>
+<simpara>Durant son activité, un système génère des informations qui rendent compte
+de son comportement, ses performances et ses résultats. En effet, chaque système
+possède une sorte de "mémoire" et des mécanismes pour sauvegarder et pour
+traiter (si nécessaire) ces informations. Autrement, le contrôle de l&#8217;activité
+sera difficile, voire impossible. Par conséquent, le système sera incapable de
+déterminer est-ce qu&#8217;il a atteint ses objectifs ou pas.</simpara>
+<simpara>Les informations générées pour être :</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis role="strong">Pour son propre compte :</emphasis> ces informations concernent ses éléments (composants)
+et les interactions entre eux. Elles sont généralement destinées à d&#8217;autres
+éléments ou sont utilisées pour le contrôle.</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Au sein de l&#8217;environnement :</emphasis> ces informations sont à destination d&#8217;autres
+systèmes dans l&#8217;environnement du système et concernent les interactions
+qu&#8217;il effectue avec eux.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+</section>
+<section xml:id="_notion_de_sous_systeme">
+<title>Notion de sous-systeme</title>
+<formalpara>
+<title>Définition</title>
+<para>Un sous-système est un sous-ensemble du système qui constitue lui-même un système avec
+ses propres entrées, sorties et fonction de transformation.</para>
+</formalpara>
+<simpara>Cette notion devient plus claire dans les systèmes où les interactions internes
+(entre ses propres éléments) prennent une forme hiérarchique. Elle permet
+de se focaliser sur un sous-système (analyse, conception, amélioration, etc.).</simpara>
+<formalpara>
+<title>Exemple : l&#8217;université</title>
+<para>L&#8217;université est un système complexe et ouvert. Elle reçoit en entrée les nouveaux bacheliers
+prend comme elle prend les différentes ressources nécessaires. Elle offre
+en sortie des diplômés ainsi qu&#8217;un ensemble de productions scientifiques
+(livres, supports pédagogiques, articles scientifiques, brevets, etc.). Si
+on analyse ses éléments, nous allons trouver qu&#8217;elle se compose d&#8217;un ensemble
+de faculté. Chaque faculté peut être vue comme un système. Elle vise les
+mêmes objectifs mais pour un ensemble défini de spécialités. A son tour,
+la faculté se compose de plusieurs départements. Chaque département vise les
+mêmes objectifs mais pour une spécialité donnée.</para>
+</formalpara>
+</section>
+<section xml:id="_les_sous_systemes_dun_point_de_vue_organisationnel">
+<title>Les sous-systemes d&#8217;un point de vue organisationnel</title>
+<simpara>Les organisations de manière générale sont structurées selon la fonction
+de ses éléments (on parle de l&#8217;approche fonctionnelle). Selon cette approche,
+les éléments qui exercent la même fonction sont regroupés ensemble.</simpara>
+<simpara>Cette structure est représentée en utilisant des organigrammes. Ces derniers
+permettent de montrer les différents services de l&#8217;organisation (sous-systèmes)
+ainsi que les liens hiérarchiques entre eux.</simpara>
+<simpara>Selon cette vision, un poste de travail appartient à un seul élément
+de la structure : Le travail est spécialisé et chaque poste est doté
+d&#8217;un ensemble fini de fonctions (ou tâches) à accomplir.</simpara>
+<formalpara>
+<title>Exemple</title>
+<para>Une entreprise contient les suivants, où chaque service se spécialise en
+une seule fonction :</para>
+</formalpara>
+<itemizedlist>
+<listitem>
+<simpara>Service de production,</simpara>
+</listitem>
+<listitem>
+<simpara>Service de comptabilité,</simpara>
+</listitem>
+<listitem>
+<simpara>Service financier,</simpara>
+</listitem>
+<listitem>
+<simpara>Service maintenance,</simpara>
+</listitem>
+<listitem>
+<simpara>Gestion des ressources humaines,</simpara>
+</listitem>
+<listitem>
+<simpara>La direction.</simpara>
+</listitem>
+</itemizedlist>
+<figure>
+<title>Organigramme d&#8217;une petite entreprise</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/Organigramme.jpeg"/>
+</imageobject>
+<textobject><phrase>Organigramme d&#8217;une petite entreprise</phrase></textobject>
+</mediaobject>
+</figure>
+</section>
+<section xml:id="_les_sous_systemes_dun_point_de_vue_informationnel">
+<title>Les sous-systemes d&#8217;un point de vue informationnel</title>
+<simpara>Comme pour la vision organisationnelle, un système pour être décomposé
+en sous-systèmes selon le type des informations manipulées.</simpara>
+<figure>
+<title>Pyramide de Le Moigne</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/Lemoigne.jpeg"/>
+</imageobject>
+<textobject><phrase>Pyramide de Le Moigne</phrase></textobject>
+</mediaobject>
+</figure>
+<section xml:id="_le_système_de_pilotage">
+<title>Le système de pilotage</title>
+<simpara>Le système de pilotage définit les missions et les objectifs, organise
+l&#8217;emploi des moyens, et contrôle l&#8217;exécution des travaux. Ces tâches
+nécessitent des informations globales, abrégées et condensées pour refléter
+le fonctionnement de tout le système sur une période donnée ou durant un
+cycle donné.</simpara>
+<simpara>en se basant sur ces informations et sur les décisions prises, il contrôle
+le système opérant en lui fournissant des informations nécessaires pour
+la planification de son fonctionnement.</simpara>
+<formalpara>
+<title>Exemple :</title>
+<para>Dans une usine, pour décider la quantité à produire d&#8217;un produit donné, le
+système de pilotage fait référence, par exemple, à la quantité produite
+durant l&#8217;an dernier. Cette information est globale (parce qu&#8217;elle couvre
+tout le processus de production) et condensée (elle regroupe les données
+de toute une année).</para>
+</formalpara>
+</section>
+<section xml:id="_le_système_opérant">
+<title>Le système opérant</title>
+<simpara>Le système opérant est l&#8217;ensemble des moyens humains, matériels,
+organisationnels qui exécutent les ordres du système de pilotage. Ces
+ordres sont lui fuornis selon des conventions claires et des représentations
+compréhensibles.</simpara>
+<simpara>Il assure le fonctionnement du système (la fonction de transformation).
+Durant son activité (continue), il produit une quantité énorme d&#8217;informations
+locales et détaillées.</simpara>
+<formalpara>
+<title>Exemple</title>
+<para>Dans une usine, et durant son activité, un employé prépare une fiche de panne
+pour une machine qui l&#8217;utilise. Cette information (la machine X est en panne)
+est une information détaillée (elle concerne une seule étape de production) et
+locale (elle ne concerne qu&#8217;un seul atelier).</para>
+</formalpara>
+</section>
+<section xml:id="_le_systeme_dinformation">
+<title>Le systeme d&#8217;information</title>
+<simpara>C&#8217;est l&#8217;ensemble des ressources humaines, techniques et financières qui
+fournissent, utilisent, compilent, traitent et distribuent l&#8217;information
+de l&#8217;organisation. Il alimente l&#8217;organisation en informations en étant
+la passerelle obligatoire par toutes les informations de l&#8217;organisation.</simpara>
+<simpara>Il achemine les informations du Système Opérant vers le Système de Pilotage.
+Durant cette diffusion, il doit les transformer (les traiter) en appliquant
+les différentes approches statistiques et d&#8217;analyse. Autrement, le Système
+de Pilotage ne sera pas en mesure de les exploiter sous leur forme brute.</simpara>
+<simpara>Il achemine aussi les informations du Système de Pilotage (les ordres et
+les stratégies) vers le Système Opérant. Durant cette diffusion, il doit
+assurer que chaque élément du Système Opérant reçoit une information
+localisée qui le concerne et qu&#8217;il peut exploiter.</simpara>
+<simpara>Le Système d&#8217;Information permet aussi d&#8217;effectuer des échanges d&#8217;informations
+avec l&#8217;environnement de l&#8217;organisation. Ces échanges peuvent être de
+différents formats et pour différentes raisons. Ils peuvent être initiés
+par l&#8217;organisation (envoie d&#8217;une commande à un fournisseur) ou par
+l&#8217;environnement (nouvelle loi communiquée par la direction des impôts).</simpara>
+</section>
+</section>
+<section xml:id="_fonctions_du_système_dinformation_dans_lorganisation">
+<title>Fonctions du Système d&#8217;Information dans l&#8217;organisation</title>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>La collecte de l&#8217;information,</simpara>
+</listitem>
+<listitem>
+<simpara>La mémorisation de l&#8217;information,</simpara>
+</listitem>
+<listitem>
+<simpara>Le traitement de l&#8217;information,</simpara>
+</listitem>
+<listitem>
+<simpara>La diffusion de l&#8217;information.</simpara>
+</listitem>
+</orderedlist>
+</section>
+<section xml:id="_apport_du_système_dinformation_pour_lorganisation">
+<title>Apport du Système d&#8217;Information pour l&#8217;organisation</title>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Une prise de décision avec plus de certitude et d&#8217;objectivité : en offrant
+des informations correctes, précises et d&#8217;actualité (au bon moment) aux décideurs
+au niveau de Système de Pilotage.</simpara>
+</listitem>
+<listitem>
+<simpara>Une meilleure planification des objectifs : en offrant une meilleure communication
+entre le Système de Pilotage et le Système Opérant.</simpara>
+</listitem>
+<listitem>
+<simpara>Prise en considération et évolution suivant l&#8217;environnement externe :
+en offrant la possibilité d&#8217;avoir des échanges informationnels rapides
+et précis avec les partenaires et les composants de l&#8217;environnement.</simpara>
+</listitem>
+<listitem>
+<simpara>Une meilleure collaboration et coopération entre les différents sous-systèmes.</simpara>
+</listitem>
+</orderedlist>
+</section>
+<section xml:id="_laspect_statique_et_laspect_dynamique_dun_système_dinformation">
+<title>L&#8217;aspect statique et l&#8217;aspect dynamique d&#8217;un Système d&#8217;Information</title>
+<simpara>Le Système d&#8217;Information, suivant ses fonctions, peut être réparti
+en deux parties :</simpara>
+<section xml:id="_laspect_statique">
+<title>L&#8217;aspect statique</title>
+<simpara>La fonction de mémorisation d&#8217;un Système d&#8217;Information se traduit par :</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>L&#8217;enregistrement des faits dans un ensemble qui s&#8217;appellera base de données,</simpara>
+</listitem>
+<listitem>
+<simpara>L&#8217;enregistrement se fait en respectant des structures, des règles et des
+contraintes auxquelles doivent répondre ces informations dans un ensemble
+qui s&#8217;appellera modèle de données.</simpara>
+</listitem>
+</orderedlist>
+</section>
+<section xml:id="_laspect_dynamique">
+<title>L&#8217;aspect dynamique</title>
+<simpara>Les fonctions de collecte, traitement et de transmission qui se traduisent par :</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Mettre à jour les informations (ajout, suppression, modification),</simpara>
+</listitem>
+<listitem>
+<simpara>Modification des structures et des règles suivant l&#8217;évolution de l&#8217;organisation.</simpara>
+</listitem>
+</orderedlist>
+<formalpara>
+<title>Analogie en Informatique</title>
+<para>La meilleure analogie pour comprendre cette répartition est la notion
+d&#8217;algorithmes. Chaque algorithme se compose de deux parties : les variables
+et le prgramme principal (avec les fonctions). Les variables permettent
+de mémoriser les données manipulées par le programme. Sans traitement,
+ces variables restent sans changement (d&#8217;où l&#8217;appellation statique). Le
+programme principal est la partie exécutable (d&#8217;où l&#8217;appellation dynamique).
+Son rôle est d&#8217;appliquer l&#8217;ensemble des traitements sur les données (la partie
+statique).</para>
+</formalpara>
+</section>
+</section>
+<section xml:id="_système_dinformation_automatisable_sia">
+<title>Système d&#8217;Information Automatisable (SIA)</title>
+<simpara>Chaque organisation possède un Système d&#8217;Information. Sans un Système d&#8217;Information,
+il sera difficile d&#8217;imaginer une forme d&#8217;organisation, d&#8217;activité et de contrôle.
+La question traitée dans cette section est : est-il possible d&#8217;automatiser
+tout le système d&#8217;Information d&#8217;une organisation ? Pour répondre à cette question,
+il est nécessaire de voir la nature des différentes actions dans l&#8217;organisation
+et la possibilité de les traduire en programmes informatiques.</simpara>
+<section xml:id="_types_des_actions">
+<title>Types des actions</title>
+<simpara>Selon la théorie de Simon sur la rationnalité limitée dans la prise de décision,
+les actions peuvent etre classifiées en deux types :</simpara>
+<section xml:id="_actions_programmees_programmables">
+<title>Actions programmees (programmables)</title>
+<simpara>Une action programmable est chaque action dans laquelle les sorties sont
+determinées de la même manière à partir des entrées. C&#8217;est-à-dire, les mêmes
+entrées donneront toujours les mêmes sorties.</simpara>
+</section>
+<section xml:id="_décisions">
+<title>Décisions</title>
+<simpara>Une décision est une action dans laquelle les entrées ne sont pas suffisantes
+pour déterminer les sorties. Ainsi, les mêmes entrées donnent des sorties
+différentes. En effet, un décideur peut être influencé par les informations
+en entrée, les biais cognitifs (le processus de raisonnement lui-même), et
+le manque de temps. Par conséquent, un décideur peut prendre une décision
+"satisfaisante" si la prise d&#8217;une décision "optimale" s&#8217;avère coûteuse.</simpara>
+</section>
+</section>
+<section xml:id="_partie_automatisable_dun_système_dinformation">
+<title>Partie automatisable d&#8217;un Système d&#8217;Information</title>
+<simpara>Malgré l&#8217;avancée technologique, il n&#8217;est pas possible d&#8217;automatiser tout le
+système d&#8217;information d&#8217;une organisation. Seule une partie des traitements
+pourra être implémentée sous forme de programmes informatiques (les actions
+programmables).</simpara>
+<simpara>Il est aussi possible qu&#8217;une partie de ces actions ne sera pas concernée
+par l&#8217;automatisation pour des raisons organisationnelles (pas prioritaires,
+manque de financement, manque du personnel dans le service informatique, etc.).</simpara>
+<simpara>Ainsi, nous pouvons définir la partie automatisable d&#8217;un Système d&#8217;Information
+par "l&#8217;ensemble des actions programmées (programmables) concernées
+par une décision d&#8217;automatisation."</simpara>
+<figure>
+<title>Système Automatisable d&#8217;Information (Partie Automatisable)</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/SAI.jpeg"/>
+</imageobject>
+<textobject><phrase>Partie Automatisable</phrase></textobject>
+</mediaobject>
+</figure>
+</section>
+<section xml:id="_structure_et_fonctions_dun_système_dinformation_automatisé">
+<title>Structure et fonctions d&#8217;un système d&#8217;information automatisé</title>
+<simpara>La structure et les fonctions d&#8217;un Système d&#8217;Information automatisé peuvent
+être résumées dans le schéma suivant :</simpara>
+<figure>
+<title>Structure et fonctions d&#8217;un systeme d&#8217;information automatisé</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/SI.jpeg"/>
+</imageobject>
+<textobject><phrase>Structure et fonctions d&#8217;un systeme d&#8217;information automatisé</phrase></textobject>
+</mediaobject>
+</figure>
+</section>
+</section>
+<section xml:id="_vers_le_e_buisness">
+<title>Vers le e-Buisness</title>
+<section xml:id="_les_types_des_systèmes_en_e_buisness">
+<title>Les types des systèmes en e-Buisness</title>
+<simpara>Les types des systèmes en e-Buisness sont généralement basés sur les
+types des relations commerciales qu&#8217;ils assurent :</simpara>
+<section xml:id="_b_to_b_b2b">
+<title>B to B (B2B)</title>
+<simpara>On dit qu&#8217;un système assure une relation de type B2B s&#8217;il assure une relation
+d&#8217;entreprise à entreprise.</simpara>
+</section>
+<section xml:id="_b_to_c_b2c">
+<title>B to C (B2C)</title>
+<simpara>On dit qu&#8217;un système d&#8217;information assure une relation B2C lorsqu&#8217;il assure
+une relation commerciale d&#8217;entreprise à client (grand public). Ces
+systèmes sont connus aussi sous le nom e-Commerce (commerce électronique)
+dont la définition ne se limite pas au seul acte de vente mais couvre tous
+les échanges (demande, devis, livraison facturation, service après vente).</simpara>
+</section>
+<section xml:id="_b_to_a_b2a">
+<title>B to A (B2A)</title>
+<simpara>Cette appelation est utilisée lorsuq&#8217;il s&#8217;agit d&#8217;une relation de l&#8217;entreprise
+à l&#8217;administration (secteur public).</simpara>
+</section>
+</section>
+<section xml:id="_limportance_du_e_buisness">
+<title>L&#8217;importance du e-Buisness</title>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Rendre plus efficace la relation avec les clients et les partenaires.</simpara>
+</listitem>
+<listitem>
+<simpara>Développer de nouvelles opportunités d&#8217;affaires.</simpara>
+</listitem>
+<listitem>
+<simpara>Fluidifier de la circulation de l&#8217;information interne.</simpara>
+</listitem>
+<listitem>
+<simpara>Mettre sous contrôle les différents processus de l&#8217;entreprise.</simpara>
+</listitem>
+</orderedlist>
+</section>
+</section>
+<section xml:id="_conclusion">
+<title>Conclusion</title>
+<simpara>Dans ce chapitre, nous avons vu la notion de Système d&#8217;Information ainsi
+que les concepts relatifs. Comprendre ces notions est essentiel pour
+pouvoir concevoir, réaliser et manipuler un système d&#8217;information.</simpara>
+<simpara>Le Système d&#8217;Information prend davantage d&#8217;importance pour les entreprises.
+En effet, le Système d&#8217;Information peut réduire considérablement les coûts
+comme il permet d&#8217;améliorer les performances au sein de l&#8217;entreprise.</simpara>
+<simpara>Avant d&#8217;entamer la conception des deux parties (statique et dynamique) d&#8217;un
+Système d&#8217;Information, nous devons introduire d&#8217;abord la notion
+de "modélisation"; une compétence clé pour la conception des SI.</simpara>
+</section>
+</book>
