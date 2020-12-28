@@ -11,8 +11,8 @@ Tout système (ou organisation) dispose d'un système d'information.
 Sans un système d'information, il sera difficile d'imaginer 
 des actions organisées. La présence d'un système d'information implique,
 à son tour, la circulation d'information : la coordination, la collaboration 
-et la coopréation entre les différentes composantes du système nécessitent
-l'échange d'information entre ces composantes.
+et la coopération entre les différentes composantes du système nécessitent
+l'échange d'informations entre ces composantes.
 
 Comprendre ces échanges est un élément essentiel durant l'automatisation
 du Système d'Information (ou de l'une de ses parties). Cette compréhension
@@ -24,11 +24,11 @@ Pour pouvoir comprendre ces flux, il est important de faire recours à un
 modèle qui permet de les représenter d'une manière exhaustive, claire, et 
 précise. Le Diagramme des flux d'Information est l'un de ces modèles. Comme
 son nom l'indique, ce diagramme se focalise exclusivement sur les flux 
-d'information effectuées dans le cadre d'un processus donné au sein de 
+d'informations effectués dans le cadre d'un processus donné au sein de 
 l'organisation.
 
 L'objectif de ce chapitre est d'introduire le Diagramme des Flux
-d'Information.
+d'Informations.
 
 === Modèle et modélisation
 
@@ -75,11 +75,11 @@ référencier le résultat de ce processus.
 Un modèle possède trois propriétés :
 
 * **la figuration :** les concepts généraux sont représentés par des 
-figures. Ces figures doivent refleter ces concepts comme elles doivent 
+figures. Ces figures doivent refléter ces concepts comme elles doivent 
 permettre de représenter leurs propriétés.
-* **l'imitation :** le modèle imite l'environnement dans se compléxité, ainsi,
+* **l'imitation :** le modèle imite l'environnement dans sa complexité, ainsi,
 il doit reprendre les relations perçues entre les différents concepts.
-* **la formalisation :** le modèle propse une structuration de la réalité.
+* **la formalisation :** le modèle propose une structuration de la réalité.
 Cette dernière est plus complexe et beaucoup moins organisée.
 
 ==== Utilité des modèles 
@@ -88,12 +88,12 @@ Un modèle sert à :
 
 * **Communiquer :** le modèle permet de communiquer notre vision et notre
 compréhension vers :
-** Les clients : pour voir est-ce que nous comprennons bien la réalité,
+** Les clients : pour voir est-ce que nous comprenons bien la réalité,
 ** Les autres concepteurs et développeurs : dans le cadre de réalisation
 dans un système d'information automatisé, il est nécessaire de partager la 
 même vision sur le système réel.
 * **Préparer la réalisation :** le modèle permet de lier le domaine étudié
-au monde informatique, en effet, l'utilisation de plsuieurs modèles suivants
+au monde informatique, en effet, l'utilisation de plusieurs modèles suivants
 une approche bien définie peut guider le passage d'une réalité (plus 
 précisément d'une vision ou d'une compréhension de la réalité) vers une
 représentation informatique (logiciels et données informatisées).
@@ -122,7 +122,7 @@ défini par délimiter l'étude à une activité du système.
 * **Acteur :** c'est un émetteur ou récepteur d'un flux d'information
 dans le cadre de l'activité étudiée. Selon le cas d'étude, il peut s'agir de :
 ** Une catégorie de personnes (par exemple : étudiant, client, citoyen),
-** Un service (par exempe : réception, service comptabilité, service scolarité),
+** Un service (par exemple : réception, service comptabilité, service scolarité),
 ** Une autre organisation.
 
 Selon leurs positions par rapport au domaine d'étude, on définit les acteurs
@@ -131,10 +131,10 @@ internes et les acteurs externes.
 * **Flux d'information :** Un flux désigne un transfert d’information entre 
 deux acteurs. Un flux part d’un acteur source pour aboutir à un acteur but.
 Un flux d'information peut être
-** Un flux d'information pour échange d'information : dans ce cas, l'objectif
+** Un flux d'information pour échange d'informations : dans ce cas, l'objectif
 est la communication.
 ** Un flux d'information associé à un flux physique ou financier : dans ce
-cas, on s'intéresse à l'information et non pas au flux physique lui même.
+cas, on s'intéresse à l'information et non pas au flux physique lui-même.
 
 **Exemple :** 
 
@@ -169,8 +169,7 @@ internes.
 
 . Définir précisément le domaine d'étude, c'est-à-dire, l'activité concernée.
 . Repérer les acteurs en distinguant les acteurs externes des acteurs internes,
-. Repérer les flux entre les acteurs en les ordonnant si c’est utile à 
-une meilleure compréhension de l’activité,
+. Repérer les flux entre les acteurs en les ordonnant (numérotation chronologique)
 . Tracer le diagramme de flux.
 
 
@@ -202,7 +201,7 @@ vente (showroom) et d'un magasin de stock (qui se situe en dehors de la ville)_ 
 peuvent être considérés comme des acteurs potentiels.
 ** Aucune activité n'est définie.
 * _Pour acheter des produits_ :
-** Déinfition de l'activité étudiée : l'achat.
+** Définfition de l'activité étudiée : l'achat.
 * _le client doit se présenter au point de vente et présenter un bon de 
 commande détaillé avec le paiement nécessaire (en espèce ou par chèque bancaire)_ :
 ** Ce passage décrit deux flux :
@@ -232,14 +231,14 @@ Cette dernière est essentielle pour pouvoir concevoir et mettre en oeuvre
 un système d'informationn automatisé.
 
 Pour démontrer cette notion, un premier modèle a été présenté. Il s'agit
-du Diagramme des Flux d'Information qui permet de "modéliser" la circulation
+du Diagramme des Flux d'Informations qui permet de "modéliser" la circulation
 de l'information dans l'organisation. Malgré sa simplicité, ce diagramme
 respecte tous les éléments d'un modèle complet. Il imite la circulation
 de l'information en se basant sur une représentation graphique claire et
 précise.
 
 Les notions de base étudiées concernant les modèles
-et la modélisation resteront valable pour tous les modèles qui seront 
+et la modélisation resteront valables pour tous les modèles qui seront 
 présentés durant ce cours.
 
 

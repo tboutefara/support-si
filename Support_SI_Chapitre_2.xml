@@ -28,8 +28,8 @@
 Sans un système d&#8217;information, il sera difficile d&#8217;imaginer
 des actions organisées. La présence d&#8217;un système d&#8217;information implique,
 à son tour, la circulation d&#8217;information : la coordination, la collaboration
-et la coopréation entre les différentes composantes du système nécessitent
-l&#8217;échange d&#8217;information entre ces composantes.</simpara>
+et la coopération entre les différentes composantes du système nécessitent
+l&#8217;échange d&#8217;informations entre ces composantes.</simpara>
 <simpara>Comprendre ces échanges est un élément essentiel durant l&#8217;automatisation
 du Système d&#8217;Information (ou de l&#8217;une de ses parties). Cette compréhension
 permet d&#8217;identifier les différents "acteurs" impliqués dans un processus,
@@ -39,10 +39,10 @@ qui dirigent le processus en question.</simpara>
 modèle qui permet de les représenter d&#8217;une manière exhaustive, claire, et
 précise. Le Diagramme des flux d&#8217;Information est l&#8217;un de ces modèles. Comme
 son nom l&#8217;indique, ce diagramme se focalise exclusivement sur les flux
-d&#8217;information effectuées dans le cadre d&#8217;un processus donné au sein de
+d&#8217;informations effectués dans le cadre d&#8217;un processus donné au sein de
 l&#8217;organisation.</simpara>
 <simpara>L&#8217;objectif de ce chapitre est d&#8217;introduire le Diagramme des Flux
-d&#8217;Information.</simpara>
+d&#8217;Informations.</simpara>
 </section>
 <section xml:id="_modèle_et_modélisation">
 <title>Modèle et modélisation</title>
@@ -103,15 +103,15 @@ référencier le résultat de ce processus.</simpara>
 <itemizedlist>
 <listitem>
 <simpara><emphasis role="strong">la figuration :</emphasis> les concepts généraux sont représentés par des
-figures. Ces figures doivent refleter ces concepts comme elles doivent
+figures. Ces figures doivent refléter ces concepts comme elles doivent
 permettre de représenter leurs propriétés.</simpara>
 </listitem>
 <listitem>
-<simpara><emphasis role="strong">l&#8217;imitation :</emphasis> le modèle imite l&#8217;environnement dans se compléxité, ainsi,
+<simpara><emphasis role="strong">l&#8217;imitation :</emphasis> le modèle imite l&#8217;environnement dans sa complexité, ainsi,
 il doit reprendre les relations perçues entre les différents concepts.</simpara>
 </listitem>
 <listitem>
-<simpara><emphasis role="strong">la formalisation :</emphasis> le modèle propse une structuration de la réalité.
+<simpara><emphasis role="strong">la formalisation :</emphasis> le modèle propose une structuration de la réalité.
 Cette dernière est plus complexe et beaucoup moins organisée.</simpara>
 </listitem>
 </itemizedlist>
@@ -125,7 +125,7 @@ Cette dernière est plus complexe et beaucoup moins organisée.</simpara>
 compréhension vers :</simpara>
 <itemizedlist>
 <listitem>
-<simpara>Les clients : pour voir est-ce que nous comprennons bien la réalité,</simpara>
+<simpara>Les clients : pour voir est-ce que nous comprenons bien la réalité,</simpara>
 </listitem>
 <listitem>
 <simpara>Les autres concepteurs et développeurs : dans le cadre de réalisation
@@ -136,7 +136,7 @@ même vision sur le système réel.</simpara>
 </listitem>
 <listitem>
 <simpara><emphasis role="strong">Préparer la réalisation :</emphasis> le modèle permet de lier le domaine étudié
-au monde informatique, en effet, l&#8217;utilisation de plsuieurs modèles suivants
+au monde informatique, en effet, l&#8217;utilisation de plusieurs modèles suivants
 une approche bien définie peut guider le passage d&#8217;une réalité (plus
 précisément d&#8217;une vision ou d&#8217;une compréhension de la réalité) vers une
 représentation informatique (logiciels et données informatisées).</simpara>
@@ -176,7 +176,7 @@ dans le cadre de l&#8217;activité étudiée. Selon le cas d&#8217;étude, il pe
 <simpara>Une catégorie de personnes (par exemple : étudiant, client, citoyen),</simpara>
 </listitem>
 <listitem>
-<simpara>Un service (par exempe : réception, service comptabilité, service scolarité),</simpara>
+<simpara>Un service (par exemple : réception, service comptabilité, service scolarité),</simpara>
 </listitem>
 <listitem>
 <simpara>Une autre organisation.</simpara>
@@ -193,12 +193,12 @@ deux acteurs. Un flux part d’un acteur source pour aboutir à un acteur but.
 Un flux d&#8217;information peut être</simpara>
 <itemizedlist>
 <listitem>
-<simpara>Un flux d&#8217;information pour échange d&#8217;information : dans ce cas, l&#8217;objectif
+<simpara>Un flux d&#8217;information pour échange d&#8217;informations : dans ce cas, l&#8217;objectif
 est la communication.</simpara>
 </listitem>
 <listitem>
 <simpara>Un flux d&#8217;information associé à un flux physique ou financier : dans ce
-cas, on s&#8217;intéresse à l&#8217;information et non pas au flux physique lui même.</simpara>
+cas, on s&#8217;intéresse à l&#8217;information et non pas au flux physique lui-même.</simpara>
 </listitem>
 </itemizedlist>
 </listitem>
@@ -267,8 +267,7 @@ internes.</simpara>
 <simpara>Repérer les acteurs en distinguant les acteurs externes des acteurs internes,</simpara>
 </listitem>
 <listitem>
-<simpara>Repérer les flux entre les acteurs en les ordonnant si c’est utile à
-une meilleure compréhension de l’activité,</simpara>
+<simpara>Repérer les flux entre les acteurs en les ordonnant (numérotation chronologique)</simpara>
 </listitem>
 <listitem>
 <simpara>Tracer le diagramme de flux.</simpara>
@@ -316,7 +315,7 @@ peuvent être considérés comme des acteurs potentiels.</simpara>
 <simpara><emphasis>Pour acheter des produits</emphasis> :</simpara>
 <itemizedlist>
 <listitem>
-<simpara>Déinfition de l&#8217;activité étudiée : l&#8217;achat.</simpara>
+<simpara>Définfition de l&#8217;activité étudiée : l&#8217;achat.</simpara>
 </listitem>
 </itemizedlist>
 </listitem>
@@ -387,13 +386,13 @@ sur le flux physique (les produits).</simpara>
 Cette dernière est essentielle pour pouvoir concevoir et mettre en oeuvre
 un système d&#8217;informationn automatisé.</simpara>
 <simpara>Pour démontrer cette notion, un premier modèle a été présenté. Il s&#8217;agit
-du Diagramme des Flux d&#8217;Information qui permet de "modéliser" la circulation
+du Diagramme des Flux d&#8217;Informations qui permet de "modéliser" la circulation
 de l&#8217;information dans l&#8217;organisation. Malgré sa simplicité, ce diagramme
 respecte tous les éléments d&#8217;un modèle complet. Il imite la circulation
 de l&#8217;information en se basant sur une représentation graphique claire et
 précise.</simpara>
 <simpara>Les notions de base étudiées concernant les modèles
-et la modélisation resteront valable pour tous les modèles qui seront
+et la modélisation resteront valables pour tous les modèles qui seront
 présentés durant ce cours.</simpara>
 </section>
 </article>
