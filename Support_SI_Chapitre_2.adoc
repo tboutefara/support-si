@@ -116,5 +116,130 @@ les différents acteurs durant cette activité.
 
 ==== Eléments de base
 
-* **Le domaine étudié :** c'est le domaine 
+* **Domaine étudié :** c'est le domaine concerné par l'étude. Il est 
+défini par délimiter l'étude à une activité du système.
+
+* **Acteur :** c'est un émetteur ou récepteur d'un flux d'information
+dans le cadre de l'activité étudiée. Selon le cas d'étude, il peut s'agir de :
+** Une catégorie de personnes (par exemple : étudiant, client, citoyen),
+** Un service (par exempe : réception, service comptabilité, service scolarité),
+** Une autre organisation.
+
+Selon leurs positions par rapport au domaine d'étude, on définit les acteurs
+internes et les acteurs externes.
+
+* **Flux d'information :** Un flux désigne un transfert d’information entre 
+deux acteurs. Un flux part d’un acteur source pour aboutir à un acteur but.
+Un flux d'information peut être
+** Un flux d'information pour échange d'information : dans ce cas, l'objectif
+est la communication.
+** Un flux d'information associé à un flux physique ou financier : dans ce
+cas, on s'intéresse à l'information et non pas au flux physique lui même.
+
+**Exemple :** 
+
+. Un client dépose une commande pour acheter un produit : dans ce cas, 
+il s'agit d'un flux de communication.
+. Le magasin fait la livraison des produits avec le bon de livraison : dans
+ce cas, le flux "bon de livraison" est associé au flux physique (flux des
+produits). Seul le flux d'information sera représenté sur le diagramme.
+
+==== Représentation graphique
+
+* Acteurs :
+
+.La repérsentation des acteurs (internes et externes)
+image::acteurs.jpeg[Représentation des acteurs]
+
+* Flux :
+
+.La repérsentation d'un flux entre deux acteurs (acteur 1 et acteur 2)
+image::flux_d_information.jpeg[Représentation d'un flux d'information]
+
+Les flux sont numérotés selon l'ordre chronologique.
+
+Il est possible de définir des conditions (gardes) sur un flux donné.
+
+* Domaine d'étude :
+
+Le domaine d'étude est représenté par un rectangle qui regroupe les acteurs
+internes.
+
+=== Démarche à suivre
+
+. Définir précisément le domaine d'étude, c'est-à-dire, l'activité concernée.
+. Repérer les acteurs en distinguant les acteurs externes des acteurs internes,
+. Repérer les flux entre les acteurs en les ordonnant si c’est utile à 
+une meilleure compréhension de l’activité,
+. Tracer le diagramme de flux.
+
+
+=== Exemple
+
+**Enoncé**
+
+Un magasin de vente des matériaux de construction dispose d'un point de 
+vente (showroom) et d'un magasin de stock (qui se situe en dehors de la ville). 
+Pour acheter des produits, le client doit se présenter au point de vente 
+et présenter un bon de commande détaillé avec le paiement nécessaire (en 
+espèce ou par chèque bancaire). Le responsable des ventes lui donne, en 
+contrepartie, une facture signée. Le client se dirige, ensuite, vers le 
+magasin de stock. En recevant la facture, le responsable des stocks fournit 
+au client les produits mentionnés ainsi que la facture avec la mention "Livrée".
+
+**Solution**
+
+.Solution : Diagramme des flux d'Information
+image::exemple_diagramme_flux.jpeg[Diagremme des Flux d'Information]
+
+**Détails de la solution :**
+
+La description de l'activité nous frounit les éléments suivants :
+
+* _Un magasin de vente des matériaux de construction dispose d'un point de 
+vente (showroom) et d'un magasin de stock (qui se situe en dehors de la ville)_ :
+** Cette partie décrit le système global et ses sous-systèmes. Ces derniers
+peuvent être considérés comme des acteurs potentiels.
+** Aucune activité n'est définie.
+* _Pour acheter des produits_ :
+** Déinfition de l'activité étudiée : l'achat.
+* _le client doit se présenter au point de vente et présenter un bon de 
+commande détaillé avec le paiement nécessaire (en espèce ou par chèque bancaire)_ :
+** Ce passage décrit deux flux :
+*** Flux financier (monétaire) : ce flux ne sera pas représenté, 
+*** Flux d'information : sous forme du "bon de commande". Ce flux contient
+toutes les informations nécessaires sur le flux monétaire.
+** Le passage définit deux acteurs :
+*** Le client : comme un acteur externe,
+*** Le showroom : comme un acteur interne.
+* _Le responsable des ventes lui donne, en contrepartie, une facture signée_ :
+** Ce passage définit un deuxième flux comme réponse au premier flux. 
+C'est-à-dire, il s'agit des mêmes acteurs avec un flux dans le sens inverse.
+* _En recevant la facture, le responsable des stocks fournit 
+au client les produits mentionnés ainsi que la facture avec la mention "Livrée"_ :
+** Ce passage définit deux flux :
+*** _En recevant la facture_ définit un premier flux : s'il y a un acteur récepteur
+alors il y a forcément un acteur émetteur. Dans ce cas, l'affirmation qui
+précède ce passage précise que le client se déplace au magasin.
+*** _ainsi que la facture avec la mention "Livrée"_ définit le deuxième flux 
+en réponse au flux précédent. Il contient toutes les informations nécessaires
+sur le flux physique (les produits).
+
+=== Conclusion
+
+Dans ce chapitre, nous avons entâmé la notion de modèle et de modélisation.
+Cette dernière est essentielle pour pouvoir concevoir et mettre en oeuvre
+un système d'informationn automatisé.
+
+Pour démontrer cette notion, un premier modèle a été présenté. Il s'agit
+du Diagramme des Flux d'Information qui permet de "modéliser" la circulation
+de l'information dans l'organisation. Malgré sa simplicité, ce diagramme
+respecte tous les éléments d'un modèle complet. Il imite la circulation
+de l'information en se basant sur une représentation graphique claire et
+précise.
+
+Les notions de base étudiées concernant les modèles
+et la modélisation resteront valable pour tous les modèles qui seront 
+présentés durant ce cours.
+
 
