@@ -1,0 +1,120 @@
+= Cours de Système d'Information: Chapitre 2 - Les flux d'information
+Tarek Boutefara <t_boutefara@univ-jijel.dz>
+v0.1, 2020-12-25
+:imagesdir: ./images/
+:sectnums:
+:toc:
+
+=== Introduction
+
+Tout système (ou organisation) dispose d'un système d'information. 
+Sans un système d'information, il sera difficile d'imaginer 
+des actions organisées. La présence d'un système d'information implique,
+à son tour, la circulation d'information : la coordination, la collaboration 
+et la coopréation entre les différentes composantes du système nécessitent
+l'échange d'information entre ces composantes.
+
+Comprendre ces échanges est un élément essentiel durant l'automatisation
+du Système d'Information (ou de l'une de ses parties). Cette compréhension
+permet d'identifier les différents "acteurs" impliqués dans un processus,
+les différents échanges informationnels entre eux, et les règles et conditions
+qui dirigent le processus en question.
+
+Pour pouvoir comprendre ces flux, il est important de faire recours à un
+modèle qui permet de les représenter d'une manière exhaustive, claire, et 
+précise. Le Diagramme des flux d'Information est l'un de ces modèles. Comme
+son nom l'indique, ce diagramme se focalise exclusivement sur les flux 
+d'information effectuées dans le cadre d'un processus donné au sein de 
+l'organisation.
+
+L'objectif de ce chapitre est d'introduire le Diagramme des Flux
+d'Information.
+
+=== Modèle et modélisation
+
+==== Notion de modèle
+
+.Définition 1
+"Un modèle est une représentation artificielle de ce que l'on pense avoir 
+compris du monde environnant".
+
+.Définition 2
+"Un modèle est une abstraction de la réalité".
+
+.Définition 3
+"Un modèle est une vue subjective mais pertinente de la réalité".
+
+Ces définitions nous permettent de déduire les points suivants :
+
+* **Un modèle est une représentation ou abstraction :** cela veut dire qu'un modèle
+dépende d'une réalité ou d'un élément existant. Le modèle est une projection
+de cet élément suivant une "représentation" ou un "formalisme" donné (artificielle).
+* **Un modèle concerne une réalité :** ainsi, il est nécessaire d'avoir accès 
+à l'ensemble des caractéristiques et des propriétés de cette réalité pour
+pouvoir la modéliser.
+* **La qualité d'un modèle dépend de notre compréhension de la réalité :**
+si le concepteur ne dispose pas des ressources suffisantes sur la réalité,
+la méthodologie suivie et les outils utilisés, le modèle construit verra
+sa "qualité" réduite.
+* **Un modèle est conçu suivant les besoins du concepteur :** il n'est pas
+pratique (ou même possible) de proposer un modèle qui reprend toute la réalité.
+Un modèle se focalise sur un aspect ou une facette de la réalité selon les
+besoins du concepteur et selon sa vision. 
+
+==== La modélisation
+
+.Définition
+Il s'agit d'un processus qui consiste à identifier les caractéristiques 
+intéressantes d'une entité, en vue d'une utilisation précise.
+
+Le terme "modélisation" ou "abstraction" peut, aussi, être utilisé pour
+référencier le résultat de ce processus.
+
+==== Les propriétés d'un modèle
+
+Un modèle possède trois propriétés :
+
+* **la figuration :** les concepts généraux sont représentés par des 
+figures. Ces figures doivent refleter ces concepts comme elles doivent 
+permettre de représenter leurs propriétés.
+* **l'imitation :** le modèle imite l'environnement dans se compléxité, ainsi,
+il doit reprendre les relations perçues entre les différents concepts.
+* **la formalisation :** le modèle propse une structuration de la réalité.
+Cette dernière est plus complexe et beaucoup moins organisée.
+
+==== Utilité des modèles 
+
+Un modèle sert à :
+
+* **Communiquer :** le modèle permet de communiquer notre vision et notre
+compréhension vers :
+** Les clients : pour voir est-ce que nous comprennons bien la réalité,
+** Les autres concepteurs et développeurs : dans le cadre de réalisation
+dans un système d'information automatisé, il est nécessaire de partager la 
+même vision sur le système réel.
+* **Préparer la réalisation :** le modèle permet de lier le domaine étudié
+au monde informatique, en effet, l'utilisation de plsuieurs modèles suivants
+une approche bien définie peut guider le passage d'une réalité (plus 
+précisément d'une vision ou d'une compréhension de la réalité) vers une
+représentation informatique (logiciels et données informatisées).
+
+=== Diagramme des Flux d'Information
+
+==== Présentation
+
+.Définition
+Le diagramme des flux d'information permet de représenter
+les flux d’informations consiste à analyser les échanges d’informations 
+au sein du système d’information d’une organisation (par exemple : entre 
+les services , les postes de travail, etc.)et avec d’autres systèmes d’information
+(par exemple : le système d'information des partenaires, des fournisseurs, 
+de la direction des impôts, etc.).
+
+Un diagramme se focalise, généralement, sur une seule activité. 
+Il permet de modéliser la circulation des informations entre 
+les différents acteurs durant cette activité.
+
+==== Eléments de base
+
+* **Le domaine étudié :** c'est le domaine 
+
