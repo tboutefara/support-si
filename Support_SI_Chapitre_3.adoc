@@ -1,0 +1,120 @@
+= Cours de Système d'Information: Chapitre 3 - Codification et contrôle des données
+Tarek Boutefara <t_boutefara@univ-jijel.dz>
+v0.1, 2020-12-28
+:imagesdir: ./images/
+:sectnums:
+:toc:
+
+=== Introduction
+
+=== L'importance de la codification
+
+Il y a une différence entre les types de données de base offerts par l'outil
+informatique et les concepts (notions) manipulés par le Système d'Information
+de l'organisation.
+
+La codification enlève cette différence par associer des codes aux 
+différents concepts manipulés.
+
+=== Définition
+
+==== Un code
+
+Un nom abrégé ou une représentation de l'information permettant de 
+designer un objet ou un concept de manière unique.
+
+.Exemple
+// Schemas avec fleches
+
+==== Codification
+// Schema
+
+En programmatin, la codification fait reference :
+
+. Au choix des noms des variables,
+. Aux valeurs distinctives de ces variables.
+
+La codification est l'operation qui consiste a remplacer une information 
+sous sa forme naturelle par un code claire qui serait mieux adapte aux 
+besoins de l'utilisateur. 
+
+==== Caracteristiques d'une codification
+
+. Non-ambigue,
+. Facilite d'utilisation,
+. Concision,
+. Possibilite d'extension et d'insertion.
+
+=== Types de codifications
+
+==== Coditification sequentielle
+
+Associer des numeros sequentiels (consecutifs) aux informations.
+
+==== Codification par tranche
+
+Associer des tranches de codes aux categories. Chaque tranche contient
+des codes sequentiels.
+
+==== Codification articulee
+
+Utilisation des codes decoupes en zones (descripteurs). Chaque descripteur
+a une signification particuliere.
+
+==== Codification par niveau
+
+Cas particulier de la codification articulee ou les descripteurs representent 
+des niveaux.
+
+==== Codification mnemonique
+
+Abreviation de la designation en utilisant un ensemble reduit de caracteres.
+
+===== Consonants
+
+Total -> ttl
+
+===== Abreviatifs
+
+Total -> tot
+
+=== Les controles
+
+==== Definition
+
+Un controle est la verification que les caracteristiques d'une information
+sont conformes a ce qu'elles doivent etre.
+
+==== Types des controles
+
+===== Controles directs
+
+Des controles se rapportant a l'information elle-meme :
+
+.Controle de presence
+L'information figure bien sur le support.
+
+.Controle de type
+(numerique, alphanumerique, date)
+
+.Controle du codage
+(position dans la zone de saisie)
+
+===== Controles indirects
+
+Des controles qui verifient une information par comparaison a d'autres
+informations.
+
+.Controle de coherence interne
+(Codification articulee)
+
+.Controle de coherence externe
+Comparaison avec d'autres informations.
+
+==== Ordre d'execution des controles
+
+. Presence,
+. Type,
+. Codage,
+. Coherence interne,
+. Coherence externe. 
