@@ -1,0 +1,527 @@
+= Support du Cours
+:Author: Boutefara Tarek
+:Email: t_boutefara@univ-jijel.dz
+:Date: 2020-12-15 
+:Revision: 0.1.0
+:sectnums:
+:toc:
+
+<<<
+
+== Notions de base
+
+=== Information
+
+.Definition 1 :
+L'information est definie comme etant tout element de connaissance pouvant 
+être perçu par l'un des cinq sens.
+// Ajouter explication : definition generale, sans sens et sans outil 
+// il est impossible de connaitre l'information
+
+.Definition 2 :
+L'information est une indication, renseignement, precision que l'on donne 
+ou que l'on obtient sur quelqu'un ou quelque chose.
+// Ajouter explication : l'information est toujours "a propos" de quelquechose
+
+.Definition 3 :
+Une information est un element de connaissance susceptible d'être represente 
+a l'aide de conventions pour être conserve, traite ou communique.
+// Ajouter explication : la definition la plus adaptee a notre contexte
+// On s'interesse a la manipulation de l'information et non pas a sa nature
+// pour l'être humain
+
+=== Importance de l'information
+
+// Ajouter un paragraphe sur l'ere de l'information et l'importance
+// de la prise de decision
+La prise de decision est une activite quotidienne. Elle est plus importante 
+dans le milieu des organisations (et des entreprises en particulier). 
+La prise de decision se base sur une reflexion faite sur un ensemble 
+d'informations.
+// Ajouter explication : l'information doit être correcte, d'actualite, precise
+
+=== Donnees – Information – Connaissances
+// Schema
+
+.Exemple
+// L'exemple avec 5
+
+=== Systeme
+
+.Definition 1
+Un systeme est un ensemble d'elements materiels ou immateriels, en interaction, 
+organises en fonction d'un objectif. 
+
+.Definition 2
+C'est un tout constitue d'elements unis par des relations. Les elements 
+et les relations sont munis de proprietes.
+
+.Exemple 
+// Usine materiels : (machine, employes, produits), immateriels (procedures, donnees, commandes)
+
+.Representation d'un systeme
+// Schema de modelisation d'un systeme
+
+Le controle concerne l'activite, les performances et les resultats generes par le systeme.
+Ce controle est effectue par rapport a l'objectif du systeme.
+
+=== Les caracteristiques d'un systeme
+
+.Les frontiere d'un systeme
+Un systeme est un element fini dont le perimetre est une frontiere qui
+le separe de son environnement.
+// Ajouter explication sur les differents composants de ml'environnement
+
+.Le systeme ouvert et le systeme ferme
+Selon leurs interactions avec leur environnement, on distingue deux types 
+du systeme :
+
+. *Les systemes fermes :* ce sont les systemes qui n
+. *Les systemes ouverts :* ce sont les systemes qui 
+
+.Les interactions avec l'environnement
+Il interagit avec son environnement grace a des flux materiels (produits, 
+flux, financiers) et immateriels.
+
+.Les systemes generent des informations
+Le systeme genere des informations qui rendent compte de son comportement:
+. Pour son propre compte,
+. Au sein de l'environnement.
+
+=== Notion de sous-systeme
+
+Un sous-ensemble du systeme qui constitue lui meme un systeme avec
+ses propres entrees, sorties et fonction de transformation.
+
+.Exemple 
+// Departement, Faculte, universite
+// Explication de notion du sous-systeme (niveaux de details)
+
+=== Les sous-systemes d'un point de vue organisationnel
+// A completer
+
+. Exemple
+// Entreprise : service de production, service de comptabilite,
+// service maintenance
+
+=== Les sous-systemes d'un point de vue informationnel
+// Schema : pyramide de lemoigne
+
+==== Le systeme de pilotage
+
+Le systeme de pilotage definit les missions et les objectifs, organise
+l'emploi des moyens, et controle l'execution des travaux.
+
+Il controle le systeme operant.
+
+==== Le systeme operant
+
+Le systeme operant est l'ensemble des moyens humains, materiels, 
+organisationnels qui executent les ordres du systeme de pilotage.
+
+Il assure le fonctinnement du systeme global.
+
+==== Le systeme d'information
+
+C'est l'ensemble des ressources humaines, techniques et financieres qui
+fournissent, utilisent, compilent, traitent et distribuent l'information 
+de l'organisation
+
+Il alimente l'organisation en informations: il est la passerelle obligatoire
+par toutes les informations de l'organisation.
+
+=== Fonctions du Systeme d'Information dans l'organisation
+
+. La collecte de l'information,
+. La memorisation de l'information,
+. Le traitement de l'information,
+. La diffusion de l'information.
+
+=== Apport du Systeme d'Information pour l'organisation
+
+. Une prise de decision avec plus de certitude et d'objectivite,
+. Une meilleure planification des objectifs,
+. Prise en consideration et evolution suivant l'environnement externe,
+. Une meilleure collaboration et cooperation entre les differents sous-systemes.
+
+=== L'aspect statique et l'aspect dynamique d'un Systeme d'Information
+
+==== L'aspect statique
+
+La fonction de memorisation qui se traduit par :
+
+. L'enregistrement des faits dans un ensemble qui s'appellera base de donnees,
+. L'enregistrement se fait en respectant des structures, des regles et des
+contraintes auwquelles diuvent repondre ces informations dans un ensemble
+qui s'appellera modele de donnees.
+
+==== L'aspect dynamique
+
+Les fonctions de collecte, traitement et de transmission qui se traduisent par :
+
+. Mettre a jour les information (ajout, suppression, modification),
+. Modification des structures et des regles suivant l'evolution de l'organisation.
+
+=== Systeme d'Information Automatisable (SIA)
+
+==== Types des actions 
+
+Selon la theorie de Simon sur la rationnalite limitee dans a prise de decision,
+les actions peuvent etre classifiees en deux types :
+
+===== Actions programmees (programmables)
+
+Une action programmable est chaque action dans laquelle les sorties sont
+determinees de la meme maniere a partir des entrees.
+
+===== Decisions
+
+Une decision est une action dans laquelle les entrees ne sont pas suffisantes
+pour determiner les sorties. Ainsi, les memes entrees donnent des sorties
+differentes.
+
+==== Partie automatisable d'un Systeme d'Information
+
+Il s'agit de l'ensemble des actions programmees (programmables) concernees 
+par une decision d'automatisation.
+
+==== Structure et fonction d'un systeme d'information automatise
+
+=== Vers le e-Buisness
+
+==== Les types des systemes en e-Buisness
+
+Les types des systemes en e-Buisness sont generalement bases sur les 
+types des relations commerciales qu'is assurent :
+
+===== B to B (B2B)
+
+On dir qu'un systeme assure une relation de type B2B s'il assure une relation 
+d'entreprise à entreprise.
+
+===== B to C (B2C)
+
+On dit qu'un systeme d'information assure une relation B2C lorsqu'il assure
+une relation commercfiale d'entreprise a client (grand publique). Ces
+systemes ont connus aussi sous le nom e-Commerce (commerce electronique)
+dont la definition ne se limite pas au seul acte de vente mais couvre tous
+les echanges (demande, devis, livraison facturation, service apres vente).
+
+===== B to A (B2A)
+
+Cette appelation est utilisee lorsuq'il s'agit d'une relation de l'entreprise
+a l'administration (secteur publique).
+
+==== L'importance du e-Buisness
+
+. Rendre plus efficace la relation avec les clients et les partenaires.
+. Developper de nouvelles opportunites d'affaires.
+. Fluidifier la circuation de l'information interne.
+. Mettre sous controle les differents processus de l'entreprise/
+// Meilleure controle, meilleure decision, c'est pourquoi l'informatique
+// implique des changements (des fois majeures) au sein de l'entreprise
+// et l'adminsitration.
+
+<<<
+
+== Codification et controle des donnees
+
+=== L'importance de la codification
+
+Il y a une difference entre les types de donnees de base offerts par l'outil
+informatique et les concepts (notions) manipules par le Systeme d'Information
+de l'organisation.
+
+La codification enleve cette difference par associer des codes aux 
+differents concepts manipules.
+
+=== Definition
+
+==== Un code
+
+Un nom abrege ou une representation de l'information permettant de 
+designer un objet ou un concept de maniere unique.
+
+.Exemple
+// Schemas avec fleches
+
+==== Codification
+// Schema
+
+En programmatin, la codification fait reference :
+
+. Au choix des noms des variables,
+. Aux valeurs distinctives de ces variables.
+
+La codification est l'operation qui consiste a remplacer une information 
+sous sa forme naturelle par un code claire qui serait mieux adapte aux 
+besoins de l'utilisateur. 
+
+==== Caracteristiques d'une codification
+
+. Non-ambigue,
+. Facilite d'utilisation,
+. Concision,
+. Possibilite d'extension et d'insertion.
+
+=== Types de codifications
+
+==== Coditification sequentielle
+
+Associer des numeros sequentiels (consecutifs) aux informations.
+
+==== Codification par tranche
+
+Associer des tranches de codes aux categories. Chaque tranche contient
+des codes sequentiels.
+
+==== Codification articulee
+
+Utilisation des codes decoupes en zones (descripteurs). Chaque descripteur
+a une signification particuliere.
+
+==== Codification par niveau
+
+Cas particulier de la codification articulee ou les descripteurs representent 
+des niveaux.
+
+==== Codification mnemonique
+
+Abreviation de la designation en utilisant un ensemble reduit de caracteres.
+
+===== Consonants
+
+Total -> ttl
+
+===== Abreviatifs
+
+Total -> tot
+
+=== Les controles
+
+==== Definition
+
+Un controle est la verification que les caracteristiques d'une information
+sont conformes a ce qu'elles doivent etre.
+
+==== Types des controles
+
+===== Controles directs
+
+Des controles se rapportant a l'information elle-meme :
+
+.Controle de presence
+L'information figure bien sur le support.
+
+.Controle de type
+(numerique, alphanumerique, date)
+
+.Controle du codage
+(position dans la zone de saisie)
+
+===== Controles indirects
+
+Des controles qui verifient une information par comparaison a d'autres
+informations.
+
+.Controle de coherence interne
+(Codification articulee)
+
+.Controle de coherence externe
+Comparaison avec d'autres informations.
+
+==== Ordre d'execution des controles
+
+. Presence,
+. Type,
+. Codage,
+. Coherence interne,
+. Coherence externe. 
+
+<<<
+
+== Merise
+
+=== Demarche de developpement d'un logiciel
+
+Les principale etapes sont :
+
+==== Analyse de la situation existante et des besoins
+
+// Groupe d'etude
+// Sources d'information
+
+==== Representation des aspects importants
+
+Cette representation devient possible grace a l'analyse des besoins et de
+l'existant. Elle est effectuee par la creation d'une serie de modeles.
+
+==== Implementation du systeme logiciel
+
+=== Merise
+
+Merise est une methode de conception qui nous permet de representer les 
+aspects du systeme (2eme etape).
+Merise est une approche systemique qui separe les donnees des traitements
+et definit trois niveaux de conception (d'abstraction).
+
+==== Niveau conceptuel
+
+A ce niveau, on decrit les donnees et les traitements sans tenir compte
+de l'implementation technique et des details organisationnels. On repond
+a la question (Quoi ?).
+
+==== Niveau logique
+
+A ce niveau, on prend en compte la technique d''organisation des donnees 
+et les details organisationnels des traitements (Qui ? Ou ? Quand ?).
+
+==== niveau physique
+
+Ce niveau contient tous les details d'implementation du system (Comment ?).
+
+=== Validation
+
+Cette operation vise à completer le modele des donnees par les donnees 
+necessaires aux traitements et qui ne sont pas definies dans le modele
+des donnees.
+
+<<<
+
+== Les modeles conceptuels
+
+=== Le MCD
+
+Le Modele Conceptuel des Donnees decrit de façon formelle les donnees 
+utilisees par le Systeme d'Information. Il se base sur une representation
+graphique des trois notions : entite, association, et propriete.
+
+==== Les proprietes
+
+Les proprietes sont les informations de base du Systeme d'Information.
+
+==== Les entites
+
+Une entite permet de modeliser un ensemble d'objets de meme nature (qui
+ont les meme proprietes)
+
+// Schema abstrait / Etudiant
+
+.Identifiant
+
+L'identifiant est une propriete qui permet d'identifier une occurance
+d'une maniere unique et sure.
+
+==== Les associations 
+
+Une association decrits un lien entre deux ou plusieurs entites. Son 
+existence est conditionnee par celle des entites qui y participent.
+
+.Dimension
+C'est le nombre de pattes d'une association (different du nombre d'entities).
+
+// Schema Livre/Auteur
+
+.Cardinalite
+Elle precise le nombre de participation de chaque occurence de l'entite
+a la relation. Elle est notee sur la patte.
+
+Il existe quatre (04) types de cardinalites :
+
+. (0, 1) : au plus une fois.
+. (1, 1) : une et une seule fois.
+. (1, n) : au moins une fois.
+. (0, n) : aucune precision (plusieurs).
+
+// Revoir l'exemple Livre/Auteur
+
+Une association peut porter des proprietes.
+
+==== Normalisation du modele
+
+===== La premiere forme normale (1FN)
+
+Dans une entite, toutes les proprietes sont elementaires et il existe au
+moins une cle.
+
+===== La deuxieme forme normale (2FN)
+
+Toutes les proprietes doivent dependre de toute la cle et non pas d'une
+partie de la cle.
+
+===== La troisieme forme normale (3FN)
+
+Toutes les proprietes doivent dependre de la cle d'une maniere directe.
+
+=== Le MCT
+
+Le Modele Conceptuel des Traitements vise a degager les actions menees par 
+l'entreprise independament de la facon dont cette derniere a choisi de les 
+organiser.
+
+==== Evenement
+
+Un fait nouveau dans le systeme (declencheur ou resultat).
+
+==== Operation
+
+Un ensemble d'actions accomplies en reaction a un evenement et produit de
+nouveaux evenements.
+
+==== Synchronisation
+
+Une pre-condition sur les evenements (proposition logique) au declenchement 
+d'une operation (ET/OU)
+
+==== Regeles d'emission
+
+Il s'agit de regles de gestion liees a l'emission des resultats. Elle doivent
+couvrire toutes les situations possibles.
+
+==== Processus
+
+Un enchainement d'operation propre a un domaine d'activites.
+
+// Schema abstrait
+
+<<<
+
+== Les modeles logiques
+
+=== Le MOT
+
+Le Modele Organisationnel des Traitements fournit une representation
+schematique de l'organisation du Systeme d'Informationen precisant :
+
+. Ou ? : le poste de travail,
+. Qui ? : nature de traitement (manuel/automatique),
+. Quand ? : le temps et la duree.
+
+// Schema abstrait
+
+=== Le MLD
+
+Le Modele Logique des Donnes represente les donnees suivant un formalisme
+dependant du choix organisationnel. Ce dernier peut etre : relationnel (
+en vu d'une utilisation probable d'une base de donnees), navigationnel (en 
+vu d'une utilisation probable des fichiers), hierarchique, reseau, etc.
+
+==== Le modele relationnel
+
+Chaque entite est vue comme une relation entre un ensemble de proprietes.
+
+==== Regles de traduction
+
+. Chaque entite devient une relation,
+. Chaque association qui n'a pas la cardinalite (1, 1) sur l'une de ses pattes
+devient une relation,
+. Une association qui possede une cardinalite (1, 1) sur une patte se traduit
+par une cle etrangere,
+. Les relations qui ne contiennent qu'une seule propriete sera supprimee.
+
+
+
+
+
+
+
