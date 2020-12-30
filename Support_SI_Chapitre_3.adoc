@@ -5,116 +5,381 @@ v0.1, 2020-12-28
 :sectnums:
 :toc:
 
+<<<
+
 === Introduction
+
+Dans le chapitre précédent, nous avons modélisé la circulation de l'information.
+Dans ce cadre, nous avons utilisé le Diagramme des Flux d'Informations qui
+modélise les acteurs et les flux d'information entre eux.
+
+Ce diagramme ne modélise pas l'information en elle-même. 
+Il est conçu pour focaliser sur les échanges des informations sans
+analyser ou modéliser le contenu de ces flux. Il est aussi
+possible de référer au "support de l'information" comme un flux d'informations.
+A titre d'exemple, il est commun de référer à la "facture" comme étant
+un flux d'informations dans un diagramme des flux d'information. Néanmoins,
+une "facture" est un support de l'information qui contient plusieurs 
+informations.
+
+Dans ce chapitre, nous allons faire notre premier pas vers la manipulation
+de l'information. Pour ce faire, il est nécessaire de proposer une
+représentation claire pour chaque information du système. En d'autres
+termes, il est nécessaire de proposer "un codage" pour chaque "information"
+qui existe dans le système pour pouvoir la manipuler.
 
 === L'importance de la codification
 
-Il y a une différence entre les types de données de base offerts par l'outil
+Il y a une différence entre les types de données offerts par l'outil
 informatique et les concepts (notions) manipulés par le Système d'Information
-de l'organisation.
+de l'organisation. La codification enlève cette différence par associer des 
+codes aux différents concepts manipulés.
 
-La codification enlève cette différence par associer des codes aux 
-différents concepts manipulés.
+Associer un concept issu du monde réel (système existant) à un code (issu
+du monde informatique) veut dire qu'il est désormais possible de le stocker,
+le traiter et le partager. Cela est vrai aussi pour les objets liés au concept.
+
+**Exemple**
+
+La notion d'Etudiant est un "concept" issu de l'université; une organisation
+qui fait partie du monde réel. Une fois codifié, il devient possible de le
+stocker, le lier à d'autres concepts codifiés, et le partager.
+
+Il devient aussi possible de stocker les données des différents étudiants 
+(objets ou instances du concept). A leur tour, ces données peuvent être traitées 
+et partagées.
 
 === Définition
 
 ==== Un code
 
 Un nom abrégé ou une représentation de l'information permettant de 
-designer un objet ou un concept de manière unique.
+désigner un objet ou un concept de manière unique.
 
-.Exemple
-// Schemas avec fleches
+**Exemples**
+
+* Codes des concepts
+
+[.text-center]
+Code d'Etudiant -> Code_E
+
+* Codes des objets
+
+[.text-center]
+Un étudiant (bac 2008) -> 2018/0049
+
+[.text-center]
+Un autre étudiant (bac 2017) -> 2017/0033
+
 
 ==== Codification
-// Schema
 
-En programmatin, la codification fait reference :
-
-. Au choix des noms des variables,
-. Aux valeurs distinctives de ces variables.
-
-La codification est l'operation qui consiste a remplacer une information 
-sous sa forme naturelle par un code claire qui serait mieux adapte aux 
+La codification est l'opération qui consiste à remplacer une information 
+sous sa forme naturelle par un code claire qui serait mieux adapté aux 
 besoins de l'utilisateur. 
 
-==== Caracteristiques d'une codification
+.Codification
+image::codification.jpeg[Codification]
 
-. Non-ambigue,
-. Facilite d'utilisation,
-. Concision,
-. Possibilite d'extension et d'insertion.
+En programmation, la codification fait référence :
+
+* Au choix des noms des variables,
+* Aux valeurs distinctives de ces variables.
+
+==== Caractéristiques d'une codification
+
+. **Non ambigüe :** une codification doit représenter d'une manière claire,
+précise et unique le concept ou l'objet en question.
+. **Facilité d'utilisation :** il est possible de proposer plusieurs codifications
+pour le même concept ou bien pour le même objet. Il faut opter pour la
+codification la plus simple et la plus facile à utiliser.
+. **Concision :** la codification proposée doit être plus courte que les 
+informations codifiées. Autrement, le code sera plus difficile à manipuler 
+par rapport à l'information originale.
+. **Possibilite d'extension et d'insertion :** le caractère dynamique des 
+organisations implique un changement constant des concepts et des objets
+manipulés. Ainsi, la codification proposée doit supporter :
+.. L'extension : elle doit permettre d'ajouter de nouveaux codes (de concepts
+et d'objets).
+.. L'insertion : si la codification présente un certain ordre, elle doit
+permettre l'insertion des éléments dans leurs bonnes positions entre
+les objets existants (suivant l'ordre défini).
+
+**Exemples**
+
+.Exemple 01
+Dans le cadre de réalisation d'un système de gestion pour l'université,
+un premier concepteur modélisait la partie concernant les étudiants. Il a 
+proposé :
+
+[.text-center]
+Code Etudiant -> Code_E
+
+Dans le cadre du même projet, un autre concepteur travaillait sur la partie
+qui concerne les employés de l'université. Il a proposé :
+
+[.text-center]
+Code Employé -> Code_E
+
+Dans ce cas, Code_E est un code ambigü.
+
+.Exemple 02
+Soit les deux codes suivants proposés pour Code Etudiant :
+
+.Première proposition pour le code d'étudiant
+image::code_etudiant_1.jpeg[]
+
+.Deuxième proposition pour le code d'étudiant
+image::code_etudiant_2.jpeg[]
+
+Malgré que les deux codes sont "corrects" vu qu'ils permettent de définir
+d'une manière précise et unique un étudiant. La première proposition est 
+plus simple et plus facile à manipuler.
 
 === Types de codifications
 
-==== Coditification sequentielle
+==== Coditification séquentielle
 
-Associer des numeros sequentiels (consecutifs) aux informations.
+Associer des numéros séquentiels (consécutifs) aux informations.
+
+[cols=2*,options="header"]
+|===
+|Avantages
+|Inconvénients
+
+a| * Non ambiguë : chaque code (numéro) est unique,
+* Simple à mettre en oeuvre : il suffit de mettre oeuvre un compteur,
+* Extension possible : il est toujours possible d'ajouter des codes.
+a| * Insertion impossible : il est impossible de créer un nouveau code
+entre deux codes (deux numéros) consécutifs déjà utilisés,
+* Non significative : le code n'a aucune signification et sert uniquement
+à identifier d'une manière unique un objet.
+|===
 
 ==== Codification par tranche
 
-Associer des tranches de codes aux categories. Chaque tranche contient
-des codes sequentiels.
+Associer des tranches de codes aux catégories. Chaque tranche contient
+des codes séquentiels.
 
-==== Codification articulee
+[cols=2*,options="header"]
+|===
+|Avantages
+|Inconvénients
 
-Utilisation des codes decoupes en zones (descripteurs). Chaque descripteur
-a une signification particuliere.
+a| * Non ambiguë : chaque code (numéro) est unique,
+* Insertion et extension possibles : il est toujours possible d'insérer de 
+nouveaux codes dans une catégories même si les catégories suivantes contiennent 
+déjà des codes,
+* Possibilité de contrôle : il est possible de mettre en oeuvre qui contrôle
+est-ce que la valeur saisie est valide ou pas.
+a| * Possibilité de saturation d’une tranche : l'insertion ne devient plus 
+possibe,
+* Un seul regroupement est possible.
+|===
+
+
+**Exemple**
+
+Les codes de réponse du protocole HTTP utilisent une codification par
+tranche :
+
+[cols="h,a"]
+|===
+|1xx Réponse informationnele
+a| * 100 Continue
+* 101 Switching Protocols
+* 102 Processing
+* 103 Early Hints
+
+|2xx Succès
+a| * 200 OK
+* 201 Created
+* 202 Accepted
+* 203 Non-Authoritative Information
+* 204 No Content
+* ...
+
+|3xx Redirection
+a| * 300 Multiple Choices
+* 301 Moved Permanently
+* 302 Found
+* 303 See Other
+* 304 Not Modified
+* ...
+
+|4xx Erreur (par le client)
+a| * 400 Bad Request
+* 401 Unauthorized
+* 402 Payment Required
+* 403 Forbidden
+* 404 Not Found
+* ...
+
+|5xx Erreur (par le serveur)
+a| * 500 Internal Server Error
+* 501 Not Implemented
+* 502 Bad Gateway
+* 503 Service Unavailable
+* 504 Gateway Timeout
+* ...
+|===
+
+==== Codification articulée
+
+Utilisation des codes découpés en zones (descripteurs). Chaque descripteur
+a une signification particulière.
+
+[cols=2*,options="header"]
+|===
+|Avantages
+|Inconvénients
+
+a| * Non ambiguë : chaque code (numéro) est unique,
+* Insertion et extension possibles : il est toujours possible d'insérer de 
+nouveaux codes dans une catégorie même si les catégories suivantes contiennent 
+déjà des codes,
+* Possibilité  de  regrouper  les  objets  selon  un  critère donné :
+chaque descripteur offre une possibilité de regroupement,
+* Possibilité de contrôle : il est possible de mettre en oeuvre qui contrôle
+est-ce que la valeur saisie est valide ou pas.
+a| * Codes difficiles à manipuler : vu qu'il est composé de plusieurs 'codes',
+* Possibilité de saturation d’un descripteur : l'insertion ne devient plus 
+possible,
+* Instabilité : si un descripteur change, tout le code doit être changé.
+|===
+
+
+**Exemple**
+
+.Matricule d'un véhicule
+image::matricule.jpeg[]
 
 ==== Codification par niveau
 
-Cas particulier de la codification articulee ou les descripteurs representent 
+Cas particulier de la codification articulée où les descripteurs représentent 
 des niveaux.
 
-==== Codification mnemonique
+**Exemple**
 
-Abreviation de la designation en utilisant un ensemble reduit de caracteres.
+Le code postale peut être vu comme une codification par niveau parce que
+la ville (ou la région) est une partie de (appartient à) la Daïra qui 
+fait, à son tour, partie de la Wilaya.
 
-===== Consonants
+.CodePostal
+image::code_postale.jpeg[]
 
+==== Codification mnémonique
+
+Abréviation de la désignation en utilisant un ensemble réduit de caractères.
+
+**Consonants**
+
+[.text-center]
 Total -> ttl
 
-===== Abreviatifs
+**Abréviatifs**
 
+[.text-center]
 Total -> tot
 
-=== Les controles
+<<<
 
-==== Definition
+=== Les contrôles
 
-Un controle est la verification que les caracteristiques d'une information
-sont conformes a ce qu'elles doivent etre.
+Dans un système d'information, plusieurs contrôles sont effectués :
 
-==== Types des controles
+* Contrôle des traitements,
+* Contrôle des résultats,
+* Contrôle des informations.
 
-===== Controles directs
+Dans cette partie, nous nous intéressons à ce dernier type.
 
-Des controles se rapportant a l'information elle-meme :
+==== Définition
 
-.Controle de presence
+Un contrôle est la vérification que les caractéristiques d'une information
+sont conformes à ce qu'elles doivent être.
+
+==== Types des contrôles
+
+===== Contrôles directs
+
+Ces contrôles se rapportent à l'information elle-même :
+
+.Contrôle de présence
 L'information figure bien sur le support.
 
-.Controle de type
-(numerique, alphanumerique, date)
+*_Exemple_*
 
-.Controle du codage
+Champs obligatoires dans un formulaire.
+
+.Contrôle de type
+(numérique, alphanumérique, date)
+
+*_Exemple_*
+
+L'age ne peut pas contenir des caractères.
+
+.Contrôle du cadrage
 (position dans la zone de saisie)
 
-===== Controles indirects
+*_Exemple_*
 
-Des controles qui verifient une information par comparaison a d'autres
+Les types alphanumériques sont alignés à gauche tandis que les types
+numériques sont alignés à droite.
+
+.Exemple du cadrage sous Excel
+image::position.png[]
+
+.Contrôle de vraisemblance
+S’assurer que la valeur de l’information est semblable à une valeur correcte
+(par comparaison à des règles, des valeurs précédentes, ou des valeurs
+issues du secteur professionnel).
+
+*_Exemple_*
+
+La date doit être valide (30/02/2020, par exemple, a une forme correcte mais ce n'est
+pas une date valide).
+
+===== Contrôles indirects
+
+Des contrôles qui vérifient une information par comparaison à d'autres
 informations.
 
-.Controle de coherence interne
-(Codification articulee)
+.Controle de cohérence interne
+(Codification articulée)
 
-.Controle de coherence externe
+*_Exemple_*
+
+Si la Wilaya 18 compte 6 Daïras, alors le code postale "18721" ne peut pas
+être correct.
+
+.Controle de cohérence externe
 Comparaison avec d'autres informations.
 
-==== Ordre d'execution des controles
+*_Exemple_*
 
-. Presence,
+La date d'obtention du diplôme doit être supérieure (après) la date 
+d'inscription.
+
+==== Ordre d'exécution des contrôles
+
+Les différentes contrôles sont exécutés dans l'ordre suivant :
+
+. Présence,
 . Type,
-. Codage,
-. Coherence interne,
-. Coherence externe. 
+. Cadrage,
+. Vraisemblance,
+. Cohérence interne,
+. Cohérence externe. 
+
+=== Conclsuion
+
+Dans ce chapitre, nous avons vu la notion de codification. Cette notion 
+permet de ramener les notions et concepts manipulés par l'organisation
+vers le monde informatique en proposant une représentation adéquate.
+Cette représentation permettra l'utilisation de l'outil informatique
+de stocker, traiter et communiquer ces concepts.
+
+La codification nécessite des actions du contrôle pour une utilisation
+correcte et pertinente de cette représentation. Ainsi, nous avons évoqué
+les différents contrôles possibles sur une information.
