@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Cours de Système d&#8217;Information</title>
+<subtitle>Chapitre 5 - Modèle Conceptuel des Données</subtitle>
+<date>2020-12-20</date>
+<author>
+<personname>
+<firstname>Tarek</firstname>
+<surname>Boutefara</surname>
+</personname>
+<email>t_boutefara@univ-jijel.dz</email>
+</author>
+<authorinitials>TB</authorinitials>
+<revhistory>
+<revision>
+<revnumber>0.3</revnumber>
+<date>2020-12-20</date>
+<authorinitials>TB</authorinitials>
+</revision>
+</revhistory>
+</info>
+<section xml:id="_introduction">
+<title>Introduction</title>
+<simpara>Le Modèle Conceptuel des Données est l&#8217;un des six modèles proposés par Merise.
+C&#8217;est le premier modèle des données et celui du plus haut niveau d&#8217;abstraction.
+Dans ce chapitre, nous allons voir ce modèle, sa construction, et sa normalisation.</simpara>
+</section>
+<section xml:id="_le_mcd">
+<title>Le MCD</title>
+<simpara>Le Modèle Conceptuel des Données décrit de façon formelle les données
+utilisées par le Système d&#8217;Information. Il se base sur une représentation
+graphique des trois notions : entité, association, et propriété.</simpara>
+<simpara>Le modèle représente l&#8217;aspect statique du système (les données). Il est
+important de noter que l&#8217;appellation "statique" fait référence aux données;
+le modèle lui-même évolue avec l&#8217;évolution de l&#8217;organisation et de ses
+données.</simpara>
+</section>
+<section xml:id="_les_propriétés">
+<title>Les propriétés</title>
+<simpara>Les propriétés sont les informations de base du Système d&#8217;Information.
+Une propriété est une information élémentaire (qui ne peut pas être
+décomposée) et monovaluée (possède une seule valeur élémentaire à un
+instant "t")</simpara>
+</section>
+<section xml:id="_les_dépendances_fonctionnelles">
+<title>Les dépendances fonctionnelles</title>
+<section xml:id="_définition">
+<title>Définition</title>
+<simpara>Une dépendance fonctionnelle c&#8217;est le fait de relier de manière unique une
+propriété à une autre propriété ou un ensemble de propriétés.</simpara>
+<simpara>Une dépendance fonctionnelle entre A et B est notée :</simpara>
+<simpara role="text-center">A &#8594; B</simpara>
+<simpara>Et se lit "A détermine B", c&#8217;est-à-dire, pour une valeur définie de A,
+nous pouvons connaître d&#8217;une manière sûre (et unique) une valeur de B.</simpara>
+<section xml:id="_exemple_01">
+<title>Exemple 01</title>
+<simpara>Soit les propriétés suivantes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Code Etudiant,</simpara>
+</listitem>
+<listitem>
+<simpara>Nom Etudiant,</simpara>
+</listitem>
+<listitem>
+<simpara>Prénom Etudiant,</simpara>
+</listitem>
+<listitem>
+<simpara>Date de Naissance Etudiant,</simpara>
+</listitem>
+<listitem>
+<simpara>Code Module</simpara>
+</listitem>
+<listitem>
+<simpara>Intitulé du Module</simpara>
+</listitem>
+<listitem>
+<simpara>Coefficient Module</simpara>
+</listitem>
+<listitem>
+<simpara>Crédits Module</simpara>
+</listitem>
+</itemizedlist>
+<simpara>A partie de ces propriétés, nous pouvons définir les dépendances
+fonctionnelles suivantes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Premier sous-ensemble</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Code Etudiant &#8594; Nom Etudiant</simpara>
+</listitem>
+<listitem>
+<simpara>Code Etudiant &#8594; Prénom Etudiant</simpara>
+</listitem>
+<listitem>
+<simpara>Code Etudiant &#8594; Date de Naissance Etudiant</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Deuxième sous-ensemble</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Code Module &#8594; Intitulé Module</simpara>
+</listitem>
+<listitem>
+<simpara>Code Module &#8594; Coefficient Module</simpara>
+</listitem>
+<listitem>
+<simpara>Code Module &#8594; Crédits Module</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+<simpara>En d&#8217;autres termes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Premier sous-ensemble :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Si on connaît le code de l&#8217;étudiant, nous pouvons connaître d&#8217;une
+manière sûre le nom, le prénom et la date de naissance de l&#8217;étudiant.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Deuxième sous-ensemble :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Si on connaît le code du module, nous pouvons connaître d&#8217;une manière
+sûre l&#8217;intitulé du module, son coefficient et ses crédits.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+<simpara>Nous notons que nous ne pouvons définir aucune dépendance fonctionnelle
+entre les deux sous-ensembles.</simpara>
+</section>
+<section xml:id="_exemple_02">
+<title>Exemple 02</title>
+<simpara>Reprenons l&#8217;ensemble des dépendances fonctionnelles de l&#8217;exemple précédent, on
+ajoute la dépendance suivante</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Code Module, Code Etudiant &#8594; Note</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Autrement dit :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Si on connaît le code du module et le code de l&#8217;étudiant, alors on peut
+connaître la note obtenue par l&#8217;étudiant dans ce module.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+</section>
+<section xml:id="_graphe_des_dépendances_fonctionnelles_gdf">
+<title>Graphe des Dépendances Fonctionnelles (<emphasis>GDF</emphasis>)</title>
+<simpara>L&#8217;ensemble des dépendances fonctionnelles d&#8217;une application peut être
+représenté par une arborescence appelée graphe des dépendances
+fonctionnelles.</simpara>
+<section xml:id="_exemple">
+<title>Exemple</title>
+<simpara>Si on reprend l&#8217;exmeple 02 (extension de l&#8217;exemple 01) cité ci-dessus,
+le GDF sera comme suit :</simpara>
+<figure>
+<title>Graphe des Dépendances Fonctionnelles de l&#8217;exemple 02</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/GDF.jpeg"/>
+</imageobject>
+<textobject><phrase>GDF</phrase></textobject>
+</mediaobject>
+</figure>
+</section>
+</section>
+<section xml:id="_propriétés_des_dépendances_fonctionnelles">
+<title>Propriétés des Dépendances Fonctionnelles</title>
+<itemizedlist>
+<listitem>
+<simpara>Réflexivité :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Si Y est un sous-ensemble de X alors X  Y</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Augmentation :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Si X &#8594; Y alors XZ &#8594; YZ</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Transitivité :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Si X &#8594; Y et Y &#8594; Z alors X &#8594; Z</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Union :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Si X &#8594; Y et X &#8594; Z alors X &#8594; YZ</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Pseudo-transitivité :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Si X &#8594; Y et WY &#8594; Z alors WX &#8594; Z</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Décomposition :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Si X &#8594; Y et Z est un sous-ensemble de Y alors X &#8594; Z</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_la_couverture_minimale">
+<title>La couverture minimale</title>
+<simpara>La couverture minimale est l&#8217;ensemble des dépendances où chaque dépendance
+fonctionnelle ne peut pas être déduite à partir des autres dépendances
+fonctionnelles.</simpara>
+</section>
+</section>
+<section xml:id="_les_entités">
+<title>Les entités</title>
+<section xml:id="_définition_2">
+<title>Définition</title>
+<simpara>Une entité permet de modéliser un ensemble d&#8217;objets de même nature (qui
+ont les mêmes propriétés).</simpara>
+<simpara>Nous pouvons obtenir les entités par :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Analyser les objets qui constituent le système ou bien qui sont manipulés
+par lui (approche descendante).</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis>Exemple</emphasis> : à l&#8217;université, nous pouvons citer les "éléments", à
+titre d&#8217;exemple, les éléments Etudiant, Module, Enseignant, Classe,
+Groupe, Session. Tous ces éléments font partie du système ou bien
+ils sont manipulés par lui.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Regrouper les propriétés qui dépendent de la même propriété ensemble
+(approche ascendante).</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis>Exemple</emphasis> : dans le graphe des dépendances fonctionnelles cité ci-dessus,
+il est possible de</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Regrouper "Code Etudiant, Nom Etudiant, Prénom Etudiant
+et Date de Naissance Etudiant" dans une entité "Etudiant".</simpara>
+</listitem>
+<listitem>
+<simpara>Regrouper les propriétés "Code Module, Intitulé Module,
+Coefficient Module et Crédits Module" dans une entité "Module".</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+<simpara>Il n&#8217;y a pas une règle précise pour déterminer toutes les entités.
+Le concepteur doit faire appel à ses capacités d&#8217;analyse.</simpara>
+</section>
+<section xml:id="_une_occurrence">
+<title>Une occurrence</title>
+<simpara>Une occurrence est une "instance" de l&#8217;entité, un objet parmi les objets
+représentés par l&#8217;entité.</simpara>
+<section xml:id="_exemple_2">
+<title>Exemple</title>
+<simpara>Dans le cas de l&#8217;entité Etudiant ci-dessus, nous pouvons donner comme
+exemples d&#8217;occurrences :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Etudiant 01 : 18172256, Benahmed, Ahmed, 23/01/1999</simpara>
+</listitem>
+<listitem>
+<simpara>Etudiant 02 : 17179822, Benomar, Omar, 06/09/2000</simpara>
+</listitem>
+<listitem>
+<simpara>Etudiant 03 : 19183952, Benameur, Amer, 14/05/2001</simpara>
+</listitem>
+</itemizedlist>
+</section>
+</section>
+<section xml:id="_identifiant">
+<title>Identifiant</title>
+<simpara>L&#8217;identifiant est une propriété qui permet d&#8217;identifier une occurrence
+d&#8217;une manière unique et sûre.</simpara>
+<simpara>Si l&#8217;approche suivie est l&#8217;approche descendante, l&#8217;identifiant est choisi
+parmi les propriétés de l&#8217;entité. Cette propriété (ou ensemble de
+propriétés) doit être :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Non-nul (doit exister pour toutes les occurrences)</simpara>
+</listitem>
+<listitem>
+<simpara>Unique (chaque valeur est donnée une et une seule fois)</simpara>
+</listitem>
+<listitem>
+<simpara>Stable (ne doit pas changer dans le temps)</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Si l&#8217;approche suivie est l&#8217;approche ascendante, il suffit de prendre les
+racines utilisées pour le regroupement des propriétés dans des entités.</simpara>
+</section>
+<section xml:id="_représentation_graphique">
+<title>Représentation graphique</title>
+<figure>
+<title>Repérsentation graphique d&#8217;une entité</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/abstrait_01.png"/>
+</imageobject>
+<textobject><phrase>abstrait 01</phrase></textobject>
+</mediaobject>
+</figure>
+<figure>
+<title>Exemple : entité "Etudiant"</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/etudiant.png"/>
+</imageobject>
+<textobject><phrase>etudiant</phrase></textobject>
+</mediaobject>
+</figure>
+</section>
+</section>
+<section xml:id="_les_associations">
+<title>Les associations</title>
+<section xml:id="_définition_3">
+<title>Définition</title>
+<simpara>Une association décrit un lien entre deux ou plusieurs entités. Son
+existence est conditionnée par l&#8217;existance des entités qui y participent.</simpara>
+<simpara>Nous pouvons obtenir (la majorité) des associations par :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Analyser l&#8217;aspect dynamique (actions et tâches dans le système) ou bien
+les liens structurels (qui définissent une structure ou une forme
+d&#8217;organisation)</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis>Exemple</emphasis> : à l&#8217;université, nous pouvons citer comme exemple de lien
+structurel : un Etudiant appartient à un Groupe. Nous pouvons citer comme
+exemple sur la dynamique au sein de l&#8217;organisation : un Enseignant
+enseigne un Module.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>La présence de propriétés qui nécessitent plusieurs identifiants (ou clés)
+d&#8217;autres entités pour les déterminer.</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis>Exemple</emphasis> : dans l&#8217;exemple précédent, Note nécessaire Code Etudiant
+et Code Module pour pouvoir la déterminer.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+<simpara>Il n&#8217;y a pas une règle précise pour déterminer toutes les associations.
+Le concepteur doit faire appel à ses capacités d&#8217;analyse.</simpara>
+<simpara>A son tour, une association peut porter des propriétés.</simpara>
+</section>
+<section xml:id="_représentation_graphique_2">
+<title>Représentation graphique</title>
+<figure>
+<title>Repérsentation graphique d&#8217;une association</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/abstrait_02.png"/>
+</imageobject>
+<textobject><phrase>abstrait 02</phrase></textobject>
+</mediaobject>
+</figure>
+<figure>
+<title>Exemple : association "Obtient"</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/obtient_sans_cardinalite.png"/>
+</imageobject>
+<textobject><phrase>obtient sans cardinalite</phrase></textobject>
+</mediaobject>
+</figure>
+</section>
+<section xml:id="_dimension">
+<title>Dimension</title>
+<simpara>C&#8217;est le nombre de pattes d&#8217;une association (différent du nombre d&#8217;entités).</simpara>
+<section xml:id="_exemple_3">
+<title>Exemple</title>
+<simpara>L&#8217;association "Obtient" dans l&#8217;exemple ci-dessus est de
+dimension 2.</simpara>
+</section>
+</section>
+<section xml:id="_cardinalité">
+<title>Cardinalité</title>
+<simpara>Elle précise le nombre de participations de chaque occurrence de l&#8217;entité
+à l&#8217;association. Elle est notée sur la patte.</simpara>
+<section xml:id="_exemple_4">
+<title>Exemple</title>
+<simpara>Prenons les occurrences des Etudiants et des Modules suivants (diagramme
+d&#8217;occurrences)</simpara>
+<figure>
+<title>Diagramme d&#8217;occurrences</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/diagramme_occurrences.jpeg"/>
+</imageobject>
+<textobject><phrase>diagramme occurrences</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>Dans cet exemle, nous pouvons voir que :</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis role="strong">UN</emphasis> étudiant peut entrer en relation avec <emphasis role="strong">PLUSIEURS</emphasis> modules,</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">UN</emphasis> module peut entrer en relation avec <emphasis role="strong">PLUSIEURS</emphasis> étudiants.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_types_de_cardinalités">
+<title>Types de Cardinalités</title>
+<simpara>Il existe quatre (04) types de cardinalites :</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>(0, 1) : au plus une fois.</simpara>
+</listitem>
+<listitem>
+<simpara>(1, 1) : une et une seule fois.</simpara>
+</listitem>
+<listitem>
+<simpara>(1, n) : au moins une fois.</simpara>
+</listitem>
+<listitem>
+<simpara>(0, n) : aucune précision (plusieurs).</simpara>
+</listitem>
+</orderedlist>
+</section>
+<section xml:id="_exemple_5">
+<title>Exemple</title>
+<simpara>Reprenons le dernier MCD (exemple Etudiant/Module) avec le diagramme
+d&#8217;occurrences associés. Le MCD final sera comme suit :</simpara>
+<figure>
+<title>L&#8217;association "Obtient" avec les cardinalités</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/obtient.png"/>
+</imageobject>
+<textobject><phrase>obtient</phrase></textobject>
+</mediaobject>
+</figure>
+</section>
+</section>
+</section>
+<section xml:id="_normalisation_du_modèle">
+<title>Normalisation du modèle</title>
+<simpara>La normalisation du modèle permet d&#8217;enlever toute anomalie qui peut rendre
+le modèle incorrect (difficile, ou même impossible, à implémenter et à
+gérer). L&#8217;anomalie la plus courante est la redondance de l&#8217;information.</simpara>
+<simpara>La redondance dans le modèle peut engendrer :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Des erreurs lors de mise à jour : puisque l&#8217;information est répétée, il
+est possible qu&#8217;au moment de mise à jour, quelques copies soient mises à
+jour tandis que d&#8217;autres ne le seront pas (garde l&#8217;ancienne valeur).</simpara>
+</listitem>
+<listitem>
+<simpara>Lectures incohérentes : si des erreurs de mise à jour sont survenues,
+il est possible de lire des valeurs différentes (incohérentes) pour la
+même information.</simpara>
+</listitem>
+</itemizedlist>
+<section xml:id="_la_première_forme_normale_1fn">
+<title>La première forme normale (1FN)</title>
+<simpara>Dans une entité, toutes les propriétés sont élémentaires et il existe au
+moins une clé.</simpara>
+<section xml:id="_exemple_6">
+<title>Exemple</title>
+<simpara>Soit le modèle suivant :</simpara>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/_1FN.png"/>
+</imageobject>
+<textobject><phrase> 1FN</phrase></textobject>
+</mediaobject>
+</informalfigure>
+<simpara>Si on considère qu&#8217;un livre peut avoir plusieurs auteurs, le modèle deviendra
+non normalisé (ne respecte pas la première forme normale).
+Pour le normaliser, la propriété "Auteur" doit être extraite comme une entité.
+Le modèle devient alors :</simpara>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/_1FN_normalise.png"/>
+</imageobject>
+<textobject><phrase> 1FN normalise</phrase></textobject>
+</mediaobject>
+</informalfigure>
+</section>
+</section>
+<section xml:id="_la_deuxième_forme_normale_2fn">
+<title>La deuxième forme normale (2FN)</title>
+<itemizedlist>
+<listitem>
+<simpara>Le modèle doit être en 1FN</simpara>
+</listitem>
+<listitem>
+<simpara>Toutes les propriétés doivent dépendre de toute la clé et non pas d&#8217;une
+partie de la clé.</simpara>
+</listitem>
+</itemizedlist>
+<section xml:id="_exemple_7">
+<title>Exemple</title>
+<simpara>Soit le modèle suivant :</simpara>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/_2FN.png"/>
+</imageobject>
+<textobject><phrase> 2FN</phrase></textobject>
+</mediaobject>
+</informalfigure>
+<simpara>Il est clair que la propriété "Nombre étages" dépend du "N° Bloc",
+c&#8217;est une propriété du bloc et est complètement indépendante de la
+notion d&#8217;appartement. Ainsi, ce modèle ne respecte pas la 2FN.</simpara>
+<simpara>Pour le normaliser, la Dépendance Fonctionnelle qui cause problème doit
+être représentée par une entité séparée. Le modèle en 2FN devient alors :</simpara>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/_2FN_normalise.png"/>
+</imageobject>
+<textobject><phrase> 2FN normalise</phrase></textobject>
+</mediaobject>
+</informalfigure>
+<simpara><emphasis role="strong">Note :</emphasis> si la clé de l&#8217;entité est élémentaire (une seule propriété)
+alors l&#8217;entité respecte la 2FN automatiquement.</simpara>
+</section>
+</section>
+<section xml:id="_la_troisième_forme_normale_3fn">
+<title>La troisième forme normale (3FN)</title>
+<itemizedlist>
+<listitem>
+<simpara>Le modèle doit être en 2FN,</simpara>
+</listitem>
+<listitem>
+<simpara>Toutes les propriétés doivent dépendre de la clé d&#8217;une manière directe.</simpara>
+</listitem>
+</itemizedlist>
+<section xml:id="_exemple_8">
+<title>Exemple</title>
+<simpara>Soit le modèle suivant :</simpara>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/_3FN.png"/>
+</imageobject>
+<textobject><phrase> 3FN</phrase></textobject>
+</mediaobject>
+</informalfigure>
+<simpara>Les propriétés Nom Fournisseur et Adresse Frounisseur dépendent de la
+clé Référence Produit, mais cette dépendance est indirecte. En effet,
+les dépendances sont clairement :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Référence Produit &#8594; Code Frounisseur (si on connaît le produit, on
+peut identifier d&#8217;où il a été acheté),</simpara>
+</listitem>
+<listitem>
+<simpara>Code Fournisseur &#8594; Nom Fournisseur, Adresse Fournisseur (si on connaît
+le code du fournisseur, on peut connaître son nom et son adresse).</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Pour le normaliser, les dépendances fonctionnelles qui provoquent
+l&#8217;erreur doivent être représentés par une nouvelle entité. Le modèle
+devient alors :</simpara>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/_3FN_normalise.png"/>
+</imageobject>
+<textobject><phrase> 3FN normalise</phrase></textobject>
+</mediaobject>
+</informalfigure>
+</section>
+</section>
+</section>
+<section xml:id="_conclusion">
+<title>Conclusion</title>
+<simpara>Dans ce chapitre, nous avons vu le premier modèle de données défini par
+Merise. Il s&#8217;agit du MCD (Modèle Conceptuel des Données). Nous pouvons
+constater qu&#8217;au cours d&#8217;élaboration de ce modèle, on se concentre
+exclusivement sur le "Quoi ?" sans se préoccuper de l&#8217;organisation de
+ces données ou comment seront-elles implémentées physiquement sur la
+machine.</simpara>
+<simpara>Le chapitre présente aussi la notion de normalisation pour enlever toute
+anomalie. Le résultat sera un modèle dit "en 3ème forme normale". Cette
+forme normale est une condition nécessaire (et minimale) pour avoir
+un modèle correct et "implémentable".</simpara>
+<simpara>Le chapitre suivant traite le Modèle Conceptuel des Traitements.</simpara>
+</section>
+</article>
