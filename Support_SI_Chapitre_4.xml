@@ -245,6 +245,7 @@ et les détails organisationnels des traitements (<emphasis role="strong">Qui ? 
 <title>Niveau physique</title>
 <simpara>Ce niveau contient tous les détails d&#8217;implémentation du système. On répond
 à la question (<emphasis role="strong">Comment ?</emphasis>).</simpara>
+<simpara><?asciidoc-pagebreak?></simpara>
 <table frame="all" rowsep="1" colsep="1">
 <title>Les modèles définis par Merise</title>
 <tgroup cols="3">
@@ -261,18 +262,18 @@ et les détails organisationnels des traitements (<emphasis role="strong">Qui ? 
 <tbody>
 <row>
 <entry align="left" valign="top"><simpara>Niveau conceptuel</simpara></entry>
-<entry align="left" valign="top"><simpara>MCD</simpara></entry>
-<entry align="left" valign="top"><simpara>MCT</simpara></entry>
+<entry align="left" valign="top"><simpara>Le Modèle Conceptuel des Données (MCD)</simpara></entry>
+<entry align="left" valign="top"><simpara>Le Modèle Conceptuel des Traitements (MCT)</simpara></entry>
 </row>
 <row>
 <entry align="left" valign="top"><simpara>Niveau logique</simpara></entry>
-<entry align="left" valign="top"><simpara>MLD</simpara></entry>
-<entry align="left" valign="top"><simpara>MOT</simpara></entry>
+<entry align="left" valign="top"><simpara>Le Modèle Logique des Données (MLD)</simpara></entry>
+<entry align="left" valign="top"><simpara>Le Modèle Organisationnel des Traitemnts (MOT)</simpara></entry>
 </row>
 <row>
 <entry align="left" valign="top"><simpara>Niveau physique</simpara></entry>
-<entry align="left" valign="top"><simpara>MPD</simpara></entry>
-<entry align="left" valign="top"><simpara>MOpT</simpara></entry>
+<entry align="left" valign="top"><simpara>Le Modèe Physique des Données (MPD)</simpara></entry>
+<entry align="left" valign="top"><simpara>Le Modèle Opérationnel des Traitments (MOpT)</simpara></entry>
 </row>
 </tbody>
 </tgroup>

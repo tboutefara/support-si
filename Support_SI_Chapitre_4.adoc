@@ -177,6 +177,8 @@ et les détails organisationnels des traitements (**Qui ? Ou ? Quand ?**).
 Ce niveau contient tous les détails d'implémentation du système. On répond
 à la question (**Comment ?**).
 
+<<<
+
 .Les modèles définis par Merise
 [cols=3*,options="header"]
 |===
@@ -185,16 +187,16 @@ Ce niveau contient tous les détails d'implémentation du système. On répond
 |Traitements
 
 |Niveau conceptuel
-|MCD
-|MCT
+|Le Modèle Conceptuel des Données (MCD)
+|Le Modèle Conceptuel des Traitements (MCT)
 
 |Niveau logique
-|MLD
-|MOT
+|Le Modèle Logique des Données (MLD)
+|Le Modèle Organisationnel des Traitemnts (MOT)
 
 |Niveau physique
-|MPD
-|MOpT
+|Le Modèe Physique des Données (MPD)
+|Le Modèle Opérationnel des Traitments (MOpT)
 |===
 
 ==== Validation
