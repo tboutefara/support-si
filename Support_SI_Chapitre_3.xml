@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Cours de Système d&#8217;Information</title>
+<subtitle>Chapitre 3 - Codification et contrôle des données</subtitle>
+<date>2020-12-28</date>
+<author>
+<personname>
+<firstname>Tarek</firstname>
+<surname>Boutefara</surname>
+</personname>
+<email>t_boutefara@univ-jijel.dz</email>
+</author>
+<authorinitials>TB</authorinitials>
+<revhistory>
+<revision>
+<revnumber>0.1</revnumber>
+<date>2020-12-28</date>
+<authorinitials>TB</authorinitials>
+</revision>
+</revhistory>
+</info>
+<simpara><?asciidoc-pagebreak?></simpara>
+<section xml:id="_introduction">
+<title>Introduction</title>
+<simpara>Dans le chapitre précédent, nous avons modélisé la circulation de l&#8217;information.
+Dans ce cadre, nous avons utilisé le Diagramme des Flux d&#8217;Informations qui
+modélise les acteurs et les flux d&#8217;information entre eux.</simpara>
+<simpara>Ce diagramme ne modélise pas l&#8217;information en elle-même.
+Il est conçu pour focaliser sur les échanges des informations sans
+analyser ou modéliser le contenu de ces flux. Il est aussi
+possible de référer au "support de l&#8217;information" comme un flux d&#8217;informations.
+A titre d&#8217;exemple, il est commun de référer à la "facture" comme étant
+un flux d&#8217;informations dans un diagramme des flux d&#8217;information. Néanmoins,
+une "facture" est un support de l&#8217;information qui contient plusieurs
+informations.</simpara>
+<simpara>Dans ce chapitre, nous allons faire notre premier pas vers la manipulation
+de l&#8217;information. Pour ce faire, il est nécessaire de proposer une
+représentation claire pour chaque information du système. En d&#8217;autres
+termes, il est nécessaire de proposer "un codage" pour chaque "information"
+qui existe dans le système pour pouvoir la manipuler.</simpara>
+</section>
+<section xml:id="_limportance_de_la_codification">
+<title>L&#8217;importance de la codification</title>
+<simpara>Il y a une différence entre les types de données offerts par l&#8217;outil
+informatique et les concepts (notions) manipulés par le Système d&#8217;Information
+de l&#8217;organisation. La codification enlève cette différence par associer des
+codes aux différents concepts manipulés.</simpara>
+<simpara>Associer un concept issu du monde réel (système existant) à un code (issu
+du monde informatique) veut dire qu&#8217;il est désormais possible de le stocker,
+le traiter et le partager. Cela est vrai aussi pour les objets liés au concept.</simpara>
+<simpara><emphasis role="strong">Exemple</emphasis></simpara>
+<simpara>La notion d&#8217;Etudiant est un "concept" issu de l&#8217;université; une organisation
+qui fait partie du monde réel. Une fois codifié, il devient possible de le
+stocker, le lier à d&#8217;autres concepts codifiés, et le partager.</simpara>
+<simpara>Il devient aussi possible de stocker les données des différents étudiants
+(objets ou instances du concept). A leur tour, ces données peuvent être traitées
+et partagées.</simpara>
+</section>
+<section xml:id="_définition">
+<title>Définition</title>
+<section xml:id="_un_code">
+<title>Un code</title>
+<simpara>Un nom abrégé ou une représentation de l&#8217;information permettant de
+désigner un objet ou un concept de manière unique.</simpara>
+<simpara><emphasis role="strong">Exemples</emphasis></simpara>
+<itemizedlist>
+<listitem>
+<simpara>Codes des concepts</simpara>
+</listitem>
+</itemizedlist>
+<simpara role="text-center">Code d&#8217;Etudiant &#8594; Code_E</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Codes des objets</simpara>
+</listitem>
+</itemizedlist>
+<simpara role="text-center">Un étudiant (bac 2008) &#8594; 2018/0049</simpara>
+<simpara role="text-center">Un autre étudiant (bac 2017) &#8594; 2017/0033</simpara>
+</section>
+<section xml:id="_codification">
+<title>Codification</title>
+<simpara>La codification est l&#8217;opération qui consiste à remplacer une information
+sous sa forme naturelle par un code claire qui serait mieux adapté aux
+besoins de l&#8217;utilisateur.</simpara>
+<figure>
+<title>Codification</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/codification.jpeg"/>
+</imageobject>
+<textobject><phrase>Codification</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>En programmation, la codification fait référence :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Au choix des noms des variables,</simpara>
+</listitem>
+<listitem>
+<simpara>Aux valeurs distinctives de ces variables.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_caractéristiques_dune_codification">
+<title>Caractéristiques d&#8217;une codification</title>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara><emphasis role="strong">Non ambigüe :</emphasis> une codification doit représenter d&#8217;une manière claire,
+précise et unique le concept ou l&#8217;objet en question.</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Facilité d&#8217;utilisation :</emphasis> il est possible de proposer plusieurs codifications
+pour le même concept ou bien pour le même objet. Il faut opter pour la
+codification la plus simple et la plus facile à utiliser.</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Concision :</emphasis> la codification proposée doit être plus courte que les
+informations codifiées. Autrement, le code sera plus difficile à manipuler
+par rapport à l&#8217;information originale.</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Possibilite d&#8217;extension et d&#8217;insertion :</emphasis> le caractère dynamique des
+organisations implique un changement constant des concepts et des objets
+manipulés. Ainsi, la codification proposée doit supporter :</simpara>
+<orderedlist numeration="loweralpha">
+<listitem>
+<simpara>L&#8217;extension : elle doit permettre d&#8217;ajouter de nouveaux codes (de concepts
+et d&#8217;objets).</simpara>
+</listitem>
+<listitem>
+<simpara>L&#8217;insertion : si la codification présente un certain ordre, elle doit
+permettre l&#8217;insertion des éléments dans leurs bonnes positions entre
+les objets existants (suivant l&#8217;ordre défini).</simpara>
+</listitem>
+</orderedlist>
+</listitem>
+</orderedlist>
+<simpara><emphasis role="strong">Exemples</emphasis></simpara>
+<formalpara>
+<title>Exemple 01</title>
+<para>Dans le cadre de réalisation d&#8217;un système de gestion pour l&#8217;université,
+un premier concepteur modélisait la partie concernant les étudiants. Il a
+proposé :</para>
+</formalpara>
+<simpara role="text-center">Code Etudiant &#8594; Code_E</simpara>
+<simpara>Dans le cadre du même projet, un autre concepteur travaillait sur la partie
+qui concerne les employés de l&#8217;université. Il a proposé :</simpara>
+<simpara role="text-center">Code Employé &#8594; Code_E</simpara>
+<simpara>Dans ce cas, Code_E est un code ambigü.</simpara>
+<formalpara>
+<title>Exemple 02</title>
+<para>Soit les deux codes suivants proposés pour Code Etudiant :</para>
+</formalpara>
+<figure>
+<title>Première proposition pour le code d&#8217;étudiant</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/code_etudiant_1.jpeg"/>
+</imageobject>
+<textobject><phrase>code etudiant 1</phrase></textobject>
+</mediaobject>
+</figure>
+<figure>
+<title>Deuxième proposition pour le code d&#8217;étudiant</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/code_etudiant_2.jpeg"/>
+</imageobject>
+<textobject><phrase>code etudiant 2</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>Malgré que les deux codes sont "corrects" vu qu&#8217;ils permettent de définir
+d&#8217;une manière précise et unique un étudiant. La première proposition est
+plus simple et plus facile à manipuler.</simpara>
+</section>
+</section>
+<section xml:id="_types_de_codifications">
+<title>Types de codifications</title>
+<section xml:id="_coditification_séquentielle">
+<title>Coditification séquentielle</title>
+<simpara>Associer des numéros séquentiels (consécutifs) aux informations.</simpara>
+<informaltable frame="all" rowsep="1" colsep="1">
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="50*"/>
+<colspec colname="col_2" colwidth="50*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Avantages</entry>
+<entry align="left" valign="top">Inconvénients</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><itemizedlist>
+<listitem>
+<simpara>Non ambiguë : chaque code (numéro) est unique,</simpara>
+</listitem>
+<listitem>
+<simpara>Simple à mettre en oeuvre : il suffit de mettre oeuvre un compteur,</simpara>
+</listitem>
+<listitem>
+<simpara>Extension possible : il est toujours possible d&#8217;ajouter des codes.</simpara>
+</listitem>
+</itemizedlist></entry>
+<entry align="left" valign="top"><itemizedlist>
+<listitem>
+<simpara>Insertion impossible : il est impossible de créer un nouveau code
+entre deux codes (deux numéros) consécutifs déjà utilisés,</simpara>
+</listitem>
+<listitem>
+<simpara>Non significative : le code n&#8217;a aucune signification et sert uniquement
+à identifier d&#8217;une manière unique un objet.</simpara>
+</listitem>
+</itemizedlist></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+</section>
+<section xml:id="_codification_par_tranche">
+<title>Codification par tranche</title>
+<simpara>Associer des tranches de codes aux catégories. Chaque tranche contient
+des codes séquentiels.</simpara>
+<informaltable frame="all" rowsep="1" colsep="1">
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="50*"/>
+<colspec colname="col_2" colwidth="50*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Avantages</entry>
+<entry align="left" valign="top">Inconvénients</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><itemizedlist>
+<listitem>
+<simpara>Non ambiguë : chaque code (numéro) est unique,</simpara>
+</listitem>
+<listitem>
+<simpara>Insertion et extension possibles : il est toujours possible d&#8217;insérer de
+nouveaux codes dans une catégories même si les catégories suivantes contiennent
+déjà des codes,</simpara>
+</listitem>
+<listitem>
+<simpara>Possibilité de contrôle : il est possible de mettre en oeuvre qui contrôle
+est-ce que la valeur saisie est valide ou pas.</simpara>
+</listitem>
+</itemizedlist></entry>
+<entry align="left" valign="top"><itemizedlist>
+<listitem>
+<simpara>Possibilité de saturation d’une tranche : l&#8217;insertion ne devient plus
+possibe,</simpara>
+</listitem>
+<listitem>
+<simpara>Un seul regroupement est possible.</simpara>
+</listitem>
+</itemizedlist></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+<simpara><emphasis role="strong">Exemple</emphasis></simpara>
+<simpara>Les codes de réponse du protocole HTTP utilisent une codification par
+tranche :</simpara>
+<informaltable frame="all" rowsep="1" colsep="1">
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="50*"/>
+<colspec colname="col_2" colwidth="50*"/>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara><emphasis role="strong">1xx Réponse informationnele</emphasis></simpara></entry>
+<entry align="left" valign="top"><itemizedlist>
+<listitem>
+<simpara>100 Continue</simpara>
+</listitem>
+<listitem>
+<simpara>101 Switching Protocols</simpara>
+</listitem>
+<listitem>
+<simpara>102 Processing</simpara>
+</listitem>
+<listitem>
+<simpara>103 Early Hints</simpara>
+</listitem>
+</itemizedlist></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis role="strong">2xx Succès</emphasis></simpara></entry>
+<entry align="left" valign="top"><itemizedlist>
+<listitem>
+<simpara>200 OK</simpara>
+</listitem>
+<listitem>
+<simpara>201 Created</simpara>
+</listitem>
+<listitem>
+<simpara>202 Accepted</simpara>
+</listitem>
+<listitem>
+<simpara>203 Non-Authoritative Information</simpara>
+</listitem>
+<listitem>
+<simpara>204 No Content</simpara>
+</listitem>
+<listitem>
+<simpara>&#8230;&#8203;</simpara>
+</listitem>
+</itemizedlist></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis role="strong">3xx Redirection</emphasis></simpara></entry>
+<entry align="left" valign="top"><itemizedlist>
+<listitem>
+<simpara>300 Multiple Choices</simpara>
+</listitem>
+<listitem>
+<simpara>301 Moved Permanently</simpara>
+</listitem>
+<listitem>
+<simpara>302 Found</simpara>
+</listitem>
+<listitem>
+<simpara>303 See Other</simpara>
+</listitem>
+<listitem>
+<simpara>304 Not Modified</simpara>
+</listitem>
+<listitem>
+<simpara>&#8230;&#8203;</simpara>
+</listitem>
+</itemizedlist></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis role="strong">4xx Erreur (par le client)</emphasis></simpara></entry>
+<entry align="left" valign="top"><itemizedlist>
+<listitem>
+<simpara>400 Bad Request</simpara>
+</listitem>
+<listitem>
+<simpara>401 Unauthorized</simpara>
+</listitem>
+<listitem>
+<simpara>402 Payment Required</simpara>
+</listitem>
+<listitem>
+<simpara>403 Forbidden</simpara>
+</listitem>
+<listitem>
+<simpara>404 Not Found</simpara>
+</listitem>
+<listitem>
+<simpara>&#8230;&#8203;</simpara>
+</listitem>
+</itemizedlist></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara><emphasis role="strong">5xx Erreur (par le serveur)</emphasis></simpara></entry>
+<entry align="left" valign="top"><itemizedlist>
+<listitem>
+<simpara>500 Internal Server Error</simpara>
+</listitem>
+<listitem>
+<simpara>501 Not Implemented</simpara>
+</listitem>
+<listitem>
+<simpara>502 Bad Gateway</simpara>
+</listitem>
+<listitem>
+<simpara>503 Service Unavailable</simpara>
+</listitem>
+<listitem>
+<simpara>504 Gateway Timeout</simpara>
+</listitem>
+<listitem>
+<simpara>&#8230;&#8203;</simpara>
+</listitem>
+</itemizedlist></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+</section>
+<section xml:id="_codification_articulée">
+<title>Codification articulée</title>
+<simpara>Utilisation des codes découpés en zones (descripteurs). Chaque descripteur
+a une signification particulière.</simpara>
+<informaltable frame="all" rowsep="1" colsep="1">
+<tgroup cols="2">
+<colspec colname="col_1" colwidth="50*"/>
+<colspec colname="col_2" colwidth="50*"/>
+<thead>
+<row>
+<entry align="left" valign="top">Avantages</entry>
+<entry align="left" valign="top">Inconvénients</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><itemizedlist>
+<listitem>
+<simpara>Non ambiguë : chaque code (numéro) est unique,</simpara>
+</listitem>
+<listitem>
+<simpara>Insertion et extension possibles : il est toujours possible d&#8217;insérer de
+nouveaux codes dans une catégorie même si les catégories suivantes contiennent
+déjà des codes,</simpara>
+</listitem>
+<listitem>
+<simpara>Possibilité  de  regrouper  les  objets  selon  un  critère donné :
+chaque descripteur offre une possibilité de regroupement,</simpara>
+</listitem>
+<listitem>
+<simpara>Possibilité de contrôle : il est possible de mettre en oeuvre qui contrôle
+est-ce que la valeur saisie est valide ou pas.</simpara>
+</listitem>
+</itemizedlist></entry>
+<entry align="left" valign="top"><itemizedlist>
+<listitem>
+<simpara>Codes difficiles à manipuler : vu qu&#8217;il est composé de plusieurs 'codes',</simpara>
+</listitem>
+<listitem>
+<simpara>Possibilité de saturation d’un descripteur : l&#8217;insertion ne devient plus
+possible,</simpara>
+</listitem>
+<listitem>
+<simpara>Instabilité : si un descripteur change, tout le code doit être changé.</simpara>
+</listitem>
+</itemizedlist></entry>
+</row>
+</tbody>
+</tgroup>
+</informaltable>
+<simpara><emphasis role="strong">Exemple</emphasis></simpara>
+<figure>
+<title>Matricule d&#8217;un véhicule</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/matricule.jpeg"/>
+</imageobject>
+<textobject><phrase>matricule</phrase></textobject>
+</mediaobject>
+</figure>
+</section>
+<section xml:id="_codification_par_niveau">
+<title>Codification par niveau</title>
+<simpara>Cas particulier de la codification articulée où les descripteurs représentent
+des niveaux.</simpara>
+<simpara><emphasis role="strong">Exemple</emphasis></simpara>
+<simpara>Le code postale peut être vu comme une codification par niveau parce que
+la ville (ou la région) est une partie de (appartient à) la Daïra qui
+fait, à son tour, partie de la Wilaya.</simpara>
+<figure>
+<title>CodePostal</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/code_postale.jpeg"/>
+</imageobject>
+<textobject><phrase>code postale</phrase></textobject>
+</mediaobject>
+</figure>
+</section>
+<section xml:id="_codification_mnémonique">
+<title>Codification mnémonique</title>
+<simpara>Abréviation de la désignation en utilisant un ensemble réduit de caractères.</simpara>
+<simpara><emphasis role="strong">Consonants</emphasis></simpara>
+<simpara role="text-center">Total &#8594; ttl</simpara>
+<simpara><emphasis role="strong">Abréviatifs</emphasis></simpara>
+<simpara role="text-center">Total &#8594; tot</simpara>
+<simpara><?asciidoc-pagebreak?></simpara>
+</section>
+</section>
+<section xml:id="_les_contrôles">
+<title>Les contrôles</title>
+<simpara>Dans un système d&#8217;information, plusieurs contrôles sont effectués :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Contrôle des traitements,</simpara>
+</listitem>
+<listitem>
+<simpara>Contrôle des résultats,</simpara>
+</listitem>
+<listitem>
+<simpara>Contrôle des informations.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Dans cette partie, nous nous intéressons à ce dernier type.</simpara>
+<section xml:id="_définition_2">
+<title>Définition</title>
+<simpara>Un contrôle est la vérification que les caractéristiques d&#8217;une information
+sont conformes à ce qu&#8217;elles doivent être.</simpara>
+</section>
+<section xml:id="_types_des_contrôles">
+<title>Types des contrôles</title>
+<section xml:id="_contrôles_directs">
+<title>Contrôles directs</title>
+<simpara>Ces contrôles se rapportent à l&#8217;information elle-même :</simpara>
+<formalpara>
+<title>Contrôle de présence</title>
+<para>L&#8217;information figure bien sur le support.</para>
+</formalpara>
+<simpara><emphasis role="strong"><emphasis>Exemple</emphasis></emphasis></simpara>
+<simpara>Champs obligatoires dans un formulaire.</simpara>
+<formalpara>
+<title>Contrôle de type</title>
+<para>(numérique, alphanumérique, date)</para>
+</formalpara>
+<simpara><emphasis role="strong"><emphasis>Exemple</emphasis></emphasis></simpara>
+<simpara>L&#8217;age ne peut pas contenir des caractères.</simpara>
+<formalpara>
+<title>Contrôle du cadrage</title>
+<para>(position dans la zone de saisie)</para>
+</formalpara>
+<simpara><emphasis role="strong"><emphasis>Exemple</emphasis></emphasis></simpara>
+<simpara>Les types alphanumériques sont alignés à gauche tandis que les types
+numériques sont alignés à droite.</simpara>
+<figure>
+<title>Exemple du cadrage sous Excel</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/position.png"/>
+</imageobject>
+<textobject><phrase>position</phrase></textobject>
+</mediaobject>
+</figure>
+<formalpara>
+<title>Contrôle de vraisemblance</title>
+<para>S’assurer que la valeur de l’information est semblable à une valeur correcte
+(par comparaison à des règles, des valeurs précédentes, ou des valeurs
+issues du secteur professionnel).</para>
+</formalpara>
+<simpara><emphasis role="strong"><emphasis>Exemple</emphasis></emphasis></simpara>
+<simpara>La date doit être valide (30/02/2020, par exemple, a une forme correcte mais ce n&#8217;est
+pas une date valide).</simpara>
+</section>
+<section xml:id="_contrôles_indirects">
+<title>Contrôles indirects</title>
+<simpara>Des contrôles qui vérifient une information par comparaison à d&#8217;autres
+informations.</simpara>
+<formalpara>
+<title>Controle de cohérence interne</title>
+<para>(Codification articulée)</para>
+</formalpara>
+<simpara><emphasis role="strong"><emphasis>Exemple</emphasis></emphasis></simpara>
+<simpara>Si la Wilaya 18 compte 6 Daïras, alors le code postale "18721" ne peut pas
+être correct.</simpara>
+<formalpara>
+<title>Controle de cohérence externe</title>
+<para>Comparaison avec d&#8217;autres informations.</para>
+</formalpara>
+<simpara><emphasis role="strong"><emphasis>Exemple</emphasis></emphasis></simpara>
+<simpara>La date d&#8217;obtention du diplôme doit être supérieure (après) la date
+d&#8217;inscription.</simpara>
+</section>
+</section>
+<section xml:id="_ordre_dexécution_des_contrôles">
+<title>Ordre d&#8217;exécution des contrôles</title>
+<simpara>Les différentes contrôles sont exécutés dans l&#8217;ordre suivant :</simpara>
+<orderedlist numeration="arabic">
+<listitem>
+<simpara>Présence,</simpara>
+</listitem>
+<listitem>
+<simpara>Type,</simpara>
+</listitem>
+<listitem>
+<simpara>Cadrage,</simpara>
+</listitem>
+<listitem>
+<simpara>Vraisemblance,</simpara>
+</listitem>
+<listitem>
+<simpara>Cohérence interne,</simpara>
+</listitem>
+<listitem>
+<simpara>Cohérence externe.</simpara>
+</listitem>
+</orderedlist>
+</section>
+</section>
+<section xml:id="_conclsuion">
+<title>Conclsuion</title>
+<simpara>Dans ce chapitre, nous avons vu la notion de codification. Cette notion
+permet de ramener les notions et concepts manipulés par l&#8217;organisation
+vers le monde informatique en proposant une représentation adéquate.
+Cette représentation permettra l&#8217;utilisation de l&#8217;outil informatique
+de stocker, traiter et communiquer ces concepts.</simpara>
+<simpara>La codification nécessite des actions du contrôle pour une utilisation
+correcte et pertinente de cette représentation. Ainsi, nous avons évoqué
+les différents contrôles possibles sur une information.</simpara>
+</section>
+</article>

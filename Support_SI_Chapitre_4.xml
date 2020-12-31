@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Cours de Système d&#8217;Information</title>
+<subtitle>Chapitre 4 - Merise</subtitle>
+<date>2020-12-30</date>
+<author>
+<personname>
+<firstname>Tarek</firstname>
+<surname>Boutefara</surname>
+</personname>
+<email>t_boutefara@univ-jijel.dz</email>
+</author>
+<authorinitials>TB</authorinitials>
+<revhistory>
+<revision>
+<revnumber>0.1</revnumber>
+<date>2020-12-30</date>
+<authorinitials>TB</authorinitials>
+</revision>
+</revhistory>
+</info>
+<section xml:id="_introduction">
+<title>Introduction</title>
+<simpara>Développer un Système d&#8217;Information est un oeuvre d&#8217;ingénierie. Ainsi, il
+est important de suivre une approche efficace qui permet de mener à terme
+le projet d&#8217;automatisation avec le respect des délais et des coûts.</simpara>
+<simpara>Dans ce chapitre, nous allons voir la notion de "démarche de développement".
+Nus allons aussi voir la méthode MERISE. Cette dernière est une méthode
+conçue pour réaliser les Systèmes d&#8217;Information. Les modèles proposés
+par MERISE seront utilisés dans la suite de ce cours.</simpara>
+</section>
+<section xml:id="_démarche_de_développement_dun_logiciel">
+<title>Démarche de développement d&#8217;un logiciel</title>
+<simpara>Un logiciel de manière générale et les systèmes d&#8217;information en particulier
+sont des projets d&#8217;ingénierie. C&#8217;est-à-dire, un projet :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Vise à résoudre un problème réel et bien défini,</simpara>
+</listitem>
+<listitem>
+<simpara>Repose sur un ensemble d&#8217;outils et de méthodes,</simpara>
+</listitem>
+<listitem>
+<simpara>Est un travail d&#8217;équipe, chaque membre d&#8217;équipe se charge d&#8217;une mission claire
+et joue un rôle bien défini.</simpara>
+</listitem>
+<listitem>
+<simpara>Passe par plusieurs étapes, chaque étape se compose de plusieurs tâches,</simpara>
+</listitem>
+<listitem>
+<simpara>Donne comme résultat un "livrable".</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Un projet informatique dépend de plusieurs enjeux :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Adéquation aux besoins du client.</simpara>
+</listitem>
+<listitem>
+<simpara>Respect des délais de réalisation prévus.</simpara>
+</listitem>
+<listitem>
+<simpara>Maximisation des performances et de la fiabilité.</simpara>
+</listitem>
+<listitem>
+<simpara>Facilitation de la maintenance et des évolutions ultérieures.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>La réalisation d&#8217;un projet informatique est soumise à des exigences
+contradictoires et difficilement conciliables :</simpara>
+<figure>
+<title>Les exigences d&#8217;un projet informatique</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/enjeux_projet_informatique.jpeg"/>
+</imageobject>
+<textobject><phrase>enjeux projet informatique</phrase></textobject>
+</mediaobject>
+</figure>
+<itemizedlist>
+<listitem>
+<simpara>Délai : le projet doit respecter les délais fixés,</simpara>
+</listitem>
+<listitem>
+<simpara>Coût : le projet ne doit pas dépasser le budget attribué,</simpara>
+</listitem>
+<listitem>
+<simpara>Qualité : le projet doit donner résultat à un livrable de qualité.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Il est très difficile de respecter toutes les trois exigences.</simpara>
+<simpara>Tenant compte de ces notions et pour pouvoir mener à bien la réalisation
+d&#8217;un Système d&#8217;Information, il faut faire appel à des méthodes (ou
+approches) conçues spécialement pur ce type de projets.</simpara>
+<simpara>Plusieurs méthodes ont été proposées. Elles partagent les mêmes principale
+étapes qui sont :</simpara>
+<section xml:id="_analyse_de_la_situation_existante_et_des_besoins_analyse">
+<title>Analyse de la situation existante et des besoins : Analyse</title>
+<simpara>L&#8217;objectif de cette étape est de comprendre les besoins du client
+dans le cadre du nouveau système (ou système futur), par exemple :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Les objectifs généraux (rôle du nouveau système et fonctionnalités désirées),</simpara>
+</listitem>
+<listitem>
+<simpara>L&#8217;environnement du futur système (technique et organisationnel),</simpara>
+</listitem>
+<listitem>
+<simpara>Les ressources disponibles (ou planifiées),</simpara>
+</listitem>
+<listitem>
+<simpara>contraintes de performance (temps d&#8217;exécution, qualité des traitements, &#8230;&#8203;)</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Ces éléments sont généralement fournis par le client. En effet, le client
+est l&#8217;expert du domaine d&#8217;application et c&#8217;est le futur utilisateur. Néanmoins,
+il est possible que le client demande à l&#8217;équipe du projet de faire un
+recensement des besoins spécifiques à partir d&#8217;un objectif stratégique
+globale. Dans ce cas, l&#8217;équipe du projet peut collecter les données
+nécessaires en faisant appel aux :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Entretiens avec les employés,</simpara>
+</listitem>
+<listitem>
+<simpara>Sondage avec les employés et les clients,</simpara>
+</listitem>
+<listitem>
+<simpara>Observation de l&#8217;activité des employés,</simpara>
+</listitem>
+<listitem>
+<simpara>Etude des différentes ressources d&#8217;informations au sein de l&#8217;organisation.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Ce travail nécessaire l&#8217;implication d&#8217;une équipe mixte entre les cadres
+de l&#8217;organisation et l&#8217;équipe de réalisation du projet. On parle d&#8217;un
+groupe du travail.</simpara>
+<simpara>Cette étape se termine par la tâche de spécification. Elle consiste à
+l&#8217;élaboration une description claire de ce que doit faire le logiciel
+(fonctionnalités détaillées, exigences de qualité, interface utilisateur,
+et autres). Cette spécification doit clarifier le cahier des charges
+pour enlever toutes ambiguïtés ou contradictions.</simpara>
+</section>
+<section xml:id="_représentation_des_aspects_importants_conception">
+<title>Représentation des aspects importants : Conception</title>
+<simpara>Cette représentation devient possible grâce à l&#8217;analyse des besoins et de
+l&#8217;existant. Elle est effectuée par la création d&#8217;une série de modèles.
+Ces derniers peuvent être vus comme une concrétisation de la spécification.</simpara>
+<simpara>Cette représentation doit offrir une description architecturale des composants
+du nouveau système. Elle doit prendre en compte :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Les besoins fonctionnels : c&#8217;est-à-dire, les fonctionnalités liées au métier,</simpara>
+</listitem>
+<listitem>
+<simpara>Les besoins non-fonctionnels : tels que la sécurité et les performances.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_implementation_du_systeme_logiciel_réalisation">
+<title>Implementation du systeme logiciel : Réalisation</title>
+<simpara>Cette étape consiste à "traduire" la conception proposée en une solution
+technique. Pour ce faire, il faut effectuer le choix des langages de
+programmation, des plates-formes et des outils à utiliser. Ensuite, les
+différents modèles conceptuels sont concrêtisés.</simpara>
+<simpara>C&#8217;est l&#8217;étape de la construction effective du livrable (le nouveau système
+d&#8217;information).</simpara>
+</section>
+</section>
+<section xml:id="_merise">
+<title>Merise</title>
+<section xml:id="_présentation">
+<title>Présentation</title>
+<simpara>MERISE est une méthode de conception, de développement et de réalisation
+de projets informatiques. Le but de cette méthode est d&#8217;arriver à
+concevoir un système d&#8217;information. Merise a été proposée par René Colletti,
+Arnold Rochfeld et Hubert Tardieu dans les années 1970. Elle est devenue
+un projet opérationnel au début des années 1980 à la demande du ministère
+de l&#8217;industrie français, et a surtout été utilisée en France.</simpara>
+<simpara>Ce qu&#8217;il faut retenir sur la méthode Merise :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Merise repose sur l&#8217;analyse systémique : des notions comme frontière,
+entrée/sortie, sous-système sont présentes au centre de la philosophie
+de Merise,</simpara>
+</listitem>
+<listitem>
+<simpara>Merise sépare les données des traitements : cette séparation repose
+sur la considération des données comme la dimension statique et les
+traitements comme la dimension dynamique du système. Cette séparation
+assure vise une meilleure longivité du système. En effet, un changement
+des traitements, par exemple, ne veut pas dire forcément un changement
+des données.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_cycle_vie">
+<title>Cycle vie</title>
+<simpara>Le cycle de vie est la dimension "temps" du projet du point de départ
+jusqu&#8217;à l&#8217;exploitation. Merise est découpée en 3 périodes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>La conception du SI,</simpara>
+</listitem>
+<listitem>
+<simpara>La réalisation du programme,</simpara>
+</listitem>
+<listitem>
+<simpara>La maintenance</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Notons que Merise n&#8217;offre aucun support pour la phase du recensement des
+besoins, d&#8217;analyse et de spécification.</simpara>
+</section>
+<section xml:id="_le_cycle_de_décision">
+<title>Le cycle de décision</title>
+<simpara>Le cycle de décision représente l’ensemble des choix qui doivent être
+faits durant le déroulement du cycle de vie. L’entreprise s&#8217;assure que le
+système correspond aux objectifs, et prend différents types de résolutions.
+En d&#8217;autres termes, le groupe du travail contrôle de manière continue
+la progression du projet et prend les décisions nécessaires.</simpara>
+<simpara>Le passage d&#8217;une étape à l&#8217;étape suivante est une décision clé durant
+le développement du système d&#8217;information. Elle doit être prise au plus
+haut niveau et ne peut pas être considérée comme une décision technique.</simpara>
+</section>
+<section xml:id="_cycle_dabstraction">
+<title>Cycle d&#8217;abstraction</title>
+<simpara>Merise découpe le Système d&#8217;Information en trois niveaux pour guider
+l&#8217;activité de conception et de réalisation. Ces trois niveaux sont :</simpara>
+<section xml:id="_niveau_conceptuel">
+<title>Niveau conceptuel</title>
+<simpara>A ce niveau, on décrit les données et les traitements sans tenir compte
+de l&#8217;implémentation technique et des détails organisationnels.</simpara>
+<simpara>On répond à la question (<emphasis role="strong">Quoi ?</emphasis>).</simpara>
+</section>
+<section xml:id="_niveau_logique">
+<title>Niveau logique</title>
+<simpara>A ce niveau, on prend en compte la technique d&#8217;organisation des données
+et les détails organisationnels des traitements (<emphasis role="strong">Qui ? Ou ? Quand ?</emphasis>).</simpara>
+</section>
+<section xml:id="_niveau_physique">
+<title>Niveau physique</title>
+<simpara>Ce niveau contient tous les détails d&#8217;implémentation du système. On répond
+à la question (<emphasis role="strong">Comment ?</emphasis>).</simpara>
+<table frame="all" rowsep="1" colsep="1">
+<title>Les modèles définis par Merise</title>
+<tgroup cols="3">
+<colspec colname="col_1" colwidth="33.3333*"/>
+<colspec colname="col_2" colwidth="33.3333*"/>
+<colspec colname="col_3" colwidth="33.3334*"/>
+<thead>
+<row>
+<entry align="left" valign="top"></entry>
+<entry align="left" valign="top">Données</entry>
+<entry align="left" valign="top">Traitements</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry align="left" valign="top"><simpara>Niveau conceptuel</simpara></entry>
+<entry align="left" valign="top"><simpara>MCD</simpara></entry>
+<entry align="left" valign="top"><simpara>MCT</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Niveau logique</simpara></entry>
+<entry align="left" valign="top"><simpara>MLD</simpara></entry>
+<entry align="left" valign="top"><simpara>MOT</simpara></entry>
+</row>
+<row>
+<entry align="left" valign="top"><simpara>Niveau physique</simpara></entry>
+<entry align="left" valign="top"><simpara>MPD</simpara></entry>
+<entry align="left" valign="top"><simpara>MOpT</simpara></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</section>
+</section>
+<section xml:id="_validation">
+<title>Validation</title>
+<simpara>Vu que les données et les traitements sont conçus d&#8217;une manière séparée,
+une dernière étape s&#8217;impose pour 'joindre' ces deux dimensions. C&#8217;est
+la phase de validation.</simpara>
+<simpara>Cette opération vise à compléter le modèle des données par les données
+nécessaires aux traitements et qui ne sont pas encore définies dans le
+modèle des données.</simpara>
+</section>
+</section>
+<section xml:id="_conclusion">
+<title>Conclusion</title>
+<simpara>Dans ce chapitre, nous avons présenté la notion de projet informatique
+et de démarche de réalisation d&#8217;un projet informatique. En effet, un
+projet informatique est un projet d&#8217;ingénierie, ainsi, il repose
+sur un ensemble d&#8217;outils, techniques et approches et donne lieu à un
+livrable. Ce dernier doit résoudre un problème du client par répondre
+parfaitement à ses besoins.</simpara>
+<simpara>Par la suite, nous avons vu Merise; l&#8217;une de ces démarches. Merise repose
+sur la vision systémique et sépare les données des traitements. Elle
+guide le processus de conception et de réalisation par définir trois
+niveaux d&#8217;abstraction. Ces derniers permettent d&#8217;analyser et de concevoir
+le système d&#8217;une manière progressive et en tenant compte d&#8217;une seule
+facette (dimension) à la fois.</simpara>
+<simpara>Dans la suite de ce cours, nous allons détailler les deux modèles MCD et MCT.</simpara>
+</section>
+</article>

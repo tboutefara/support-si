@@ -1,0 +1,226 @@
+= Cours de Système d'Information: Chapitre 4 - Merise
+Tarek Boutefara <t_boutefara@univ-jijel.dz>
+v0.1, 2020-12-30
+:imagesdir: ./images/
+:sectnums:
+:toc:
+
+=== Introduction
+
+Développer un Système d'Information est un oeuvre d'ingénierie. Ainsi, il
+est important de suivre une approche efficace qui permet de mener à terme
+le projet d'automatisation avec le respect des délais et des coûts.
+
+Dans ce chapitre, nous allons voir la notion de "démarche de développement".
+Nus allons aussi voir la méthode MERISE. Cette dernière est une méthode
+conçue pour réaliser les Systèmes d'Information. Les modèles proposés
+par MERISE seront utilisés dans la suite de ce cours.
+
+=== Démarche de développement d'un logiciel
+
+Un logiciel de manière générale et les systèmes d'information en particulier
+sont des projets d'ingénierie. C'est-à-dire, un projet :
+
+* Vise à résoudre un problème réel et bien défini,
+* Repose sur un ensemble d'outils et de méthodes,
+* Est un travail d'équipe, chaque membre d'équipe se charge d'une mission claire 
+et joue un rôle bien défini.
+* Passe par plusieurs étapes, chaque étape se compose de plusieurs tâches,
+* Donne comme résultat un "livrable".
+
+Un projet informatique dépend de plusieurs enjeux :
+
+* Adéquation aux besoins du client.
+* Respect des délais de réalisation prévus.
+* Maximisation des performances et de la fiabilité. 
+* Facilitation de la maintenance et des évolutions ultérieures.
+
+La réalisation d'un projet informatique est soumise à des exigences 
+contradictoires et difficilement conciliables :
+
+.Les exigences d'un projet informatique
+image::enjeux_projet_informatique.jpeg[]
+
+* Délai : le projet doit respecter les délais fixés,
+* Coût : le projet ne doit pas dépasser le budget attribué,
+* Qualité : le projet doit donner résultat à un livrable de qualité.
+
+Il est très difficile de respecter toutes les trois exigences.
+
+Tenant compte de ces notions et pour pouvoir mener à bien la réalisation 
+d'un Système d'Information, il faut faire appel à des méthodes (ou 
+approches) conçues spécialement pur ce type de projets.
+
+Plusieurs méthodes ont été proposées. Elles partagent les mêmes principale 
+étapes qui sont :
+
+==== Analyse de la situation existante et des besoins : Analyse
+
+L'objectif de cette étape est de comprendre les besoins du client 
+dans le cadre du nouveau système (ou système futur), par exemple : 
+
+* Les objectifs généraux (rôle du nouveau système et fonctionnalités désirées), 
+* L'environnement du futur système (technique et organisationnel), 
+* Les ressources disponibles (ou planifiées), 
+* contraintes de performance (temps d'exécution, qualité des traitements, ...)
+
+Ces éléments sont généralement fournis par le client. En effet, le client 
+est l'expert du domaine d'application et c'est le futur utilisateur. Néanmoins,
+il est possible que le client demande à l'équipe du projet de faire un
+recensement des besoins spécifiques à partir d'un objectif stratégique
+globale. Dans ce cas, l'équipe du projet peut collecter les données
+nécessaires en faisant appel aux :
+
+* Entretiens avec les employés,
+* Sondage avec les employés et les clients,
+* Observation de l'activité des employés,
+* Etude des différentes ressources d'informations au sein de l'organisation.
+
+Ce travail nécessaire l'implication d'une équipe mixte entre les cadres
+de l'organisation et l'équipe de réalisation du projet. On parle d'un
+groupe du travail.
+
+Cette étape se termine par la tâche de spécification. Elle consiste à
+l'élaboration une description claire de ce que doit faire le logiciel 
+(fonctionnalités détaillées, exigences de qualité, interface utilisateur, 
+et autres). Cette spécification doit clarifier le cahier des charges 
+pour enlever toutes ambiguïtés ou contradictions.
+
+==== Représentation des aspects importants : Conception
+
+Cette représentation devient possible grâce à l'analyse des besoins et de
+l'existant. Elle est effectuée par la création d'une série de modèles.
+Ces derniers peuvent être vus comme une concrétisation de la spécification.
+
+Cette représentation doit offrir une description architecturale des composants 
+du nouveau système. Elle doit prendre en compte :
+
+* Les besoins fonctionnels : c'est-à-dire, les fonctionnalités liées au métier,
+* Les besoins non-fonctionnels : tels que la sécurité et les performances.
+
+==== Implementation du systeme logiciel : Réalisation
+
+Cette étape consiste à "traduire" la conception proposée en une solution
+technique. Pour ce faire, il faut effectuer le choix des langages de 
+programmation, des plates-formes et des outils à utiliser. Ensuite, les
+différents modèles conceptuels sont concrêtisés.
+
+C'est l'étape de la construction effective du livrable (le nouveau système
+d'information).
+
+=== Merise
+
+==== Présentation
+
+MERISE est une méthode de conception, de développement et de réalisation 
+de projets informatiques. Le but de cette méthode est d'arriver à 
+concevoir un système d'information. Merise a été proposée par René Colletti, 
+Arnold Rochfeld et Hubert Tardieu dans les années 1970. Elle est devenue 
+un projet opérationnel au début des années 1980 à la demande du ministère 
+de l'industrie français, et a surtout été utilisée en France.
+
+Ce qu'il faut retenir sur la méthode Merise :
+
+* Merise repose sur l'analyse systémique : des notions comme frontière, 
+entrée/sortie, sous-système sont présentes au centre de la philosophie
+de Merise,
+* Merise sépare les données des traitements : cette séparation repose
+sur la considération des données comme la dimension statique et les
+traitements comme la dimension dynamique du système. Cette séparation
+assure vise une meilleure longivité du système. En effet, un changement
+des traitements, par exemple, ne veut pas dire forcément un changement 
+des données.
+
+==== Cycle vie
+
+Le cycle de vie est la dimension "temps" du projet du point de départ
+jusqu'à l'exploitation. Merise est découpée en 3 périodes : 
+
+* La conception du SI, 
+* La réalisation du programme, 
+* La maintenance
+
+Notons que Merise n'offre aucun support pour la phase du recensement des
+besoins, d'analyse et de spécification.
+
+==== Le cycle de décision 
+
+Le cycle de décision représente l’ensemble des choix qui doivent être 
+faits durant le déroulement du cycle de vie. L’entreprise s'assure que le 
+système correspond aux objectifs, et prend différents types de résolutions.
+En d'autres termes, le groupe du travail contrôle de manière continue
+la progression du projet et prend les décisions nécessaires. 
+
+Le passage d'une étape à l'étape suivante est une décision clé durant
+le développement du système d'information. Elle doit être prise au plus
+haut niveau et ne peut pas être considérée comme une décision technique.
+
+==== Cycle d'abstraction
+
+Merise découpe le Système d'Information en trois niveaux pour guider
+l'activité de conception et de réalisation. Ces trois niveaux sont :
+
+===== Niveau conceptuel
+
+A ce niveau, on décrit les données et les traitements sans tenir compte
+de l'implémentation technique et des détails organisationnels. 
+
+On répond à la question (**Quoi ?**).
+
+===== Niveau logique
+
+A ce niveau, on prend en compte la technique d'organisation des données 
+et les détails organisationnels des traitements (**Qui ? Ou ? Quand ?**).
+
+===== Niveau physique
+
+Ce niveau contient tous les détails d'implémentation du système. On répond
+à la question (**Comment ?**).
+
+.Les modèles définis par Merise
+[cols=3*,options="header"]
+|===
+|
+|Données
+|Traitements
+
+|Niveau conceptuel
+|MCD
+|MCT
+
+|Niveau logique
+|MLD
+|MOT
+
+|Niveau physique
+|MPD
+|MOpT
+|===
+
+==== Validation
+
+Vu que les données et les traitements sont conçus d'une manière séparée,
+une dernière étape s'impose pour 'joindre' ces deux dimensions. C'est
+la phase de validation.
+
+Cette opération vise à compléter le modèle des données par les données 
+nécessaires aux traitements et qui ne sont pas encore définies dans le 
+modèle des données.
+
+=== Conclusion
+
+Dans ce chapitre, nous avons présenté la notion de projet informatique
+et de démarche de réalisation d'un projet informatique. En effet, un
+projet informatique est un projet d'ingénierie, ainsi, il repose
+sur un ensemble d'outils, techniques et approches et donne lieu à un
+livrable. Ce dernier doit résoudre un problème du client par répondre
+parfaitement à ses besoins.
+
+Par la suite, nous avons vu Merise; l'une de ces démarches. Merise repose
+sur la vision systémique et sépare les données des traitements. Elle
+guide le processus de conception et de réalisation par définir trois
+niveaux d'abstraction. Ces derniers permettent d'analyser et de concevoir
+le système d'une manière progressive et en tenant compte d'une seule 
+facette (dimension) à la fois.
+
+Dans la suite de ce cours, nous allons détailler les deux modèles MCD et MCT.
