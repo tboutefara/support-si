@@ -1,0 +1,173 @@
+= Cours de Système d'Information: Chapitre 6 - Modèle Conceptuel des Traitements
+Tarek Boutefara <t_boutefara@univ-jijel.dz>
+v0.3, 2020-12-20
+:imagesdir: ./images/
+:sectnums:
+:toc:
+
+=== Introduction
+
+Après la modélisation des données, il faut passer à la modélisation des
+traitements. Dans ce chapitre, nus allons voir le Modèle Conceptuel des
+Traitements (MCT). C'est le premier modèle des traitements à préparer.
+Il est aussi le modèle le plus abstrait : durant sa préparation,on 
+s'intéresse uniquement aux traitements sans se préoccuper de qui va
+les exécuter et comment il va les exécuter.
+
+=== Traitements
+
+Les traitements constituent la partie dynamique du Système
+d’Information. Ils sont la traduction en actions des
+règles de gestion de l’entreprise.
+
+=== Le MCT
+
+Le Modèle Conceptuel des Traitements vise a dégager les actions menées par 
+l'entreprise indépendament de la façon dont cette dernière a choisi de les 
+organiser.
+
+Ce modèle est une représentation schématique de l’activité d’une
+entreprise indépendamment des choix d’organisation et des
+moyens d’exécution.
+
+Pour pouvoir le préparer, les différentes actions doivent être recensées
+(durant la pahse d'étude de l'existant). Pour chaque action, nous devons
+connaître :
+
+* Le(s) déclencheur(s),
+* Les règles de gestion,
+* Les résultats.
+
+==== Exemple de l'aspect dynamique : gestion des stocks
+
+Nous pouvons définir les actions suivantes (intuitivement) :
+
+* Saisie du bon de commande
+* Préparation des produits
+* Préparation du bon de livraison
+* Chargement des produits
+* Déplacement et livraison des produits
+* Vérification des niveaux de stock des différents produits
+* Préparation de la liste des produits à commander
+
+Ces opérations sont définies sans donner des détails sur qui va les
+réaliser ou comment il va les réaliser.
+
+=== Evènement
+
+On appelle évènement tout fait nouveau dans le système. Il peut être :
+
+* Déclencheur : pour un traitement donné. C'est-à-dire
+* Résultat : d'un traitement donné.
+
+==== Exemple des évènements : gestion des stocks
+
+Nous pouvons citer les exemples suivants (intuitivement) :
+
+* Arrivée d'un bon de commande
+* Emission d'un bon de livraison
+* Dimanche (chaque)
+
+==== Lien avec le diagramme des flux d'informations
+
+Nous rappelons que le diagramme des flux d'informations modélise les 
+différents flux pour une activité donnée dans l'organisation. Nous
+notons aussi que les évènements sont dans leur majorité des flux
+d'information. Alors, il est possible de considérer le diagramme
+des flux d'information comme un point de départ pour la construction
+du Modèle Conceptuel des Traitements. 
+
+=== Opération
+
+Un ensemble d'actions accomplies en réaction à un évènement et produit de
+nouveaux évènements
+
+Il est possible d'extraire les différentes opérations en regroupant les 
+actions du même domaine.
+
+==== Exemple des opérations : gestion de stocks
+
+En continuant sur le même exemple, nous pouvons définir les opérations
+suivantes :
+
+* Traitement des bon de commandes : se compose des actions suivantes :
+** Saisie du bon de commande
+** Préparation des produits
+** Préparation du bon de livraison
+* Livraison des produits : se compose des actions suivantes :
+** Chargement des produits
+** Déplacement et livraison des produits
+* Réapprovisionnement : se compose des actions suivantes :
+** Vérification des niveaux de stock des différents produits
+** Préparation de la liste des produits à commander
+
+=== Représentation graphique d'un système
+
+// Schéma MCT abstrait
+
+// Schéma MCT traitement de bon de commande
+
+// Schéma MCT livraison
+
+// Schéma MCT Réapprovisionnement
+
+=== Synchronisation
+
+Une pré-condition sur les évènements (proposition logique) au déclenchement 
+d'une opération (ET/OU). Cette condition est définie par les règles de 
+gestion.
+
+==== Exemple
+
+Pour préparer la paie des employés chaque début de mois, 
+le comptable doit attendre la fiche de présence de chaque employé pour 
+le mois en question.
+
+// Schéma compatble : fiche pérsence + début du mois
+
+=== Règles d'émission
+
+Il s'agit de règles de gestion liées à l'émission des résultats. Elle doivent
+couvrire toutes les situations possibles.
+
+==== Exemple
+
+En recevant une demande de transfert (avec dossier) de la part d'un étudiant, 
+un département peut accepter la demande et prépare une attestation
+d'acceptance, ou bien il peut refuser la demande et retourne le dossier 
+à l'étudiant. Il n'y a pas une troisième possibilité.
+
+// Schéma : traitement demande transfert
+
+=== Processus
+
+Un enchainement d'opérations propre à un domaine d'activités. L'analyse et
+la préparation d'un MCT se limite, généralement, à un seul domaine d'activité.
+En effet, comme pour le diagramme des flux d'informations, travailler
+sur plusieurs activités peut donner en résultat un modèle non-connexe.
+C'est-à-dire, le modèle contiendra des parties qui n'ont aucun lien entre
+elles.
+
+==== Exemple : processus du gestion des stocks
+
+Dans l'exemple suivant, nous constatons le lien entre les deux opérations
+Traitement de bon de commande et livraison. Nous constatons aussi que ces
+deux opérations sont complètement indépendantes de la réapprovisionnement.
+Ainsi, nous pouvons définir deux processus :
+
+// Schéma processus Vente
+
+// Scxhéma processus Réapprovisionnement
+
+=== Conclusion
+
+Dans ce chapitre, nous avons introduit la notion du Modèle Conceptuel
+des Traitements. La construction du MCT repose sur un bon recenssement
+des opérations, de leurs déclencheurs et de leurs résultats. Par la
+suite, ces opérations sont regroupées en processus.
+
+Avant de passer vers des niveaux d'abstraction plus
+bas (plus proche de l'impémentation physique), les détails organisationnels
+(qui va faire quoi ?) ainsi que les détails techniques (comment automatiser ?
+En sebasant sur quelle technologie ? En utilisant quel algorithme ?)
+restent sans précision.
