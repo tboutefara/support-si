@@ -1,0 +1,208 @@
+= Cours de Système d'Information: Chapitre 1 - Notions de base
+Tarek Boutefara <t_boutefara@univ-jijel.dz>
+v0.1, 2020-12-15
+:sectnums:
+:toc:
+
+=== Introduction
+
+La notion de Système d'Information ne peut pas être assimilée sans comprendre
+plusieurs notions relatives ainsi que le contexte générale d'utilisation
+des Systèmes d'Information.
+
+Dans ce chapitre, nous allons voir la notion d'information. L'information 
+constitue l'objet essentiel sur lequel un Système d'Information. Il est 
+aussi important de comprendre son importance et sa position par rapport
+aux notions acquises précédemment (donnée).
+
+=== Information
+
+.Definition 1 :
+L'information est définie comme étant tout élément de connaissance pouvant 
+être perçu par l'un des cinq sens.
+
+Cette définition est une définition générale qui peut être projectée et
+adapatée selon le domaine d'étude. Elle voit l'information comme un
+élément de connaissance. Cela veut dire que nous ne pouvons pas obtenir, 
+construire ou extraire des connaissances sans avoir des informations.
+
+Elle précise aussi qu'une information ne peut être obtenu sans les cinq
+sens. En effet, chaque information peut être acquise ou reçue par l'un
+des cinq sens. Autrement, il sera impossible de la connaître ou de la
+manipuler. 
+
+A titre d'exemple, "la voiture est rouge" est une information que nous ne 
+pouvons pas assimiler sans le sens de la vue.
+
+.Definition 2 :
+L'information est une indication, renseignement, précision que l'on donne 
+ou que l'on obtient sur quelqu'un ou quelque chose.
+
+C'est une autre définition générale ; elle ne se focalise pas sur un domaine donné
+ou sur un type donné des informations. Néanmoins, elle précise qu'une information
+concerne "quelqu'un" ou "quelque chose". C'est à dire, une information n'a
+pas une existence propre mais elle nous offre des éléments de connaissance
+sur un objet existant.
+
+A titre d'exemple, l'information "la voiture est rouge" nous donne un élément 
+de connaissance (la couleur) sur un objet exsitant (la voiture).
+
+.Definition 3 :
+Une information est un élément de connaissance susceptible d'être représenté 
+à l'aide de conventions pour être conservé, traité ou communiqué.
+
+Cette définition enrichit d'avantage notre compréhension de la notion d'information :
+pour pouvoir manipuler une information (la conserver, la traiter ou la communiquer)
+une convention adéqaute doit être adoptée pour la représenter. 
+
+Dans un contexte informatique, cette définition peut être optée comme
+cadre de travail. Ainsi, pour pouvoir stocker, traiter et échanger
+des informations en utilisant l'outil informatique, elles doivent 
+être représentées sous un format adéquat à l'outil informatique.
+
+=== Importance de l'information
+
+Après l'agriculture et l'ère industrielle, nous vivons dans l'ère de l'information.
+Aujourd'hui posséder l'information peut signifier posséder le pouvoir. Dans le cadre
+des entreprises, posséder l'information veut dire posséder un avantage par
+rapport aux concurrents. En effet l'information joue un rôle essentiel dans
+la prise de décision.
+
+La prise de décision est une activité quotidienne. Elle est plus importante 
+dans le milieu des organisations (et des entreprises en particulier). 
+La prise de decision se base sur une réflexion faite sur un ensemble 
+d'informations. Avoir des informations correctes, précises et d'actualité (à temps)
+influence d'une manière directe et forte la qualité des décisions prises.
+
+=== Données – Information – Connaissances
+[.text-center]
+Données -> Information -> Connaissances
+
+L'information est un éléments de base de la connaissance. Elle se base à son
+tur sur un élément plus basique : la donnée. En effet, la donnée est une 
+valeur conservée (stockée). En informatique, une donnée est une suite de 0 et de 1.
+
+Une information peut être obtenue à partir d'une donnée en donnant un "sens"
+à cette dernière. Cela peut être fait en positionnant la donnée dans un contexte.
+Par la suite, une connaissance peut être obtenue à partir de l'information
+en lui enrichissant par un signification. Plus tard, la connaissance peut
+être utilisée comme un support pour la prise de décision.
+
+.Exemple 1
+Soit la donnée "5". Cette donnée peut être encodée par la suite 00000101
+sur un seul octet. Sans un contexte précis, le traitement de cette donnée
+n'aura pas une grande signification. +
+Néamoins, en précisant qu'il s'agit de la "température du jour" qui sera "5°",
+la donné aura un "sens" et plsuieurs traitements peuvent être effectuée.
+En précisant ce contexte, nous avons pu obtenir une "information" à partir
+d'une "donnée". +
+Cette information peut être interprété pour extraire une connaissance.
+"La température aujourd'hui est 5°" veut dire qu'"il fait froid". Cette
+connaissance sera un support pour la décision "je vais porter mon monteau".
+
+=== Système
+
+.Définition 1 :
+Un système est un ensemble d'éléments matériels ou immatériels, en interaction, 
+organisés en fonction d'un objectif. 
+
+Cette définition est la plusb utilisée en littérature pour définir la notion
+du système. Elle met l'accent sur trois points essentiels dans chaque système :
+
+* Un système est complexe : généralement, un système se compose de plusieurs éléments.
+Cette composition peut simple (d'un seul niveau) ou hiérachique (de plusieurs niveaux).
+* Les composantes d'un système sont en interaction : ainsi, s'il est possible de déssiner
+une frontière entre deux sous ensembles d'éléments dans un système donné (c'est à dire,
+aucune interaction n'est présente entre les deux sous ensembles) alors ce système
+peut être décomposé en deux systèmes complètement indépendants.
+* Un système possède un objectif : cet objectif est essentiel pour définir
+les éléments qu'un système doit contenir et les interactions nécessaires entre
+ces éléments Il sera aussi important pour pouvoir contrôler le bon 
+fonctionnement du système.
+
+.Definition 2 :
+C'est un tout constitué d'éléments unis par des relations. Les éléments 
+et les relations sont munis de propriétés.
+
+Cette déifinit enrichit notre compréhension des systèmes par introduire
+la notion de "propriété". En effet, cette notion est essentiel pour
+pouvoir construire des systèmes.
+
+==== Exemple : une usine
+
+Une usine peut être représentée sous forme d'un système. Premièrement, 
+une usine se compose de plusieurs éléments. Ces éléments sont de nature
+matériels (machines, ateliers, entrepôts) et immatériels (emplois du temps, 
+procédures à suivre, lois internes). Ses éléments sont en constrante interaction
+(échanges d'informations, échanges de la matière première et des produits 
+semi-finis et finis). +
+Ces éléments sont dotés de propriétés (une machine, à titre d'exemple, se 
+caractérise par une puissance et un débit de production, nous connaissons 
+aussi le type de matière première qu'elle consomme et en quel produit elle
+la transforme). +
+L'usine fonctionne dans l'objectif de produire des biens. Cet objectif 
+est l'élément clé pour le contrôle d'actvité de l'usine.
+
+==== Représentation graphique d'un système
+
+.Représentation graphique d'un système
+image::Systeme.jpeg[Représentation graphique d'un Système]
+
+Dans cette repérsentation, le système est vu comme une boite noire. C'est à dire,
+la structure interne du système (les différents éléments et les interactions entre eux)
+ne sont pas repérentées. 
+
+Cette repérsentation met l'accent sur les entrées et les sorites du système.
+De manière générale, un système prend des éléments en entrée. Ces éléments ne 
+font pas partie du système, mais, ils seront traités par ces éléments. 
+Ce traitement donne comme résultat l'ensemble des éléments en sortie.
+
+Le contrôle concerne cette activité de transformation, essentiellement, 
+les performances du système durant la transformation (temps de transformation,
+nombre de pannes, nombre des erreurs, etc.) et les resultats générés 
+(qualité, coût, etc.) par le système. L'évaluation est effectuée par 
+rapport a l'objectif du système. Cette évaluation sera la base de nouveaux
+paramètres ou décisions qui peuvent être considérés comme des entrées
+pour le prochain cycle du système.
+
+=== Les caractéristiques d'un systeme
+
+==== Les frontières d'un systeme
+
+Un systeme est un élément fini dont le périmètre est une frontière qui
+le sépare de son environnement.
+
+A son tour, l'environnement du système est complexe. Une entreprise,
+à titre d'exemple, possède :
+
+* Un environnement économique : c'est l'environnement lié directement à son 
+activité comme :
+** Les fournisseurs : qui lui fournient la matière première.
+** Les clients : qui achètent ses produits. Ils peuvent être des 
+utilisateurs finaux (personnes) ou bien des entreprises.
+** Les concurrents : qui sont des entreprises qui produisent les mêmes
+produits.
+* Un environnement social : c'est la société dans laquelle l'entreprise
+exerce son activité. Même si la société n'est pas liée directement
+à l'activité de l'entreprise, elle peut l'influencer d'une manière indirecte
+en fixant un ensemble de "règles sociales" à lesquelles l'entreprise doit
+adhérer.
+* L'état : qui contrôle l'activité de l'entreprise. Il intéagit 
+avec l'entreprise par plusieurs composantes :
+** La direction des impôts,
+** Les autorités locales,
+** Le pouvoir législatif.
+
+Le système interagit avec son environnement grace a des flux materiels 
+(produits, matière première), financiers (crédits, payments) et 
+immateriels (lois, réclamations, demandes).
+
+==== Le système ouvert et le système fermé
+
+Selon leurs interactions avec leur environnement, on distingue deux types 
+du systeme :
+
+. *Les systemes fermes :* Un système fermé peut être défini comme un 
+système qui n'effectue pas des échanges avec son environnement,
+. *Les systemes ouverts :* Un système ouvert peut être défini comme un 
+système capable deffetuer des échanges avec son environnement.

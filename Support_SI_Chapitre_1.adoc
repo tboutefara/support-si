@@ -1,6 +1,6 @@
 = Cours de Système d'Information: Chapitre 1 - Notions de base
 Tarek Boutefara <t_boutefara@univ-jijel.dz>
-v0.2, 2020-12-20
+v0.3, 2020-12-20
 :imagesdir: ./images/
 :sectnums:
 :toc:
@@ -18,7 +18,7 @@ aux notions acquises précédemment (la notion de "donnée" à titre d'exemple).
 
 === Information
 
-.Definition 1 :
+.Définition 1 :
 L'information est définie comme étant tout élément de connaissance pouvant 
 être perçu par l'un des cinq sens.
 
@@ -35,7 +35,7 @@ manipuler.
 A titre d'exemple, "la voiture est rouge" est une information que nous ne 
 pouvons pas assimiler sans le sens de la vue.
 
-.Definition 2 :
+.Définition 2 :
 L'information est une indication, renseignement, précision que l'on donne 
 ou que l'on obtient sur quelqu'un ou quelque chose.
 
@@ -48,7 +48,7 @@ sur un objet existant.
 A titre d'exemple, l'information "la voiture est rouge" nous donne un élément 
 de connaissance (la couleur) sur un objet existant (la voiture).
 
-.Definition 3 :
+.Définition 3 :
 Une information est un élément de connaissance susceptible d'être représenté 
 à l'aide de conventions pour être conservé, traité ou communiqué.
 

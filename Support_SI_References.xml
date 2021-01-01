@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Cours de Système d&#8217;Information</title>
+<subtitle>Références Bibliographiques</subtitle>
+<date>2020-12-20</date>
+<author>
+<personname>
+<firstname>Tarek</firstname>
+<surname>Boutefara</surname>
+</personname>
+<email>t_boutefara@univ-jijel.dz</email>
+</author>
+<authorinitials>TB</authorinitials>
+<revhistory>
+<revision>
+<revnumber>0.3</revnumber>
+<date>2020-12-20</date>
+<authorinitials>TB</authorinitials>
+</revision>
+</revhistory>
+</info>
+<bibliography xml:id="_références_bibliographiques">
+<title>Références Bibliographiques</title>
+<bibliodiv>
+<bibliomixed>
+<bibliomisc>Belaid, M. C. (2008). Pratique des systèmes d&#8217;information avec Merise.
+Les Pages Bleues de Rims.</bibliomisc>
+</bibliomixed>
+<bibliomixed>
+<bibliomisc>Date, C. J. (2004). Introduction aux bases de données. Vuibert.</bibliomisc>
+</bibliomixed>
+<bibliomixed>
+<bibliomisc>Donsez, D. Le Modèle Entité-Association (et UML) et les Bases de
+Données Relationnelles.</bibliomisc>
+</bibliomixed>
+<bibliomixed>
+<bibliomisc>Gardarin, G. (2003). Bases de données. Editions Eyrolles.</bibliomisc>
+</bibliomixed>
+<bibliomixed>
+<bibliomisc>Khichane, C. (2009) Microsoft Access XP par la pratique. Editions el Maarifa.</bibliomisc>
+</bibliomixed>
+<bibliomixed>
+<bibliomisc>Makhlouf, F., &amp; Belaid, M. (2006). L&#8217;entreprise: organisation et gestion.
+Eurl pages bleues internationales.</bibliomisc>
+</bibliomixed>
+<bibliomixed>
+<bibliomisc>Taouri, D., &amp; Belaid, M. C. (2002). Introduction aux systèmes d&#8217;information.
+Les Pages Bleues de Rims.</bibliomisc>
+</bibliomixed>
+<bibliomixed>
+<bibliomisc>Tardieu, H., Rochfeld, A., &amp; Coletti, R. (1983). La méthode MERISE,
+Principes et outils. Revue du SCOM anc Bulletin O. et M. Organisation,
+Méthodes et Automatisation dans les Services Publics Paris, (90).</bibliomisc>
+</bibliomixed>
+</bibliodiv>
+</bibliography>
+</article>

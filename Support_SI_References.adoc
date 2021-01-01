@@ -1,0 +1,23 @@
+= Cours de Système d'Information: Références Bibliographiques
+Tarek Boutefara <t_boutefara@univ-jijel.dz>
+v0.3, 2020-12-20
+:imagesdir: ./images/
+:sectnums:
+
+[bibliography]
+=== Références Bibliographiques
+
+- Belaid, M. C. (2008). Pratique des systèmes d'information avec Merise.
+Les Pages Bleues de Rims. 
+- Date, C. J. (2004). Introduction aux bases de données. Vuibert.
+- Donsez, D. Le Modèle Entité-Association (et UML) et les Bases de 
+Données Relationnelles.
+- Gardarin, G. (2003). Bases de données. Editions Eyrolles.
+- Khichane, C. (2009) Microsoft Access XP par la pratique. Editions el Maarifa. 
+- Makhlouf, F., & Belaid, M. (2006). L'entreprise: organisation et gestion. 
+Eurl pages bleues internationales.
+- Taouri, D., & Belaid, M. C. (2002). Introduction aux systèmes d'information. 
+Les Pages Bleues de Rims.
+- Tardieu, H., Rochfeld, A., & Coletti, R. (1983). La méthode MERISE, 
+Principes et outils. Revue du SCOM anc Bulletin O. et M. Organisation, 
+Méthodes et Automatisation dans les Services Publics Paris, (90).

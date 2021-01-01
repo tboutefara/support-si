@@ -1,0 +1,103 @@
+= Cours de Système d'Information: Chapitre 0 - Présentation
+Tarek Boutefara <t_boutefara@univ-jijel.dz>
+v0.1, 2020-12-15
+:sectnums:
+:toc:
+
+<<<
+
+== Aperçu général (1/3)
+
+Les Systèmes d'Information jouent un rôle important dans les organisations
+de manière générale et les entreprises en particulier. Ils permettent de 
+gérer des quantités massives de données en relation avec les activités 
+économiques et sociales. Ils permettent aussi d'automatiser et d'assister
+les différents processus métier au sein des organisations. Les systèmes 
+d'information peuvent aussi garantir la collaboration et la coopération 
+entre les différents organisations et partenaires.
+
+== Aperçu général (2/3)
+
+Pour garantir ces objectifs, un Système d'Information doit être conçu
+et réalisé en parfaite concordance avec les besoins de ses 
+utilisateurs. Ainsi, la conception et la réalisation d'un Système
+d'Information doit reposer sur des bases solides et suivre des démarches
+dédiées.
+
+== Aperçu général (3/3)
+
+Ce module vise à introduire la notion de Système d'Information ainsi que
+l'ensemble des notions relatives au domaine de conception et de réalisation
+des systèmes d'information. Le module introduit aussi une approche de conception
+des Systèmes d'Information.
+
+== Objectifs du module (1/3)
+
+Les principaux objectifs pédagogiques qui seront visés au cours de ce module
+sont essentiellement :
+
+* Comprendre ce qu'est un système d'information d’entreprise ; 
+* Comprendre l’articulation du SI avec la stratégie d’entreprise ;
+* Comprendre les différents éléments d’un SI : 
+** Système pilotage 
+** Système décisionnel 
+** Système opérationnel 
+
+== Objectifs du module (2/3)
+
+* Comprendre les différentes dimensions constitutives d'un SI : 
+** Dimension technique 
+** Dimension organisationnelle 
+** Dimension managériale 
+
+== Objectifs du module (3/3)
+
+* Appliquer une approche de conception des Systèmes d'Information
+** Comprendre ce qu'est une approche de conception
+** Apprendre et Appliquer la méthode Merise
+
+== Contenu du module (1/3)
+
+Pour atteindre les objectifs fixés, le contenu du module Système d'Information
+est structuré comme suit :
+
+* Généralité 
+** Définitions et caractérisations de l’entreprise (les aspects fonctionnels 
+et structurels),
+** Approche systémique des organisations : Présentation globale des trois systèmes, 
+** Le système d’information
+** Le système d'information automatisé
+** La partie statique et la partie dynamique dans un système d'information
+
+== Contenu du module (2/3)
+
+Pour atteindre les objectifs fixés, le contenu du module Système d'Information
+est structuré comme suit :
+
+* Le diagramme de flux des information
+* Les Techniques de représentation de l’information
+** Notion d’information, 
+** Etude de l’information,
+** Schéma et codification de l’information.
+* Saisie et contrôle de l''information
+** L'importance de contrôle de l'information,
+** Différents types de contrôle de l’information.
+
+== Contenu du module (3/3)
+
+Pour atteindre les objectifs fixés, le contenu du module Système d'Information
+est structuré comme suit :
+
+* Méthodologie de développement d'un SI: MERISE
+** Processus de développement d'un SI
+** Niveaux d'abstraction de modèle de données et des traitements
+** Méthodologie MERISE
+** Concepts pour la modélisation statique (Notion d’entité et d’association, un modèle
+conceptuel de données : le MCD,
+** Concepts pour la modélisation dynamique : MCT de MERISE.
+
+== Evaluation
+
+* Le contenu du module est réparti sur trois parties : Cours, TD, et TP.
+* L'évaluation se compose d'une évaluation continue (40%) et d'un examen écrit (60%).
+

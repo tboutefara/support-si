@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Cours de Système d&#8217;Information</title>
+<subtitle>Chapitre 6 - Modèle Conceptuel des Traitements</subtitle>
+<date>2020-12-20</date>
+<author>
+<personname>
+<firstname>Tarek</firstname>
+<surname>Boutefara</surname>
+</personname>
+<email>t_boutefara@univ-jijel.dz</email>
+</author>
+<authorinitials>TB</authorinitials>
+<revhistory>
+<revision>
+<revnumber>0.3</revnumber>
+<date>2020-12-20</date>
+<authorinitials>TB</authorinitials>
+</revision>
+</revhistory>
+</info>
+<section xml:id="_introduction">
+<title>Introduction</title>
+<simpara>Après la modélisation des données, il faut passer à la modélisation des
+traitements. Dans ce chapitre, nous allons voir le Modèle Conceptuel des
+Traitements (MCT). C&#8217;est le premier modèle des traitements à préparer.
+Il est aussi le modèle le plus abstrait : durant sa préparation,on
+s&#8217;intéresse uniquement aux traitements sans se préoccuper de qui va
+les exécuter et comment il va les exécuter.</simpara>
+</section>
+<section xml:id="_traitements">
+<title>Traitements</title>
+<simpara>Les traitements constituent la partie dynamique du Système
+d&#8217;Information. Ils sont la traduction en actions des règles
+de gestion de l&#8217;entreprise.</simpara>
+</section>
+<section xml:id="_le_mct">
+<title>Le MCT</title>
+<simpara>Le Modèle Conceptuel des Traitements vise a dégager les actions menées par
+l&#8217;entreprise indépendamment de la façon dont cette dernière a choisi de les
+organiser.</simpara>
+<simpara>Ce modèle est une représentation schématique de l&#8217;activité d&#8217;une
+entreprise indépendamment des choix d&#8217;organisation et des
+moyens d&#8217;exécution.</simpara>
+<simpara>Pour pouvoir le préparer, les différentes actions doivent être recensées
+(durant la phase d&#8217;étude de l&#8217;existant). Pour chaque action, nous devons
+connaître :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Le(s) déclencheur(s),</simpara>
+</listitem>
+<listitem>
+<simpara>Les règles de gestion,</simpara>
+</listitem>
+<listitem>
+<simpara>Les résultats.</simpara>
+</listitem>
+</itemizedlist>
+<section xml:id="_exemple_de_laspect_dynamique_gestion_des_stocks">
+<title>Exemple de l&#8217;aspect dynamique : gestion des stocks</title>
+<simpara>Nous pouvons définir les actions suivantes (intuitivement) :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Saisie du bon de commande</simpara>
+</listitem>
+<listitem>
+<simpara>Préparation des produits</simpara>
+</listitem>
+<listitem>
+<simpara>Préparation du bon de livraison</simpara>
+</listitem>
+<listitem>
+<simpara>Chargement des produits</simpara>
+</listitem>
+<listitem>
+<simpara>Déplacement et livraison des produits</simpara>
+</listitem>
+<listitem>
+<simpara>Vérification des niveaux de stock des différents produits</simpara>
+</listitem>
+<listitem>
+<simpara>Préparation de la liste des produits à commander</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Ces opérations sont définies sans donner des détails sur qui va les
+réaliser ou comment il va les réaliser.</simpara>
+</section>
+</section>
+<section xml:id="_evènement">
+<title>Evènement</title>
+<simpara>On appelle évènement tout fait nouveau dans le système. Il peut être :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Déclencheur : pour un traitement donné. C&#8217;est-à-dire</simpara>
+</listitem>
+<listitem>
+<simpara>Résultat : d&#8217;un traitement donné.</simpara>
+</listitem>
+</itemizedlist>
+<section xml:id="_exemple_des_évènements_gestion_des_stocks">
+<title>Exemple des évènements : gestion des stocks</title>
+<simpara>Nous pouvons citer les exemples suivants (intuitivement) :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Arrivée d&#8217;un bon de commande</simpara>
+</listitem>
+<listitem>
+<simpara>Emission d&#8217;un bon de livraison</simpara>
+</listitem>
+<listitem>
+<simpara>Dimanche (chaque)</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_lien_avec_le_diagramme_des_flux_dinformations">
+<title>Lien avec le diagramme des flux d&#8217;informations</title>
+<simpara>Nous rappelons que le diagramme des flux d&#8217;informations modélise les
+différents flux pour une activité donnée dans l&#8217;organisation. Nous
+notons aussi que les évènements sont dans leur majorité des flux
+d&#8217;information. Alors, il est possible de considérer le diagramme
+des flux d&#8217;information comme un point de départ pour la construction
+du Modèle Conceptuel des Traitements.</simpara>
+</section>
+</section>
+<section xml:id="_opération">
+<title>Opération</title>
+<simpara>Un ensemble d&#8217;actions accomplies en réaction à un évènement et produit de
+nouveaux évènements</simpara>
+<simpara>Il est possible d&#8217;extraire les différentes opérations en regroupant les
+actions du même domaine.</simpara>
+<section xml:id="_exemple_des_opérations_gestion_de_stocks">
+<title>Exemple des opérations : gestion de stocks</title>
+<simpara>En continuant sur le même exemple, nous pouvons définir les opérations
+suivantes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Traitement des bons de commande : se compose des actions suivantes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Saisie du bon de commande</simpara>
+</listitem>
+<listitem>
+<simpara>Préparation des produits</simpara>
+</listitem>
+<listitem>
+<simpara>Préparation du bon de livraison</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Livraison des produits : se compose des actions suivantes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Chargement des produits</simpara>
+</listitem>
+<listitem>
+<simpara>Déplacement et livraison des produits</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>Réapprovisionnement : se compose des actions suivantes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Vérification des niveaux de stock des différents produits</simpara>
+</listitem>
+<listitem>
+<simpara>Préparation de la liste des produits à commander</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</section>
+</section>
+<section xml:id="_représentation_graphique_du_mct">
+<title>Représentation graphique du MCT</title>
+<figure>
+<title>Repérsentation graphique : Le MCT</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/abstrait_03.png"/>
+</imageobject>
+<textobject><phrase>abstrait 03</phrase></textobject>
+</mediaobject>
+</figure>
+<figure>
+<title>Exemple : Traitement Bon de Commande - Client</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/traitement_bon_cmd.png"/>
+</imageobject>
+<textobject><phrase>traitement bon cmd</phrase></textobject>
+</mediaobject>
+</figure>
+<figure>
+<title>Exemple : Traitement Bon de Livraison - Client</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/traitement_bon_livraison.png"/>
+</imageobject>
+<textobject><phrase>traitement bon livraison</phrase></textobject>
+</mediaobject>
+</figure>
+<figure>
+<title>Exemple : Réapprovisionnement</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/reapprovisionnement.png"/>
+</imageobject>
+<textobject><phrase>reapprovisionnement</phrase></textobject>
+</mediaobject>
+</figure>
+</section>
+<section xml:id="_synchronisation">
+<title>Synchronisation</title>
+<simpara>Une pré-condition sur les évènements (proposition logique) au déclenchement
+d&#8217;une opération (ET/OU). Cette condition est définie par les règles de
+gestion.</simpara>
+<section xml:id="_exemple">
+<title>Exemple</title>
+<simpara>Pour préparer la paie des employés chaque début de mois,
+le comptable doit attendre la fiche de présence de chaque employé pour
+le mois en question.</simpara>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/paies.png"/>
+</imageobject>
+<textobject><phrase>paies</phrase></textobject>
+</mediaobject>
+</informalfigure>
+</section>
+</section>
+<section xml:id="_règles_démission">
+<title>Règles d&#8217;émission</title>
+<simpara>Il s&#8217;agit de règles de gestion liées à l&#8217;émission des résultats. Elles doivent
+couvrir toutes les situations possibles.</simpara>
+<section xml:id="_exemple_2">
+<title>Exemple</title>
+<simpara>En recevant une demande de transfert (avec dossier) de la part d&#8217;un étudiant,
+un département peut accepter la demande et prépare une attestation
+d&#8217;acceptation, ou bien il peut refuser la demande et retourne le dossier
+à l&#8217;étudiant. Il n&#8217;y a pas une troisième possibilité.</simpara>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/transfert.png"/>
+</imageobject>
+<textobject><phrase>transfert</phrase></textobject>
+</mediaobject>
+</informalfigure>
+</section>
+</section>
+<section xml:id="_processus">
+<title>Processus</title>
+<simpara>Un enchainement d&#8217;opérations propre à un domaine d&#8217;activité. L&#8217;analyse et
+la préparation d&#8217;un MCT se limite, généralement, à un seul domaine d&#8217;activité.
+En effet, comme pour le diagramme des flux d&#8217;informations, travailler
+sur plusieurs activités peut donner en résultat un modèle non-connexe.
+C&#8217;est-à-dire, le modèle contiendra des parties qui n&#8217;ont aucun lien entre
+elles.</simpara>
+<section xml:id="_exemple_gestion_du_stock">
+<title>Exemple : Gestion du stock</title>
+<simpara>Dans l&#8217;exemple suivant, nous constatons le lien entre les deux opérations
+Traitement de bon de commande et livraison. Nous constatons aussi que ces
+deux opérations sont complètement indépendantes du réapprovisionnement.
+Ainsi, nous pouvons définir deux processus :</simpara>
+<figure>
+<title>Processus de vente (commande puis livraison)</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/vente_processus.png"/>
+</imageobject>
+<textobject><phrase>vente processus</phrase></textobject>
+</mediaobject>
+</figure>
+<figure>
+<title>Processus Réapprovisionnement</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/reapprovisionnement.png"/>
+</imageobject>
+<textobject><phrase>reapprovisionnement</phrase></textobject>
+</mediaobject>
+</figure>
+</section>
+</section>
+<section xml:id="_conclusion">
+<title>Conclusion</title>
+<simpara>Dans ce chapitre, nous avons introduit la notion du Modèle Conceptuel
+des Traitements. La construction du MCT repose sur un bon recensement
+des opérations, de leurs déclencheurs et de leurs résultats. Par la
+suite, ces opérations sont regroupées en processus.</simpara>
+<simpara>Avant de passer vers des niveaux d&#8217;abstraction plus
+bas (plus proche de l&#8217;implémentation physique), les détails organisationnels
+(qui va faire quoi ?) ainsi que les détails techniques (comment automatiser ?
+En se basant sur quelle technologie ? En utilisant quel algorithme ?)
+restent sans précision.</simpara>
+</section>
+</article>

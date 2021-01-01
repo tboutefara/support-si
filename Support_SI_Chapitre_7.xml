@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+<article xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+<info>
+<title>Cours de Système d&#8217;Information</title>
+<subtitle>Chapitre 7 - MLD et MPD</subtitle>
+<date>2020-12-20</date>
+<author>
+<personname>
+<firstname>Tarek</firstname>
+<surname>Boutefara</surname>
+</personname>
+<email>t_boutefara@univ-jijel.dz</email>
+</author>
+<authorinitials>TB</authorinitials>
+<revhistory>
+<revision>
+<revnumber>0.3</revnumber>
+<date>2020-12-20</date>
+<authorinitials>TB</authorinitials>
+</revision>
+</revhistory>
+</info>
+<section xml:id="_introduction">
+<title>Introduction</title>
+<simpara>Plusieurs modèles logiques et physiques ont été proposés pour les données.
+Dans ce chapitre, nous allons introduire les choix les plus courants
+des entreprises :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Le modèle relationnel comme modèle logique,</simpara>
+</listitem>
+<listitem>
+<simpara>Les bases de données relationnelles comme niveau physique.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_niveau_logique_le_modèle_relationnel">
+<title>Niveau Logique : Le modèle relationnel</title>
+<simpara>Le modèle relationnel se base sur un ensemble de concepts :</simpara>
+<section xml:id="_relation">
+<title>Relation :</title>
+<simpara>Un sous-ensemble du produit cartésien d&#8217;une liste de domaines. Une
+relation n-aire sur D1, D2, &#8230;&#8203;, Dn est un sous-ensemble du produit
+cartésien D1 x D2 x &#8230;&#8203; X Dn.</simpara>
+</section>
+<section xml:id="_domaine_dattribut">
+<title>Domaine d&#8217;attribut :</title>
+<simpara>C&#8217;est un ensemble de valeurs possibles pour un attribut. Cela se ramène,
+au niveau physique, à un type de données. A ce type de données, une valeur
+particulière est ajoutée : la valeur “NULL”.
+Cette dernière correspond à la valeur “inconnu” (différente de 0 et
+différente de la chaîne vide).</simpara>
+</section>
+<section xml:id="_attribut">
+<title>Attribut :</title>
+<simpara>Un attribut (nommé généralement Ai) d&#8217;une relation est un identificateur
+(nom) associé à un domaine (Di) de la relation. Ce nom est généralement
+une propriété au niveau conceptuel.</simpara>
+</section>
+<section xml:id="_schéma_relationnel">
+<title>Schéma relationnel :</title>
+<simpara>Un schéma de relation définit le nom de la relation et l&#8217;ensemble de ses
+attributs. Chaque attribut appartient à un domaine spécifique. Pour
+chaque relation, un sous-ensemble de ses attributs constitue la clé
+primaire; il est souligné dans le schéma.</simpara>
+<simpara>Dans une base de données relationnelle, les données sont perçues comme
+des Tables. Le schéma relationnel (schéma de la base de données) est
+obtenu à partir du modèle Entité/Association (niveau conceptuel) en
+appliquant les règles suivantes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Toute entité devient une relation,</simpara>
+</listitem>
+<listitem>
+<simpara>Toute association de type (n:m) devient une table,</simpara>
+</listitem>
+<listitem>
+<simpara>Les associations de type (1:n) se traduisent par des clés étrangères
+(la clé primaire du père migre vers le fils),</simpara>
+</listitem>
+<listitem>
+<simpara>Chaque relation qui ne contient qu&#8217;un seul attribut sera ignoré.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+</section>
+<section xml:id="_niveau_physique_langage_sql">
+<title>Niveau Physique : Langage SQL</title>
+<simpara>Le niveau physique est influencé principalement par les caractéristiques
+de la machine (de l&#8217;ordinateur). Parmi ces limites de la machine par
+rapport aux abstractions faites au niveau sémantique (conceptuel) et
+logique, nous citons :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>L&#8217;implémentation des domaines,</simpara>
+</listitem>
+<listitem>
+<simpara>Le temps d&#8217;exécution :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Accès disque dure,</simpara>
+</listitem>
+<listitem>
+<simpara>Complexité des algorithmes,</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>L&#8217;espace mémoire :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>La taille de la RAM vs. La taille de la base des données.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+<simpara>Le langage SQL repose sur les notions d&#8217;algèbre relationnel et ajoute
+la dimension physique liée à la machine et ses limites. SQL est un
+langage déclaratif (non procédural) : on précise le "Quoi" sans le "Comment".
+Ce qui permet d&#8217;obtenir cette possibilité est le fait que nous n&#8217;avons
+que quatre opérations de base sur les données (CRUD) :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Créer (Créate),</simpara>
+</listitem>
+<listitem>
+<simpara>Lire (Read),</simpara>
+</listitem>
+<listitem>
+<simpara>Update (Mettre à jour),</simpara>
+</listitem>
+<listitem>
+<simpara>Delete (Supprimer).</simpara>
+</listitem>
+</itemizedlist>
+<simpara>SQL définit plusieurs requêtes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis role="strong">LMD :</emphasis> Langage de manipulation de données :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Select,</simpara>
+</listitem>
+<listitem>
+<simpara>Insert,</simpara>
+</listitem>
+<listitem>
+<simpara>Update,</simpara>
+</listitem>
+<listitem>
+<simpara>Delete.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">LDD :</emphasis> Langage de définition de données :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Create,</simpara>
+</listitem>
+<listitem>
+<simpara>Alter,</simpara>
+</listitem>
+<listitem>
+<simpara>Drop.</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_exemple_complet">
+<title>Exemple Complet</title>
+<simpara>Soit la description suivante :</simpara>
+<simpara>"Dans une clinique, plusieurs médecins exercent leur activité. Chaque
+médecin reçoit un malade pour chaque consultation. Pendant l&#8217;examen
+clinique, il remplit un rapport en précisant tous les symptômes
+(température, mal de tête, fréquence cardiaque, ect.). Il conclut son
+rapport par préciser une ou plusieurs maladies ou pathologies. En se
+basant sur ces résultats, le médecin prescrit au patient plusieurs
+médicaments."</simpara>
+<section xml:id="_le_mcd">
+<title>Le MCD</title>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/exemple_complet_mcd.jpeg"/>
+</imageobject>
+<textobject><phrase>exemple complet mcd</phrase></textobject>
+</mediaobject>
+</informalfigure>
+</section>
+<section xml:id="_le_modèle_relationnel">
+<title>Le Modèle Relationnel</title>
+<simpara>En appliquant les quatre règles de transformation, nous obtenons le
+schéma relationnel suivant :</simpara>
+<simpara>Médecin (ID, Nom, Prénom, Spécialité, N° Téléphone)</simpara>
+<simpara>Patient (NSS, Nom, Prénom, Age, Sexe)</simpara>
+<simpara>Médicament (Réf, Libellé, Composant, Dose, Format)</simpara>
+<simpara>Symptôme (Code, Nom)</simpara>
+<simpara>Maladie (Code, Nom)</simpara>
+<simpara>Consultation(N, Date Consultation, #ID Médecin, #NSS Patient)</simpara>
+<simpara>Préciser (#Code Symptôme, #N Consultation)</simpara>
+<simpara>Identifier (#Code Maladie, #N Consultation)</simpara>
+<simpara>Prescrire (#Ref Médicament, #N Consultation)</simpara>
+</section>
+<section xml:id="_requêtes_sql">
+<title>Requêtes SQL</title>
+<simpara>Par la traduction du schéma relationnel (ci-dessus) en langage SQL,
+nous pouvons obtenir les requêtes LDD Create suivantes :</simpara>
+<programlisting language="sql" linenumbering="unnumbered">Create Table Medecin (
+        id Integer Primary Key,
+        nom Char(100),
+        prenom Char(100),
+        specialite Char(100),
+        n_telephone Char(20)
+);
+
+Create Table Patient (
+        nss Char(20) Primary Key,
+        nom Char(100),
+        prenom Char(100),
+        age Integer,
+        sexe Char(1)
+);
+
+Create Table Medicament (
+        ref Char(13) Primary Key,
+        libelle Char(100),
+        composant Char(100),
+        dose Char(20),
+        format Char(20)
+);
+
+Create Table Symptome (
+        code Char(20) Primary Key,
+        nom Char(100)
+);
+
+Create Table Maladie (
+        code Char(20) Primary Key,
+        nom Char(100)
+);
+
+Create Table Consultation (
+        n Integer Primary Key Auto_Increment,
+        date_consultation Date,
+        id_medecin Integer References Medecin(id),
+        id_patient Char(20) References Patient(nss)
+);
+
+Create Table Preciser (
+        code_symptome Char(20) References Symptome(code),
+        n_consultation Integer References Consultation(n),
+        Primary Key (code_ symptome, n_consultation)
+);
+
+Create Table Identifier (
+        code_maladie Char(10) References Maladie(code),
+        n_consultation Integer References Consultation(n),
+        Primary Key (code_ maladie, n_consultation)
+);
+
+Create Table Presecrire (
+        ref_medicament Char10) References Medicament(ref),
+        n_consultation Integer References Consultation(n),
+        Primary Key (ref_medicament, n_consultation)
+);</programlisting>
+</section>
+</section>
+<section xml:id="_la_structure_physique_de_la_base_de_données">
+<title>La structure physique de la base de données</title>
+<section xml:id="_définition">
+<title>Définition</title>
+<simpara>Le niveau physique désigne l&#8217;organisation des données de la base de
+données sur le disque dur. C&#8217;est à dire, comment les données sont-elles
+rangées physiquement sur le disque dur. C&#8217;est le niveau le plus bas du
+SGBD.</simpara>
+<simpara>Pour pouvoir comprendre l&#8217;organisation physique d&#8217;une base de données,
+il faut d&#8217;abord comprendre le fonctionnement du disque dur lui-même.
+Il faut aussi garder en esprit les types de données et leur taille
+(en octet).</simpara>
+<simpara>Les disques durs, comme étant des mémoires secondaires, trouvent leur
+intérêt par rapport à la RAM, le cache processeur et les registres,
+comme étant des mémoires principale, à cause de :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Ils sont moins chers : les bases de données sont généralement volumineuses.</simpara>
+</listitem>
+<listitem>
+<simpara>Ils sont considérés comme des mémoires longs-termes; ce qui les rend
+nécessaires pour les bases de données.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Leur inconvénient majeur est leur lenteur. Les disques durs sont très
+lents (temps d&#8217;accès très grand) par rapport aux mémoires principales.
+Durant ce cours, nous allons nous intéresser aux disques durs de type
+HDD et non pas SSD. Les premiers sont encore les plus utilisés au moment
+de rédaction de ce cours.</simpara>
+</section>
+<section xml:id="_rappel_fonctionnement_du_disque_dur">
+<title>Rappel : fonctionnement du disque dur</title>
+<section xml:id="_structure_générique">
+<title>Structure générique</title>
+<simpara>Un disque dur de type HDD respecte l&#8217;architeture suivante :</simpara>
+<figure>
+<title>Structure d&#8217;un disque dur</title>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/disque_dur.png"/>
+</imageobject>
+<textobject><phrase>disque dur</phrase></textobject>
+</mediaobject>
+</figure>
+<simpara>Nous reprenons les définitions suivantes :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Le disque dur se compose de plusieurs disques ou plateaux.</simpara>
+</listitem>
+<listitem>
+<simpara>Sur chaque disque, on peut écrire sur une surface (une face seulement)
+ou bien sur les deux surfaces (les deux faces). Dans le deuxième cas, chaque face dispose sa propre tête de lecture/écriture.</simpara>
+</listitem>
+<listitem>
+<simpara>Une surface est divisée en plusieurs pistes,</simpara>
+</listitem>
+<listitem>
+<simpara>Une piste est divisée en plusieurs blocs, c&#8217;est l&#8217;unité la plus petite
+qu&#8217;on peut lire.</simpara>
+</listitem>
+<listitem>
+<simpara>Tous les disques sont identiques et ils sont fixés (tous) à un axe qui
+permet la rotation.</simpara>
+</listitem>
+<listitem>
+<simpara>Les têtes de lecture/écriture sont fixées à des bras, ces derniers
+sont à leur tour fixés dans un deuxième axe. Cela permet, en association
+avec la rotation des plateaux, aux têtes de L/E de balayer toute la
+surface des disques (des plateaux).</simpara>
+</listitem>
+<listitem>
+<simpara>Le cylindre peut être obtenu en prennant une piste avec les pistes
+identiques à elle et qui se trouvent sur les autres plateaux. Cette
+notion est importante parce qu&#8217;elle représente la taille maximale qu&#8217;on
+peut lire ou écrire sur le disque dur sans déplacer les têtes de
+lecture/écriture.</simpara>
+</listitem>
+<listitem>
+<simpara>Le disque dur possède un contrôleur qui traduit une adresse à un
+mouvement qui permet de récupérer l&#8217;information (les données) désirées.</simpara>
+</listitem>
+<listitem>
+<simpara>Le disque dur permet un accès direct. C&#8217;est-à-dire, nous pouvons
+récupérer une information directement en utilisant son adresse sans être
+obligé de lire toutes les informations qui la précèdent.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_temps_de_lecture_dun_bloc">
+<title>Temps de lecture d&#8217;un bloc</title>
+<simpara>La lecture n&#8217;est pas instantanée; elle prend un temps considérable par
+rapport aux autres mémoires primaires. Nous pouvons calculer ce temps de
+lecture en utilisant les formules suivantes (issues du principe du
+fonctionnement) :</simpara>
+<simpara role="text-center">Temps d&#8217;accès à un bloc = temps de recherche + temps de latence + temps de transfert</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis role="strong">Temps de recherche :</emphasis> C&#8217;est le temps nécessaire au positionnement
+de la tête sur la bonne piste. Il est de l&#8217;ordre de 7 à 10 microsecondes
+(3 à 8 msecs sur les serveurs),</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Temps de latence :</emphasis> délai de rotation des disques pour que le bloc
+soit sous la tête de lecture/écriture. On peut le calculer en sachant
+la vitesse de rotation (fournie généralement par le fabriquant). Pour
+une vitesse de 15000 rpm, le temps de latence sera environ 2 msecs
+(en moyenne, 4 msecs pour une rotation)</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Temps de transfert :</emphasis> le temps de lecture et de transfert du bloc.
+Généralement c&#8217;est le temps de passage du bloc sous la tête de lecture
+écriture vu que le temps de transfert de la tête vers le controleur est
+beaucoup plus court.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Le temps d&#8217;accès à un bloc peut être minimal. Cela arrive si la tête de
+lecture/écriture est déjà sur la bonne piste et le bloc ciblé se trouve
+sous la tête de lecture/écriture. Dans ce cas, la fonction prend sa
+valeur minimale :</simpara>
+<simpara role="text-center">Temps d&#8217;accès à un bloc (min) = temps de transfert</simpara>
+<simpara>Ce temps d&#8217;accès peut aussi prendre une valeur maximale. Cela arrive
+lorsque la tête de lecture/écriture doit se déplacer entre toutes les
+pistes et le disque dur doit faire une rotation complète pour positionner
+le bloc sous la tête de lecture/écriture. La valeur maximale sera :</simpara>
+<simpara role="text-center">Temps d&#8217;accès à un bloc (max) = temps d&#8217;une rotation complète
++ temps de déplacement entre deux pistes * nombre de pistes
++ temps de transfert</simpara>
+<simpara>Généralement, nous calculons le temps moyen vu que le positionnement est
+complètement aléatoire.</simpara>
+</section>
+</section>
+<section xml:id="_organisation_primaire_et_organisation_secondaire">
+<title>Organisation primaire et Organisation secondaire</title>
+<simpara>La sauvegarde des données d&#8217;une base de données repose sur deux
+organisations à gérer :</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis role="strong">Organisation primaire :</emphasis> "Elle détermine la façon dont les
+enregistrements sont placés physiquement sur le disque". Cette
+organisation concerne les données concrètes de la base de données
+(toutes les données). Elle influence les algorithmes de recherche,
+insertion, modification et suppression.</simpara>
+</listitem>
+<listitem>
+<simpara><emphasis role="strong">Organisation secondaire :</emphasis> Elle définit une structure d&#8217;accès
+auxiliaire qui permet d&#8217;accéder rapidement aux enregistrements. Elle
+n&#8217;implique pas toutes les données mais seulement les "clés" (champs)
+utilisés pour la recherche. Sa valeur ajoutée pour les autres opérations
+est remarquable vu que la suppression et la modification nécessitent
+une recherche avant.</simpara>
+</listitem>
+</itemizedlist>
+<simpara>Dans les deux cas, le fichier est constitué d&#8217;un ensemble
+d&#8217;enregistrements rangés dans des blocs. Cela représente la rubrique de
+base. La différence réside dans la taille et le type des enregistrements.</simpara>
+</section>
+<section xml:id="_les_enregistrements">
+<title>Les enregistrements</title>
+<simpara>Un enregistrement peut être défini comme "une collection de valeurs ou
+éléments de données apparentés, chaque valeur (constituée de plusieurs
+octets, selon le type des données et selon le système) correspond à un
+champ particulier de l&#8217;enregistrement".</simpara>
+</section>
+<section xml:id="_taille_de_lenregistrement">
+<title>Taille de l&#8217;enregistrement</title>
+<simpara>Pour la table suivante :</simpara>
+<formalpara>
+<title>Exemple :</title>
+<para>
+<screen>Create Table Employe (
+        nom char(20),
+        nss char(16),
+        code_service integer,
+        code_poste integer,
+        ville char(20),
+        date_recrutement date
+);</screen>
+</para>
+</formalpara>
+<simpara>La taille de l&#8217;enregistrement sera :</simpara>
+<simpara role="text-center">R = 20 + 16 + 4 + 4 + 20 + 8 = 72 octets.</simpara>
+</section>
+<section xml:id="_rangement_des_enregistrements">
+<title>Rangement des enregistrements</title>
+<simpara>Ayant étudié les enregistrements, il est temps de voir leur
+rangement dans les blocs.</simpara>
+<section xml:id="_bloc_de_données">
+<title>Bloc de données</title>
+<simpara>Puisque le bloc est l&#8217;unité la plus petite de lecture/écriture,
+un fichier est inévitablement composé de plusieurs blocs. Pour une
+meilleure gestion, il est important de garder des données sur le bloc
+(type, type contenu, pointeur vers le bloc suivant, etc.).
+Cette partie du bloc ne sera pas utilisée pour stocker des données.
+On appelle cet espace “Entête du bloc”.</simpara>
+<simpara>Pendant le rangement, un enregistrement n&#8217;est pas réparti sur plusieurs
+blocs; il appartient en entier à un seul bloc. En rangeant les
+enregistrements (en réservant l&#8217;espace de l&#8217;entête), un espace vide
+reste dans la fin de chaque bloc.</simpara>
+<informalfigure>
+<mediaobject>
+<imageobject>
+<imagedata fileref="./images/repartie.jpg"/>
+</imageobject>
+<textobject><phrase>repartie</phrase></textobject>
+</mediaobject>
+</informalfigure>
+</section>
+</section>
+<section xml:id="_taille_du_fichier">
+<title>Taille du fichier</title>
+<section xml:id="_fonctions_à_retenir">
+<title>Fonctions à retenir</title>
+<itemizedlist>
+<listitem>
+<simpara><emphasis role="strong">La fonction plancher :</emphasis></simpara>
+</listitem>
+</itemizedlist>
+<simpara>Elle permet d&#8217;arrondir x à la valeur entière inférieure.</simpara>
+<simpara>Par exemple : plancher(3,7) = 3.</simpara>
+<itemizedlist>
+<listitem>
+<simpara><emphasis role="strong">La fonction plafond :</emphasis></simpara>
+</listitem>
+</itemizedlist>
+<simpara>Elle permet d&#8217;arrondir x à la valeur entière supérieure.</simpara>
+<simpara>Par exemple : plafond(3,7) = 4.</simpara>
+<simpara>L&#8217;utilisation de ces fonctions d&#8217;arrondissement est nécessaire vu que :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>Les enregistrements ne sont pas répartis, ainsi, le nombre
+d&#8217;enregistrement dans un bloc est un nombre entier.</simpara>
+</listitem>
+<listitem>
+<simpara>Les blocs sont l&#8217;unité de base de sauvegarde, ainsi, un fichier
+contient un nombre entier de blocs.</simpara>
+</listitem>
+</itemizedlist>
+</section>
+<section xml:id="_calcul_de_la_taille_du_fichier">
+<title>Calcul de la taille du fichier</title>
+<simpara>Soient :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>La taille d&#8217;un bloc : B octets,</simpara>
+</listitem>
+<listitem>
+<simpara>Nous gardons en esprit que nous réservons un espace au début de chaque
+bloc pour garder des données sur son contenu (en-tête).</simpara>
+</listitem>
+<listitem>
+<simpara>La taille d&#8217;enregistrement : R octets,</simpara>
+</listitem>
+<listitem>
+<simpara>r : le nombre d&#8217;enregistrement</simpara>
+</listitem>
+</itemizedlist>
+<simpara>On calcule :</simpara>
+<itemizedlist>
+<listitem>
+<simpara>bfr : le facteur de blocage, le nombre d&#8217;enregistrements par bloc.</simpara>
+</listitem>
+</itemizedlist>
+<simpara role="text-center">bfr = plancher ((B – entête) / R);</simpara>
+<itemizedlist>
+<listitem>
+<simpara>b : le nombre de blocs du fichier</simpara>
+</listitem>
+</itemizedlist>
+<simpara role="text-center">b = plafond (r / bfr);</simpara>
+</section>
+</section>
+</section>
+<section xml:id="_conclusion">
+<title>Conclusion</title>
+<simpara>Dans ce chapitre, nous avons vu une introduction à la représentation logique
+et physique des données. Nous avons introduit aussi la dimension physique
+d&#8217;une base de données. Il existe plusieurs approches, techniques et
+structures de données pour l&#8217;organisation physique d&#8217;une base de données.
+Ce que nous avons vu n&#8217;est qu&#8217;une introduction minimale au domaine.</simpara>
+</section>
+</article>
