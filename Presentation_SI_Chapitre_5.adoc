@@ -1,0 +1,119 @@
+= Système d'Information: Chapitre 05 - Le MCD
+:Author: Boutefara Tarek
+:Email: t_boutefara@univ-jijel.dz
+:Date: 2021-01-02 
+:Revision: 0.1.0
+:imagesdir: ./images/
+:experimental:
+:pdf-page-size: 9in x 6in
+
+<<<
+
+// Commande de génération :
+// asciidoctor-pdf -a pdf-themesdir=. -a pdf-theme=presentation <fichier>.adoc 
+
+== Le MCD
+
+=== Définition
+
+* Le Modèle Conceptuel des Données décrit de façon formelle les données 
+utilisées par le Système d'Information. 
+* Il se base sur une représentation
+graphique des trois notions : entité, association, et propriété.
+
+<<<
+
+== Les propriétés
+
+Les propriétés sont les informations de base du Système d'Information.
+
+<<<
+
+== Les entités
+
+Une entité permet de modéliser un ensemble d'objets de même nature (qui
+ont les mêmes propriétés)
+
+<<<
+
+== Les entités
+
+image::abstrait_01.png[]
+
+<<<
+
+== Les entités
+
+=== Identifiant
+
+L'identifiant est une propriété qui permet d'identifier une occurrence
+d'une manière unique et sûre.
+
+<<<
+
+== Les associations 
+
+Une association décrit un lien entre deux ou plusieurs entités. Son 
+existence est conditionnée par celle des entités qui y participent.
+
+<<<
+
+== Les associations 
+
+=== Dimension
+
+C'est le nombre de pattes d'une association (différent du nombre d'entities).
+
+<<<
+
+== Les associations 
+
+image::abstrait_02.png[]
+
+<<<
+
+== Les associations 
+
+=== Cardinalité
+
+* Elle précise le nombre de participation de chaque occurrence de l'entité
+à la relation. Elle est notée sur la patte.
+* Il existe quatre (04) types de cardinalites :
+** **(0, 1) :** au plus une fois.
+** **(1, 1) :** une et une seule fois.
+** **(1, n) :** au moins une fois.
+** **(0, n) :** aucune précision (plusieurs).
+
+<<<
+
+== Normalisation du modèle
+
+* Correction des erreurs conceptuels,
+* Ces erreurs peuvent rendre le modèle inutilisable,
+* Ces erreurs peuvent causer la redondance.
+
+<<<
+
+== Normalisation du modèle
+
+=== La première forme normale (1FN)
+
+Dans une entité, toutes les propriétés sont élémentaires et il existe au
+moins une clé.
+
+<<<
+
+== Normalisation du modèle
+
+=== La deuxième forme normale (2FN)
+
+Toutes les propriétés doivent dépendre de toute la clé et non pas d'une
+partie de la clé.
+
+<<<
+
+== Normalisation du modèle
+
+=== La troisième forme normale (3FN)
+
+Toutes les propriétés doivent dépendre de la clé d'une manière directe.

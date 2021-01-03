@@ -1,0 +1,56 @@
+= Système d'Information: Chapitre 06 - Le MCT
+:Author: Boutefara Tarek
+:Email: t_boutefara@univ-jijel.dz
+:Date: 2021-01-02 
+:Revision: 0.1.0
+:imagesdir: ./images/
+:experimental:
+:pdf-page-size: 9in x 6in
+
+<<<
+
+// Commande de génération :
+// asciidoctor-pdf -a pdf-themesdir=. -a pdf-theme=presentation <fichier>.adoc 
+
+== Le MCT
+
+Le Modèle Conceptuel des Traitements vise à dégager les actions menées par 
+l'entreprise indépendament de la façon dont cette dernière a choisi de les 
+organiser.
+
+<<<
+
+== Evènement
+
+Un fait nouveau dans le système (déclencheur ou résultat).
+
+<<<
+
+== Opération
+
+Un ensemble d'actions accomplies en reaction à un évènement et produit de
+nouveaux évènements.
+
+<<<
+
+== Synchronisation
+
+Une pré-condition sur les évènements (proposition logique) au déclenchement 
+d'une opération (ET/OU)
+
+<<<
+
+== Règeles d'émission
+
+Il s'agit de règles de gestion liées à l'émission des résultats. Elle doivent
+couvrir toutes les situations possibles.
+
+<<<
+
+== Processus
+
+Un enchainement d'opérationq propre à un domaine d'activités.
+
+<<<
+
+image::abstrait_03.png[]

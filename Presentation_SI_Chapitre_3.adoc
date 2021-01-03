@@ -1,0 +1,160 @@
+= Système d'Information: Chapitre 03 - Codification et contrôle des données
+:Author: Boutefara Tarek
+:Email: t_boutefara@univ-jijel.dz
+:Date: 2021-01-02 
+:Revision: 0.1.0
+:imagesdir: ./images/
+:experimental:
+:pdf-page-size: 9in x 6in
+
+<<<
+
+// Commande de génération :
+// asciidoctor-pdf -a pdf-themesdir=. -a pdf-theme=presentation <fichier>.adoc 
+
+== Codification et contrôle des données
+
+=== L'importance de la codification
+
+* Il y a une différence entre les types de données de base offerts par l'outil
+informatique et les concepts (notions) manipulés par le Système d'Information
+de l'organisation.
+* La codification enlève cette différence par associer des codes aux 
+différents concepts manipulés.
+
+<<<
+
+== Codification et contrôle des données
+
+=== Définition
+
+* Un code
+** Un nom abrège ou une représentation de l'information permettant de 
+désigner un objet ou un concept de manière unique.
+
+<<<
+
+== Codification et contrôle des données
+
+=== Codification
+
+image::codification.jpeg[]
+
+<<<
+
+== Codification et contrôle des données
+
+=== Codification
+
+* En programmation, la codification fait référence :
+** Au choix des noms des variables,
+** Aux valeurs distinctives de ces variables.
+* La codification est l'opération qui consiste à remplacer une information 
+sous sa forme naturelle par un code claire qui serait mieux adapté aux 
+besoins de l'utilisateur. 
+
+<<<
+
+== Codification et contrôle des données
+
+=== Caractéristiques d'une codification
+
+. Non-ambigüe,
+. Facilite d'utilisation,
+. Concision,
+. Possibilite d'extension et d'insertion.
+
+<<<
+
+== Types de codifications
+
+=== Coditification sequentielle
+
+Associer des numéros séquentiels (consécutifs) aux informations.
+
+<<<
+
+== Types de codifications
+
+=== Codification par tranche
+
+Associer des tranches de codes aux catégories. Chaque tranche contient
+des codes séquentiels.
+
+<<<
+
+== Types de codifications
+
+=== Codification articulée
+
+Utilisation des codes découpés en zones (descripteurs). Chaque descripteur
+a une signification particulière.
+
+<<<
+
+== Types de codifications
+
+=== Codification par niveau
+
+Cas particulier de la codification articulée où les descripteurs représentent 
+des niveaux.
+
+<<<
+
+== Types de codifications
+
+=== Codification mnémonique
+
+Abréviation de la désignation en utilisant un ensemble réduit de caractères.
+
+* Consonants
+** Total -> ttl
+* Abreviatifs
+** Total -> tot
+
+<<<
+
+== Les contrôles
+
+=== Définition
+
+Un contrôle est la vérification que les caractéristiques d'une information
+sont conformes à ce qu'elles doivent être.
+
+<<<
+
+== Les contrôles
+
+=== Types des contrôles
+
+* Contrôles directs : des contrôles se rapportant à l'information elle-même :
+** Contrôle de présence
+** Contrôle de type
+** Controle du cadrage
+** Contrôle de vraisemblance
+
+<<<
+
+== Les contrôles
+
+=== Types des contrôles
+
+* Contrôles indirects : des controles qui verifient une information par comparaison a d'autres
+informations.
+** Contrôle de cohérence interne
+*** (Codification articulée)
+** Contrôle de cohérence externe
+*** Comparaison avec d'autres informations.
+
+<<<
+
+== Les contrôles
+
+=== Ordre d'exécution des contrôles
+
+. Presence,
+. Type,
+. Codage,
+. Vraisemblance,
+. Coherence interne,
+. Coherence externe. 

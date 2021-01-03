@@ -1,0 +1,93 @@
+= Système d'Information: Chapitre 04 - Merise
+:Author: Boutefara Tarek
+:Email: t_boutefara@univ-jijel.dz
+:Date: 2021-01-02 
+:Revision: 0.1.0
+:imagesdir: ./images/
+:experimental:
+:pdf-page-size: 9in x 6in
+
+<<<
+
+// Commande de génération :
+// asciidoctor-pdf -a pdf-themesdir=. -a pdf-theme=presentation <fichier>.adoc 
+
+== Démarche de développement d'un logiciel
+
+* # Prolème et existant
+* Analyse,
+* Conception,
+* Réalisation,
+* # Maintenance
+
+<<<
+
+== Démarche de développement d'un logiciel
+
+=== Analyse de la situation existante et des besoins
+
+* Groupe d'étude
+* Sources d'information
+
+<<<
+
+== Démarche de développement d'un logiciel
+
+=== Représentation des aspects importants
+
+Cette représentation devient possible grâce à l'analyse des besoins et de
+l'existant. Elle est effectuée par la création d'une série de modèles.
+
+<<<
+
+== Démarche de développement d'un logiciel
+
+=== Implémentation du système logiciel
+
+* Cette étape consiste à "traduire" la conception proposée en une solution technique. 
+Pour ce faire,faut effectuer le choix des langages de programmation, des plates-formes et des outils à utiliser.
+* Ensuite, les différents modèles conceptuels sont concrétisés.
+
+<<<
+
+== Merise
+
+* Merise est une méthode de conception qui nous permet de représenter les 
+aspects du système (2eme étape).
+* Merise est une approche systémique qui sépare les données des traitements
+et définit trois niveaux de conception (d'abstraction) :
+
+<<<
+
+== Merise
+
+=== Niveau conceptuel
+
+A ce niveau, on décrit les données et les traitements sans tenir compte
+de l'implémentation technique et des détails organisationnels. On répond
+à la question (Quoi ?).
+
+<<<
+
+== Merise
+
+=== Niveau logique
+
+A ce niveau, on prend en compte la technique d'organisation des données 
+et les détails organisationnels des traitements (Qui ? Ou ? Quand ?).
+
+<<<
+
+== Merise
+
+=== Niveau physique
+
+Ce niveau contient tous les détails d'implémentation du system (Comment ?).
+
+<<<
+
+== Validation
+
+Cette opération vise à compléter le modèle des données par les données 
+nécessaires aux traitements et qui ne sont pas définies dans le modèle
+des données.

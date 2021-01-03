@@ -1,0 +1,200 @@
+= Système d'Information: Chapitre 01 - Notions de Base
+:Author: Boutefara Tarek
+:Email: t_boutefara@univ-jijel.dz
+:Date: 2021-01-02 
+:Revision: 0.1.0
+:imagesdir: ./images/
+:experimental:
+:pdf-page-size: 9in x 6in
+
+<<<
+
+// Commande de génération :
+// asciidoctor-pdf -a pdf-themesdir=. -a pdf-theme=presentation <fichier>.adoc 
+
+== Information
+
+.Definition 1 :
+L'information est définie comme étant tout élément de connaissance pouvant 
+être perçu par l'un des cinq sens.
+
+<<<
+
+== Information
+
+.Definition 2 :
+L'information est une indication, renseignement, précision que l'on donne 
+ou que l'on obtient sur quelqu'un ou quelque chose.
+
+<<<
+
+== Information
+
+.Definition 3 :
+Une information est un élément de connaissance susceptible d'être représenté 
+à l'aide de conventions pour être conservé, traité ou communiqué.
+
+<<<
+
+== Importance de l'information
+
+* La prise de décision est une activité quotidienne. Elle est plus importante 
+dans le milieu des organisations (et des entreprises en particulier). 
+* La prise de décision se base sur une réflexion faite sur un ensemble 
+d'informations.
+
+<<<
+
+== Données – Informations – Connaissances
+
+* Données -> Information -> Connaissance
+* 5 -> 5°C Temp. du jour -> Il fait froid
+
+<<<
+
+== Système
+
+.Definition 1
+Un système est un ensemble d'éléments matériels ou immatériels, en interaction, 
+organisés en fonction d'un objectif. 
+
+<<<
+
+== Système
+
+.Definition 2
+C'est un tout constitue d'elements unis par des relations. Les elements 
+et les relations sont munis de proprietes.
+
+<<<
+
+== Système
+
+image::Systeme.jpeg[]
+
+<<<
+
+== Notion de sous-système
+
+Un sous-ensemble du système qui constitue lui-même un système avec
+ses propres entrées, sorties et fonction de transformation.
+
+<<<
+
+== Notion de sous-système
+
+=== Les sous-systemes d'un point de vue informationnel
+
+* Le système de pilotage
+** Le système de pilotage définit les missions et les objectifs, organise
+l'emploi des moyens, et contrôle l'exécution des travaux.
+** Il contrôle le système opérant.
+
+<<<
+
+== Notion de sous-système
+
+=== Les sous-systemes d'un point de vue informationnel
+
+* Le système opérant
+** Le systeme opérant est l'ensemble des moyens humains, matériels, 
+organisationnels qui exécutent les ordres du système de pilotage.
+** Il assure le fonctinnement du système global.
+
+<<<
+
+== Notion de sous-système
+
+=== Les sous-systemes d'un point de vue informationnel
+
+* Le système d'information
+** C'est l'ensemble des ressources humaines, techniques et financières qui
+fournissent, utilisent, compilent, traitent et distribuent l'information 
+de l'organisation.
+
+<<<
+
+== Notion de sous-système
+
+=== Les sous-systemes d'un point de vue informationnel
+
+image::Lemoigne.jpeg[]
+
+<<< 
+
+== Fonctions du Système d'Information dans l'organisation
+
+. La collecte de l'information,
+. La mémorisation de l'information,
+. Le traitement de l'information,
+. La diffusion de l'information.
+
+<<<
+
+== Apport du Système d'Information pour l'organisation
+
+. Une prise de décision avec plus de certitude et d'objectivite,
+. Une meilleure planification des objectifs,
+. Prise en considération et évolution suivant l'environnement externe,
+. Une meilleure collaboration et coopération entre les différents sous-systèmes.
+
+<<<
+
+== L'aspect statique et l'aspect dynamique d'un Système d'Information
+
+=== L'aspect statique
+
+* La fonction de memorisation qui se traduit par :
+** L'enregistrement des faits dans un ensemble qui s'appellera base de données,
+** L'enregistrement se fait en respectant des structures, des règles et des
+contraintes auxquelles doivent répondre ces informations dans un ensemble
+qui s'appellera modèle de données.
+
+<<<
+
+== L'aspect statique et l'aspect dynamique d'un Système d'Information
+
+=== L'aspect dynamique
+
+* Les fonctions de collecte, traitement et de transmission qui se traduisent par :
+** Mettre à jour les information (ajout, suppression, modification),
+** Modification des structures et des règles suivant l'évolution de l'organisation.
+
+<<<
+
+== Système d'Information Automatisable (SIA)
+
+=== Types des actions 
+
+* Selon la théorie de Simon sur la rationnalité limitée dans la prise de décision,
+les actions peuvent être classifiées en deux types :
+** Actions programmées (programmables) : Une action programmable est chaque action dans laquelle les sorties sont
+déterminées de la même manière à partir des entrées.
+** Décisions : Une décision est une action dans laquelle les entrées ne sont pas suffisantes
+pour déterminer les sorties. Ainsi, les mêmes entrées donnent des sorties
+différentes.
+
+<<<
+
+== Système d'Information Automatisable (SIA)
+
+=== Partie automatisable d'un Système d'Information
+
+Il s'agit de l'ensemble des actions programmées (programmables) concernées 
+par une décision d'automatisation.
+
+<<<
+
+== Système d'Information Automatisable (SIA)
+
+=== Partie automatisable d'un Système d'Information
+
+image::SAI.jpeg[]
+
+<<<
+
+== Système d'Information Automatisable (SIA)
+
+=== Structure et fonction d'un système d'information automatisé
+
+image::SI.jpeg[]

@@ -1,0 +1,15 @@
+extends: default
+base:
+  font_size: 15
+heading:
+  h1-font-size: 30  
+  h2-font-size: 25    
+  h3-font-size: 20
+  h4-font-size: 15
+title_page:
+  authors:
+    font_size: $heading_h3_font_size
+code:
+  font-size: 15
+footer:
+  font-size: 12 
